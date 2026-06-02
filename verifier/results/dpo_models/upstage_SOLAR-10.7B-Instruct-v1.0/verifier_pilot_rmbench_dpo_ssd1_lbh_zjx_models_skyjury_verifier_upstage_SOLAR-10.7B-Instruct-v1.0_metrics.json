@@ -1,0 +1,77 @@
+{
+  "accuracy": 0.5225694444444444,
+  "correct_pairs": 301,
+  "total_pairs": 576,
+  "num_samples": 576,
+  "subset_accuracy": {
+    "accessibility": 0.525,
+    "account_behavior": 1.0,
+    "account_verification": 0.3333333333333333,
+    "adult_creator_discovery": 0.6,
+    "adult_filtering": 0.5,
+    "ai_content": 0.6,
+    "art_safety": 0.45,
+    "community_identity": 0.5,
+    "creator_discovery": 0.6666666666666666,
+    "crypto_safety": 0.35,
+    "crypto_spam": 0.0,
+    "developer_identity": 0.0,
+    "employment": 0.5,
+    "fact_checking": 0.4,
+    "fandom_content_warnings": 0.4,
+    "fandom_identity": 0.65,
+    "fandom_spoiler": 0.75,
+    "gaming_industry": 0.5,
+    "medical_community": 1.0,
+    "music_creator": 0.5,
+    "news_source_context": 0.5,
+    "politics_filtering": 0.45454545454545453,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.4,
+    "science_misinformation": 0.65,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.6,
+    "substack_filtering": 0.0,
+    "urbanism_community": 1.0,
+    "verification": 0.59375
+  },
+  "category_accuracy": {
+    "identity_trust": 0.49137931034482757,
+    "interest_community": 0.5758928571428571,
+    "platform_information_ecology": 0.48148148148148145,
+    "safety_moderation": 0.4921875
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 57,
+      "total_pairs": 116,
+      "accuracy": 0.49137931034482757
+    },
+    "interest_community": {
+      "correct_pairs": 129,
+      "total_pairs": 224,
+      "accuracy": 0.5758928571428571
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 52,
+      "total_pairs": 108,
+      "accuracy": 0.48148148148148145
+    },
+    "safety_moderation": {
+      "correct_pairs": 63,
+      "total_pairs": 128,
+      "accuracy": 0.4921875
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/upstage_SOLAR-10.7B-Instruct-v1.0",
+  "official_model_name": "upstage/SOLAR-10.7B-Instruct-v1.0",
+  "ref_model": "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b",
+  "method": "rewardbench_compatible_dpo_logratio",
+  "device": "cuda",
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "ref_free_type": "avg",
+  "max_length": 2048,
+  "max_prompt_length": 1024
+}

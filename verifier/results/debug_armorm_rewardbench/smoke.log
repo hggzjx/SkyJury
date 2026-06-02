@@ -1,0 +1,7 @@
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.15it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.66it/s]
+RewardBench RM scoring:   0%|          | 0/4 [00:00<?, ?it/s]RewardBench RM scoring:  25%|██▌       | 1/4 [00:01<00:04,  1.43s/it]RewardBench RM scoring:  75%|███████▌  | 3/4 [00:01<00:00,  2.33it/s]RewardBench RM scoring: 100%|██████████| 4/4 [00:01<00:00,  2.42it/s]
+accuracy=1.0000 (2/2)
+predictions=/ssd1/lbh/zjx/skyjury/verifier/results/debug_armorm_rewardbench/verifier_pilot_rmbench_rm_ssd1_lbh_zjx_models_skyjury_verifier_RLHFlow_ArmoRM-Llama3-8B-v0.1_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/verifier/results/debug_armorm_rewardbench/verifier_pilot_rmbench_rm_ssd1_lbh_zjx_models_skyjury_verifier_RLHFlow_ArmoRM-Llama3-8B-v0.1_metrics.json

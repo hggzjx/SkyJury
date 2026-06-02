@@ -1,0 +1,36 @@
+{
+  "accuracy": 0.0,
+  "correct_pairs": 0,
+  "total_pairs": 3,
+  "num_samples": 3,
+  "subset_accuracy": {
+    "account_behavior": 0.0,
+    "crypto_safety": 0.0,
+    "news_source_context": 0.0
+  },
+  "category_accuracy": {
+    "identity_trust": 0.0,
+    "safety_moderation": 0.0
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 0,
+      "total_pairs": 1,
+      "accuracy": 0.0
+    },
+    "safety_moderation": {
+      "correct_pairs": 0,
+      "total_pairs": 2,
+      "accuracy": 0.0
+    }
+  },
+  "model": "gpt-4o-ca",
+  "method": "llm_as_judge",
+  "base_url": "https://api.chatanywhere.tech/v1",
+  "order": "bidirectional",
+  "temperature": 0.0,
+  "concurrency": 3,
+  "max_tokens": 1024,
+  "reasoning_effort": "minimal",
+  "skipped_pairs": 0
+}

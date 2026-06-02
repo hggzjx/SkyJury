@@ -1,0 +1,26 @@
+{
+  "accuracy": 1.0,
+  "correct_pairs": 4,
+  "total_pairs": 4,
+  "num_samples": 4,
+  "subset_accuracy": {
+    "crypto_safety": 1.0
+  },
+  "category_accuracy": {
+    "safety_moderation": 1.0
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 4,
+      "total_pairs": 4,
+      "accuracy": 1.0
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/Skywork_Skywork-Reward-Gemma-2-27B-v0.2",
+  "official_model_name": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+  "method": "rewardbench_compatible_reward_model",
+  "device": "cuda",
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "model_builder": "sequence_classification"
+}

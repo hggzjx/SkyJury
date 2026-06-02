@@ -1,0 +1,26 @@
+{
+  "accuracy": 0.0,
+  "correct_pairs": 0,
+  "total_pairs": 2,
+  "num_samples": 2,
+  "subset_accuracy": {
+    "crypto_safety": 0.0
+  },
+  "category_accuracy": {
+    "safety_moderation": 0.0
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 0,
+      "total_pairs": 2,
+      "accuracy": 0.0
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/OpenAssistant_reward-model-deberta-v3-large-v2",
+  "official_model_name": "OpenAssistant/reward-model-deberta-v3-large-v2",
+  "method": "rewardbench_compatible_reward_model",
+  "device": "cpu",
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "model_builder": "sequence_classification"
+}

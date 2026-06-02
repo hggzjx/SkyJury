@@ -1,0 +1,23 @@
+{
+  "source_data": "/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json",
+  "source_verifier_predictions": null,
+  "num_rows": 576,
+  "total_prediction_rows": null,
+  "success_only": false,
+  "perturbation_scope": "rubrics_only",
+  "semantic_constraint": "Perturbations preserve the original rubric meaning.",
+  "variants": {
+    "length": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_pilot_rmbench_rubric_length.json",
+      "changed_candidates": 1152
+    },
+    "language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_pilot_rmbench_rubric_language.json",
+      "changed_candidates": 1152
+    },
+    "length_language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_pilot_rmbench_rubric_length_language.json",
+      "changed_candidates": 1152
+    }
+  }
+}

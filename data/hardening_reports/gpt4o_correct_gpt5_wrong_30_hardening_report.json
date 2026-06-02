@@ -1,0 +1,264 @@
+{
+  "backup": "/ssd1/lbh/zjx/skyjury/data/backups/verifier_pilot_rmbench_before_gpt4o_30_harden_20260602103004.json",
+  "source_gpt4o_correct_gpt5_wrong_count": 32,
+  "edited_count": 30,
+  "edited_ids": [
+    "pref_0033",
+    "pref_0049",
+    "pref_0050",
+    "pref_0052",
+    "pref_0087",
+    "pref_0093",
+    "pref_0127",
+    "pref_0140",
+    "pref_0143",
+    "pref_0154",
+    "pref_0158",
+    "pref_0212",
+    "pref_0248",
+    "pref_0249",
+    "pref_0294",
+    "pref_0328",
+    "pref_0331",
+    "pref_0340",
+    "pref_0344",
+    "pref_0353",
+    "pref_0360",
+    "pref_0386",
+    "pref_0388",
+    "pref_0394",
+    "pref_0411",
+    "pref_0415",
+    "pref_0419",
+    "pref_0530",
+    "pref_0531",
+    "pref_0534"
+  ],
+  "held_out_ids": [
+    "pref_0564",
+    "pref_0574"
+  ],
+  "principle": "Rejected-side rubric evidence is more visible and frequent; chosen-side evidence is lower-salience but behaviorally defensible. No benchmark-design trace is inserted into model-visible prompts.",
+  "changed": [
+    {
+      "id": "pref_0033",
+      "subset": "science_misinformation",
+      "category": "safety_moderation",
+      "old_len": 1233,
+      "new_len": 1573
+    },
+    {
+      "id": "pref_0049",
+      "subset": "politics_filtering",
+      "category": "platform_information_ecology",
+      "old_len": 905,
+      "new_len": 1528
+    },
+    {
+      "id": "pref_0050",
+      "subset": "politics_filtering",
+      "category": "platform_information_ecology",
+      "old_len": 905,
+      "new_len": 1527
+    },
+    {
+      "id": "pref_0052",
+      "subset": "politics_filtering",
+      "category": "platform_information_ecology",
+      "old_len": 905,
+      "new_len": 1528
+    },
+    {
+      "id": "pref_0087",
+      "subset": "sports_fandom",
+      "category": "interest_community",
+      "old_len": 849,
+      "new_len": 923
+    },
+    {
+      "id": "pref_0093",
+      "subset": "fandom_content_warnings",
+      "category": "interest_community",
+      "old_len": 778,
+      "new_len": 985
+    },
+    {
+      "id": "pref_0127",
+      "subset": "news_source_context",
+      "category": "identity_trust",
+      "old_len": 1136,
+      "new_len": 1524
+    },
+    {
+      "id": "pref_0140",
+      "subset": "account_behavior",
+      "category": "safety_moderation",
+      "old_len": 958,
+      "new_len": 1123
+    },
+    {
+      "id": "pref_0143",
+      "subset": "urbanism_community",
+      "category": "interest_community",
+      "old_len": 676,
+      "new_len": 982
+    },
+    {
+      "id": "pref_0154",
+      "subset": "accessibility",
+      "category": "interest_community",
+      "old_len": 1168,
+      "new_len": 1279
+    },
+    {
+      "id": "pref_0158",
+      "subset": "accessibility",
+      "category": "interest_community",
+      "old_len": 1168,
+      "new_len": 1185
+    },
+    {
+      "id": "pref_0212",
+      "subset": "ai_content",
+      "category": "platform_information_ecology",
+      "old_len": 912,
+      "new_len": 1094
+    },
+    {
+      "id": "pref_0248",
+      "subset": "creator_discovery",
+      "category": "interest_community",
+      "old_len": 1219,
+      "new_len": 1082
+    },
+    {
+      "id": "pref_0249",
+      "subset": "creator_discovery",
+      "category": "interest_community",
+      "old_len": 809,
+      "new_len": 1202
+    },
+    {
+      "id": "pref_0294",
+      "subset": "crypto_safety",
+      "category": "safety_moderation",
+      "old_len": 1542,
+      "new_len": 1351
+    },
+    {
+      "id": "pref_0328",
+      "subset": "news_source_context",
+      "category": "identity_trust",
+      "old_len": 1186,
+      "new_len": 893
+    },
+    {
+      "id": "pref_0331",
+      "subset": "news_source_context",
+      "category": "identity_trust",
+      "old_len": 1165,
+      "new_len": 1603
+    },
+    {
+      "id": "pref_0340",
+      "subset": "fact_checking",
+      "category": "safety_moderation",
+      "old_len": 1436,
+      "new_len": 1516
+    },
+    {
+      "id": "pref_0344",
+      "subset": "fact_checking",
+      "category": "safety_moderation",
+      "old_len": 1436,
+      "new_len": 1538
+    },
+    {
+      "id": "pref_0353",
+      "subset": "politics_filtering",
+      "category": "platform_information_ecology",
+      "old_len": 930,
+      "new_len": 1167
+    },
+    {
+      "id": "pref_0360",
+      "subset": "politics_filtering",
+      "category": "platform_information_ecology",
+      "old_len": 840,
+      "new_len": 1160
+    },
+    {
+      "id": "pref_0386",
+      "subset": "protocol_infrastructure",
+      "category": "platform_information_ecology",
+      "old_len": 1015,
+      "new_len": 1039
+    },
+    {
+      "id": "pref_0388",
+      "subset": "protocol_infrastructure",
+      "category": "platform_information_ecology",
+      "old_len": 1015,
+      "new_len": 1024
+    },
+    {
+      "id": "pref_0394",
+      "subset": "protocol_infrastructure",
+      "category": "platform_information_ecology",
+      "old_len": 832,
+      "new_len": 1048
+    },
+    {
+      "id": "pref_0411",
+      "subset": "sports_fandom",
+      "category": "interest_community",
+      "old_len": 775,
+      "new_len": 917
+    },
+    {
+      "id": "pref_0415",
+      "subset": "sports_fandom",
+      "category": "interest_community",
+      "old_len": 775,
+      "new_len": 901
+    },
+    {
+      "id": "pref_0419",
+      "subset": "sports_fandom",
+      "category": "interest_community",
+      "old_len": 864,
+      "new_len": 1031
+    },
+    {
+      "id": "pref_0530",
+      "subset": "verification",
+      "category": "identity_trust",
+      "old_len": 661,
+      "new_len": 944
+    },
+    {
+      "id": "pref_0531",
+      "subset": "verification",
+      "category": "identity_trust",
+      "old_len": 658,
+      "new_len": 927
+    },
+    {
+      "id": "pref_0534",
+      "subset": "verification",
+      "category": "identity_trust",
+      "old_len": 661,
+      "new_len": 927
+    }
+  ],
+  "final_gpt4o_check": {
+    "metrics": "/ssd1/lbh/zjx/skyjury/verifier/results/gpt4o_hardening_loop/gpt4o_correct_gpt5_wrong_30_final_check/gpt4o_30_harden_eval_dataset_after_remaining_fix_llm_judge_gpt-4o-ca_metrics.json",
+    "predictions": "/ssd1/lbh/zjx/skyjury/verifier/results/gpt4o_hardening_loop/gpt4o_correct_gpt5_wrong_30_final_check/gpt4o_30_harden_eval_dataset_after_remaining_fix_llm_judge_gpt-4o-ca_predictions.json",
+    "accuracy": 0.0,
+    "correct_pairs": 0,
+    "total_pairs": 30,
+    "order": "bidirectional",
+    "model": "gpt-4o-ca",
+    "skipped_pairs": 0
+  }
+}
