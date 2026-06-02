@@ -89,9 +89,9 @@ def render_pdf_first_page(pdf_path, output_png, dpi=180):
 
 
 if __name__ == "__main__":
-    input_pdf = "/mnt/data/skyjury_circle_bar_no_whitespace.pdf"
-    output_pdf = "/mnt/data/skyjury_circle_bar_no_whitespace_cropped.pdf"
-    preview_png = "/mnt/data/skyjury_circle_bar_no_whitespace_cropped_preview.png"
+    input_pdf = "/ssd1/lbh/zjx/skyjury/analysis/figures/skyjury_circle_bar_no_whitespace.pdf"
+    output_pdf = "/ssd1/lbh/zjx/skyjury/analysis/figures/skyjury_circle_bar_no_whitespace_cropped.pdf"
+    preview_png = "/ssd1/lbh/zjx/skyjury/analysis/figures/skyjury_circle_bar_no_whitespace_cropped_preview.png"
 
     crop_pdf_to_visible_content(
         input_pdf=input_pdf,

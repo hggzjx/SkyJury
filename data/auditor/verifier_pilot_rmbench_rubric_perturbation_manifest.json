@@ -1,5 +1,7 @@
 {
   "source_data": "/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json",
+  "source_data_sha256": "b540a30a6aded1bab254944165d2fb951ee6fa84b76f1c30884eb27511bd4bae",
+  "base_path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_pilot_rmbench_base.json",
   "source_verifier_predictions": null,
   "num_rows": 576,
   "total_prediction_rows": null,

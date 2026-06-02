@@ -8,7 +8,7 @@ from typing import Any
 import numpy as np
 
 
-OUTCOMES = ("chosen", "rejected", "tie")
+OUTCOMES = ("chosen", "rejected")
 
 
 def sigmoid(value: float) -> float:
@@ -141,15 +141,13 @@ def format_effect_marker(effect: float, marker: str) -> str:
 
 
 def outcome_from_call(call: dict[str, Any]) -> str:
-    winner = str(call.get("winner", "tie")).lower()
+    winner = str(call.get("winner", "")).lower()
     swapped = bool(call.get("swapped", False))
-    if winner == "tie":
-        return "tie"
     if winner == "a":
         return "rejected" if swapped else "chosen"
     if winner == "b":
         return "chosen" if swapped else "rejected"
-    return "tie"
+    raise ValueError(f"Invalid or skipped LLM judge winner: {winner!r}")
 
 
 def outcomes_from_row(row: dict[str, Any]) -> list[str]:
@@ -170,8 +168,12 @@ def outcomes_from_row(row: dict[str, Any]) -> list[str]:
             elif float(chosen_score) < float(rejected_score):
                 outcomes.append("rejected")
             else:
-                outcomes.append("tie")
-    return outcomes or ["tie"]
+                raise ValueError(
+                    f"Row {row.get('id')} has tied LLM judge scores, but current LLM-as-judge audit is binary."
+                )
+    if not outcomes:
+        raise ValueError(f"Row {row.get('id')} has no valid binary LLM judge outcomes.")
+    return outcomes
 
 
 def distribution(outcomes: list[str]) -> np.ndarray:

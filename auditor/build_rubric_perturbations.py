@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -46,6 +47,11 @@ def load_rows(path: str | Path) -> list[dict[str, Any]]:
     if not isinstance(rows, list):
         raise ValueError("Input dataset must be a JSON list.")
     return rows
+
+
+def canonical_sha256(rows: list[dict[str, Any]]) -> str:
+    payload = json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 def is_successful_verifier_row(row: dict[str, Any]) -> bool:
@@ -164,9 +170,13 @@ def main() -> None:
         total_prediction_rows = len(prediction_rows)
         rows = filter_to_successful_cases(rows, prediction_rows)
     prefix = args.prefix or data_path.stem
+    base_path = output_dir / f"{prefix}_base.json"
+    base_path.write_text(json.dumps(rows, indent=2, ensure_ascii=False), encoding="utf-8")
 
     manifest: dict[str, Any] = {
         "source_data": str(data_path),
+        "source_data_sha256": canonical_sha256(rows),
+        "base_path": str(base_path),
         "source_verifier_predictions": str(source_prediction_path) if source_prediction_path else None,
         "num_rows": len(rows),
         "total_prediction_rows": total_prediction_rows,
@@ -188,6 +198,7 @@ def main() -> None:
     manifest_path = output_dir / f"{prefix}_rubric_perturbation_manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"wrote manifest: {manifest_path}")
+    print(f"base: {base_path}")
     for name, meta in manifest["variants"].items():
         print(f"{name}: {meta['path']} changed_candidates={meta['changed_candidates']}")
 

@@ -10,7 +10,6 @@ import numpy as np
 from audit_stats import (
     bh_correction,
     format_effect_marker,
-    llm_jsd_permutation_test,
     paired_permutation_t_test,
     row_preference_confidence,
 )
@@ -24,7 +23,7 @@ def parse_args() -> argparse.Namespace:
         "--method",
         choices=["rm", "dpo", "llm_judge"],
         required=True,
-        help="Verifier family. rm and dpo use paired t-statistics over preference confidence; llm_judge uses repeated-sampling JSD.",
+        help="Verifier family. rm, dpo, and llm_judge use paired t-statistics over preference confidence.",
     )
     parser.add_argument("--original", required=True, help="Prediction JSON on the original dataset.")
     parser.add_argument(
@@ -138,15 +137,7 @@ def audit_one(
     allow_subset: bool,
 ) -> dict[str, Any]:
     aligned_original, aligned_perturbed = align_rows(original_rows, perturbed_rows, allow_subset=allow_subset)
-    if method in {"rm", "dpo"}:
-        result = audit_scalar_scores(aligned_original, aligned_perturbed, permutations, seed)
-    else:
-        result = llm_jsd_permutation_test(
-            aligned_original,
-            aligned_perturbed,
-            permutations=permutations,
-            seed=seed,
-        )
+    result = audit_scalar_scores(aligned_original, aligned_perturbed, permutations, seed)
     result["audited_num_samples"] = len(aligned_original)
     result["audited_row_ids"] = [row.get("id") for row in aligned_original]
     return result

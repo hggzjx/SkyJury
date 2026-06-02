@@ -70,6 +70,12 @@ def parse_args() -> argparse.Namespace:
         default="bidirectional",
         help="Candidate order strategy. bidirectional evaluates both candidate orders to reduce position bias.",
     )
+    parser.add_argument(
+        "--samples",
+        type=int,
+        default=1,
+        help="Number of repeated response samples per candidate pair. With --order bidirectional, each sample runs both orders.",
+    )
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument(
         "--reasoning-effort",
@@ -255,48 +261,53 @@ def evaluate_row(
     for chosen_text, rejected_text in zip(row["chosen"], row["rejected"]):
         chosen_votes = 0.0
         rejected_votes = 0.0
+        total_votes = 0.0
         calls = []
-        for swapped in order_plan(args.order, rng):
-            candidate_a = rejected_text if swapped else chosen_text
-            candidate_b = chosen_text if swapped else rejected_text
-            user_prompt = build_user_prompt(row["prompt"], candidate_a, candidate_b)
-            messages = [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": user_prompt},
-            ]
-            try:
-                parsed = call_with_retries(args, base_url, api_key, messages)
-            except EmptyJudgeResponseError as exc:
-                row["skipped"] = True
-                row["skip_reason"] = str(exc)
-                row["score_chosen"] = []
-                row["score_rejected"] = []
-                row["judge_calls"] = [
-                    {
-                        "swapped": swapped,
-                        "winner": None,
-                        "raw": "",
-                        "skipped": True,
-                        "error": str(exc),
-                    }
+        for sample_index in range(args.samples):
+            for swapped in order_plan(args.order, rng):
+                candidate_a = rejected_text if swapped else chosen_text
+                candidate_b = chosen_text if swapped else rejected_text
+                user_prompt = build_user_prompt(row["prompt"], candidate_a, candidate_b)
+                messages = [
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt},
                 ]
-                return row
+                try:
+                    parsed = call_with_retries(args, base_url, api_key, messages)
+                except EmptyJudgeResponseError as exc:
+                    row["skipped"] = True
+                    row["skip_reason"] = str(exc)
+                    row["score_chosen"] = []
+                    row["score_rejected"] = []
+                    row["judge_calls"] = [
+                        {
+                            "sample_index": sample_index,
+                            "swapped": swapped,
+                            "winner": None,
+                            "raw": "",
+                            "skipped": True,
+                            "error": str(exc),
+                        }
+                    ]
+                    return row
 
-            if (parsed["winner"] == "A" and not swapped) or (parsed["winner"] == "B" and swapped):
-                chosen_votes += 1.0
-            else:
-                rejected_votes += 1.0
+                if (parsed["winner"] == "A" and not swapped) or (parsed["winner"] == "B" and swapped):
+                    chosen_votes += 1.0
+                else:
+                    rejected_votes += 1.0
+                total_votes += 1.0
 
-            calls.append(
-                {
-                    "swapped": swapped,
-                    "winner": parsed["winner"],
-                    "raw": parsed["raw"],
-                }
-            )
+                calls.append(
+                    {
+                        "sample_index": sample_index,
+                        "swapped": swapped,
+                        "winner": parsed["winner"],
+                        "raw": parsed["raw"],
+                    }
+                )
 
-        row["score_chosen"].append(chosen_votes)
-        row["score_rejected"].append(rejected_votes)
+        row["score_chosen"].append(chosen_votes / total_votes)
+        row["score_rejected"].append(rejected_votes / total_votes)
         row["judge_calls"].append(calls)
 
     return row
@@ -321,6 +332,8 @@ def main() -> None:
 
     if args.concurrency < 1:
         raise ValueError("--concurrency must be >= 1")
+    if args.samples < 1:
+        raise ValueError("--samples must be >= 1")
 
     if args.concurrency == 1:
         for index, row in enumerate(tqdm(rows, desc="LLM-as-judge")):

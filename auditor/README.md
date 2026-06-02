@@ -62,10 +62,24 @@ bash /ssd1/lbh/zjx/skyjury/auditor/run_llm_judge_perturbations.sh \
   verifier_success_cases
 ```
 
+By default this runs 10 repeated bidirectional verifications per pair
+(`SAMPLES=10`, `--order bidirectional`). The LLM chosen score is the fraction
+of calls selecting the chosen Labeler; the rejected score is the fraction of
+calls selecting the rejected Labeler.
+
 For sequence-classification reward models:
 
 ```bash
 bash /ssd1/lbh/zjx/skyjury/auditor/run_rm_perturbations.sh /path/to/rm
+```
+
+This calls the verifier-side RewardBench-compatible runner `verifier/run_reward_model.py`.
+Useful runtime knobs are inherited from the verifier scripts:
+
+```bash
+DEVICE=cuda DEVICE_MAP=auto BATCH_SIZE=1 TORCH_DTYPE=auto \
+bash /ssd1/lbh/zjx/skyjury/auditor/run_rm_perturbations.sh \
+  /ssd1/lbh/zjx/models/skyjury_verifier/RLHFlow_ArmoRM-Llama3-8B-v0.1
 ```
 
 For DPO/instruction models:
@@ -74,27 +88,27 @@ For DPO/instruction models:
 bash /ssd1/lbh/zjx/skyjury/auditor/run_dpo_perturbations.sh /path/to/dpo
 ```
 
+This calls the verifier-side RewardBench-compatible runner `verifier/run_dpo_lm.py`.
+By default it uses `/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b`
+as the reference model. Runtime knobs include `DEVICE`, `DEVICE_MAP`,
+`BATCH_SIZE`, `MAX_LENGTH`, `MAX_PROMPT_LENGTH`, `TORCH_DTYPE`, and
+`REF_FREE_TYPE`.
+
 ## Statistics
 
-For RM and DPO outputs, the auditor follows the RewardAuditor paired-test style, but uses SkyJury preference confidence rather than loss:
+For RM, DPO, and LLM-as-judge outputs, the auditor follows the RewardAuditor paired-test style, but uses SkyJury preference confidence rather than loss:
 
 1. Compute margin: `chosen_score - rejected_score`.
 2. Transform margin to preference confidence: `sigmoid(chosen_score - rejected_score)`.
 3. Compare original vs perturbed confidence with a paired permutation test over the paired t-statistic.
 4. Use Cohen's d as the effect size.
 
-The RM/DPO test is one-sided in the degradation direction:
+For LLM-as-judge, `chosen_score` and `rejected_score` are selection rates from repeated bidirectional verification rather than neural reward scores.
+
+The test is one-sided in the degradation direction:
 
 - `delta = original_confidence - perturbed_confidence`
 - small p-values indicate perturbed rubrics significantly decrease preference confidence for the verified chosen labeler.
-
-For LLM-as-judge outputs, each repeated judge call is converted to one of:
-
-- `chosen`
-- `rejected`
-- `tie`
-
-The statistic is mean per-sample Jensen-Shannon Distance between original and perturbed outcome distributions. The permutation test shuffles repeated outcomes between the original and perturbed conditions within each sample.
 
 All perturbation tests are then corrected with Benjamini-Hochberg control. The report uses the compact format:
 
