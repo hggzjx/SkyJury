@@ -38,7 +38,7 @@ else
 fi
 
 for model in "${MODELS[@]}"; do
-  for perturbation in length language length_language; do
+  for perturbation in length language; do
     DATA_PATH="${DATA_DIR}/${DATA_PREFIX}_rubric_${perturbation}.json"
     PERTURBATION_OUTPUT_DIR="${OUTPUT_DIR}/$(basename "$model")/${perturbation}"
     echo "Running RM perturbation: model=$(basename "$model") perturbation=${perturbation} batch_size=${BATCH_SIZE}"

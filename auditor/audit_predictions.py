@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
         action="append",
         required=True,
         metavar="TYPE=PATH",
-        help="Perturbed prediction JSON. Repeat for length/language/length_language.",
+        help="Perturbed prediction JSON. Repeat for length/language.",
     )
     parser.add_argument("--output-dir", default="/ssd1/lbh/zjx/skyjury/auditor/results")
     parser.add_argument("--alpha", type=float, default=0.05)
@@ -128,6 +128,12 @@ def audit_scalar_scores(
     return result
 
 
+def has_valid_scalar_scores(row: dict[str, Any]) -> bool:
+    chosen_scores = row.get("score_chosen", [])
+    rejected_scores = row.get("score_rejected", [])
+    return bool(chosen_scores) and bool(rejected_scores)
+
+
 def audit_one(
     method: str,
     original_rows: list[dict[str, Any]],
@@ -137,9 +143,28 @@ def audit_one(
     allow_subset: bool,
 ) -> dict[str, Any]:
     aligned_original, aligned_perturbed = align_rows(original_rows, perturbed_rows, allow_subset=allow_subset)
-    result = audit_scalar_scores(aligned_original, aligned_perturbed, permutations, seed)
+    valid_pairs = [
+        (original_row, perturbed_row)
+        for original_row, perturbed_row in zip(aligned_original, aligned_perturbed)
+        if has_valid_scalar_scores(original_row) and has_valid_scalar_scores(perturbed_row)
+    ]
+    dropped_row_ids = [
+        original_row.get("id")
+        for original_row, perturbed_row in zip(aligned_original, aligned_perturbed)
+        if not (has_valid_scalar_scores(original_row) and has_valid_scalar_scores(perturbed_row))
+    ]
+    if not valid_pairs:
+        raise ValueError("No valid aligned rows remain after filtering empty score pairs.")
+
+    filtered_original = [original_row for original_row, _ in valid_pairs]
+    filtered_perturbed = [perturbed_row for _, perturbed_row in valid_pairs]
+    result = audit_scalar_scores(filtered_original, filtered_perturbed, permutations, seed)
     result["audited_num_samples"] = len(aligned_original)
-    result["audited_row_ids"] = [row.get("id") for row in aligned_original]
+    result["audited_row_ids"] = [row.get("id") for row in filtered_original]
+    result["audited_num_samples_raw"] = len(aligned_original)
+    result["audited_num_samples"] = len(filtered_original)
+    result["dropped_invalid_score_rows"] = len(dropped_row_ids)
+    result["dropped_invalid_score_row_ids"] = dropped_row_ids
     return result
 
 

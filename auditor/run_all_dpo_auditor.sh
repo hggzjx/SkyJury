@@ -18,15 +18,32 @@ latest_prediction() {
   find "$dir" -name '*_predictions.json' -type f | sort | tail -n 1
 }
 
+materialize_base_subset() {
+  local full_predictions="$1"
+  local model_name="$2"
+  local output_path="$RESULT_ROOT/dpo_predictions/${model_name}/base/${DATA_PREFIX}_base_dpo_${model_name}_predictions.json"
+  python /ssd1/lbh/zjx/skyjury/auditor/materialize_base_subset.py \
+    --base-data "$DATA_DIR/${DATA_PREFIX}_base.json" \
+    --full-predictions "$full_predictions" \
+    --output "$output_path" >/dev/null
+  printf '%s\n' "$output_path"
+}
+
 run_one() {
   local model="$1"
-  local original_predictions="$2"
+  local full_predictions="$2"
   local cuda_devices="$3"
   local device_map="$4"
   local batch_size="$5"
 
   local model_name
   model_name="$(safe_name "$model")"
+  if [[ ! -f "$full_predictions" ]]; then
+    echo "Skipping DPO auditor for ${model_name}: missing full verifier predictions: ${full_predictions}" >&2
+    return 0
+  fi
+  local original_predictions
+  original_predictions="$(materialize_base_subset "$full_predictions" "$model_name")"
   local model_report_dir="$RESULT_ROOT/reports/dpo/${model_name}"
   local log_path="$RESULT_ROOT/logs/dpo_${model_name}.log"
   mkdir -p "$model_report_dir"
@@ -59,18 +76,18 @@ run_one() {
       "$DATA_PREFIX"
 
     local pred_root="$RESULT_ROOT/dpo_predictions/${model_name}"
-    local length_pred language_pred length_language_pred
+    local length_pred language_pred
     length_pred="$(latest_prediction "$pred_root/length")"
     language_pred="$(latest_prediction "$pred_root/language")"
-    length_language_pred="$(latest_prediction "$pred_root/length_language")"
 
-    ALLOW_SUBSET=1 bash /ssd1/lbh/zjx/skyjury/auditor/run_audit_report.sh \
-      dpo \
-      "$original_predictions" \
-      "$length_pred" \
-      "$language_pred" \
-      "$length_language_pred" \
-      "$model_report_dir"
+    python /ssd1/lbh/zjx/skyjury/auditor/audit_cross_candidate_perturbations.py \
+      --method dpo \
+      --original "$original_predictions" \
+      --perturbed "length=${length_pred}" \
+      --perturbed "language=${language_pred}" \
+      --output-dir "$model_report_dir" \
+      --report-name "dpo_cross_candidate_rubric_robustness" \
+      --allow-subset
   } 2>&1 | tee "$log_path"
 }
 

@@ -5,7 +5,7 @@ DATA_DIR="${DATA_DIR:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
 RESULT_ROOT="${RESULT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_category50_audit}"
 VERIFIER_RESULTS="${VERIFIER_RESULTS:-/ssd1/lbh/zjx/skyjury/verifier/results}"
 DATA_PREFIX="${DATA_PREFIX:-skyjury_bench}"
-CONCURRENCY="${CONCURRENCY:-48}"
+CONCURRENCY="${CONCURRENCY:-24}"
 
 mkdir -p "$RESULT_ROOT"/{logs,llm_judge_predictions,reports/llm_judge}
 
@@ -14,14 +14,28 @@ latest_prediction() {
   find "$dir" -name '*_predictions.json' -type f | sort | tail -n 1
 }
 
+materialize_base_subset() {
+  local full_predictions="$1"
+  local model="$2"
+  local output_path="$RESULT_ROOT/llm_judge_predictions/${model}/base/${DATA_PREFIX}_base_llm_judge_${model}_predictions.json"
+  python /ssd1/lbh/zjx/skyjury/auditor/materialize_base_subset.py \
+    --base-data "$DATA_DIR/${DATA_PREFIX}_base.json" \
+    --full-predictions "$full_predictions" \
+    --output "$output_path" >/dev/null
+  printf '%s\n' "$output_path"
+}
+
 run_one() {
   local model="$1"
-  local original_predictions="$2"
+  local full_predictions="$2"
 
-  if [[ ! -f "$original_predictions" ]]; then
-    echo "Skipping LLM-as-judge auditor for ${model}: missing original predictions: ${original_predictions}" >&2
+  if [[ ! -f "$full_predictions" ]]; then
+    echo "Skipping LLM-as-judge auditor for ${model}: missing full verifier predictions: ${full_predictions}" >&2
     return 0
   fi
+
+  local original_predictions
+  original_predictions="$(materialize_base_subset "$full_predictions" "$model")"
 
   local model_report_dir="$RESULT_ROOT/reports/llm_judge/${model}"
   local log_path="$RESULT_ROOT/logs/llm_judge_${model}.log"
@@ -44,18 +58,18 @@ run_one() {
       "$DATA_PREFIX"
 
     local pred_root="$RESULT_ROOT/llm_judge_predictions/${model}"
-    local length_pred language_pred length_language_pred
+    local length_pred language_pred
     length_pred="$(latest_prediction "$pred_root/length")"
     language_pred="$(latest_prediction "$pred_root/language")"
-    length_language_pred="$(latest_prediction "$pred_root/length_language")"
 
-    ALLOW_SUBSET=1 bash /ssd1/lbh/zjx/skyjury/auditor/run_audit_report.sh \
-      llm_judge \
-      "$original_predictions" \
-      "$length_pred" \
-      "$language_pred" \
-      "$length_language_pred" \
-      "$model_report_dir"
+    python /ssd1/lbh/zjx/skyjury/auditor/audit_cross_candidate_perturbations.py \
+      --method llm_judge \
+      --original "$original_predictions" \
+      --perturbed "length=${length_pred}" \
+      --perturbed "language=${language_pred}" \
+      --output-dir "$model_report_dir" \
+      --report-name "llm_judge_cross_candidate_rubric_robustness" \
+      --allow-subset
   } 2>&1 | tee "$log_path"
 }
 
@@ -71,17 +85,17 @@ run_one() {
 #   "deepseek-v4-flash" \
 #   "$VERIFIER_RESULTS/generative_rm/deepseek-v4-flash/skyjury_bench_llm_judge_deepseek-v4-flash_predictions.json"
 
-# run_one \
-#   "qwen3.5-plus" \
-#   "$VERIFIER_RESULTS/generative_rm/qwen3.5-plus/skyjury_bench_llm_judge_qwen3.5-plus_predictions.json"
+run_one \
+  "qwen3.5-plus" \
+  "$VERIFIER_RESULTS/generative_rm/qwen3.5-plus/skyjury_bench_llm_judge_qwen3.5-plus_predictions.json"
 
 # run_one \
 #   "glm-5" \
 #   "$VERIFIER_RESULTS/generative_rm/glm-5/skyjury_bench_llm_judge_glm-5_predictions.json"
 
-run_one \
-  "deepseek-v4-pro" \
-  "$VERIFIER_RESULTS/generative_rm/deepseek-v4-pro/skyjury_bench_llm_judge_deepseek-v4-pro_predictions.json"
+# run_one \
+#   "deepseek-v4-pro" \
+#   "$VERIFIER_RESULTS/generative_rm/deepseek-v4-pro/skyjury_bench_llm_judge_deepseek-v4-pro_predictions.json"
 
 # run_one \
 #   "minimax-m2.7" \

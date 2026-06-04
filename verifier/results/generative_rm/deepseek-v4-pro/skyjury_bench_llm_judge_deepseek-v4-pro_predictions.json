@@ -337,10 +337,10 @@
     "error_key": "goal_direction",
     "error": "The rejected Labeler is about anti-AI user behavior, while the chosen Labeler labels AI imagery, text, audio, and promotional content.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -353,8 +353,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -1345,10 +1345,10 @@
     "error_key": "near_miss_information_quality",
     "error": "Both candidates relate to information quality, but the chosen Labeler is designed for fact-check labels, while the rejected Labeler is science-community and science-misinformation focused.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -1361,8 +1361,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -1777,18 +1777,18 @@
     "error_key": "goal_direction",
     "error": "The chosen Labeler targets US politics filtering, while the rejected candidate focuses on fact-checking claim truthfulness.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -1849,18 +1849,18 @@
     "error_key": "goal_direction",
     "error": "The chosen Labeler targets US politics filtering, while the rejected candidate focuses on fact-checking claim truthfulness.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -3145,10 +3145,10 @@
     "error_key": "same_domain_sport_mismatch",
     "error": "Both candidates are team-fandom Labelers, but the chosen one is for NFL teams while the rejected one is for MLB teams.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -3161,8 +3161,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -3325,18 +3325,18 @@
     "error_key": "fandom_warning_vs_identity",
     "error": "Both candidates are fandom-adjacent, but the chosen Labeler provides AO3-style content warnings while the rejected one is One Direction fandom identity.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -3397,10 +3397,10 @@
     "error_key": "fandom_warning_vs_identity",
     "error": "Both candidates are fandom-adjacent, but the chosen Labeler provides AO3-style content warnings while the rejected one is One Direction fandom identity.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -3413,8 +3413,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -4081,18 +4081,18 @@
     "error_key": "broad_verification_goal",
     "error": "The chosen Labeler has institutional and profession trust categories, while the rejected candidate only proves human status.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -4199,14 +4199,14 @@
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -4225,18 +4225,18 @@
     "error_key": "post_link_vs_account",
     "error": "Both candidates concern politics, but the chosen Labeler targets political news links in posts and replies while the rejected one primarily labels political accounts.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -4261,10 +4261,10 @@
     "error_key": "post_link_vs_account",
     "error": "Both candidates concern politics, but the chosen Labeler targets political news links in posts and replies while the rejected one primarily labels political accounts.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -4277,8 +4277,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -4297,18 +4297,18 @@
     "error_key": "post_link_vs_account",
     "error": "Both candidates concern politics, but the chosen Labeler targets political news links in posts and replies while the rejected one primarily labels political accounts.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -4333,10 +4333,10 @@
     "error_key": "account_vs_post_link",
     "error": "The chosen Labeler maps political account categories, while the rejected Labeler only flags political news links and replies.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -4349,8 +4349,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -4441,10 +4441,10 @@
     "error_key": "account_vs_post_link",
     "error": "The chosen Labeler maps political account categories, while the rejected Labeler only flags political news links and replies.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -4457,8 +4457,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -5125,10 +5125,10 @@
     "error_key": "community_scope",
     "error": "Both candidates overlap around bikes, but the chosen Labeler covers the broader urbanism and street-safety community.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -5141,8 +5141,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -5737,18 +5737,18 @@
     "error_key": "accessibility_auto_pair",
     "error": "The chosen Labeler is narrowly tuned to missing and partial alt text, while the rejected candidate is broader and includes other accessibility-abuse cases.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -5809,10 +5809,10 @@
     "error_key": "accessibility_auto_pair",
     "error": "Both candidates detect missing alt text, but the chosen Labeler distinguishes missing alt text from partial alt text and appears more complete for multi-image posts.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -5825,8 +5825,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -6169,18 +6169,18 @@
     "error_key": "accessibility_auto_pair",
     "error": "The chosen Labeler is the simplest match for image-lacks-alt use, while the rejected candidate adds distinctions the user does not need.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -6241,18 +6241,18 @@
     "error_key": "accessibility_auto_pair",
     "error": "The chosen Labeler is the simplest match for image-lacks-alt use, while the rejected candidate adds distinctions the user does not need.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -6277,10 +6277,10 @@
     "error_key": "accessibility_auto_pair",
     "error": "The chosen Labeler is the simplest match for image-lacks-alt use, while the rejected candidate adds distinctions the user does not need.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
@@ -6293,8 +6293,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -6493,10 +6493,10 @@
     "error_key": "science_misinformation_auto_pair",
     "error": "The chosen Labeler moderates science misinformation and science-denial content, while the rejected candidate is for self-asserted scientist field identity.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -6509,8 +6509,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -6925,10 +6925,10 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler has media-level AI imagery, audio, and text labels, while the rejected candidate mostly flags likely AI accounts or generic misinformation.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -6941,8 +6941,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -7105,10 +7105,10 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler has media-level AI imagery, audio, and text labels, while the rejected candidate mostly flags likely AI accounts or generic misinformation.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -7121,8 +7121,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -7285,6 +7285,42 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler targets likely AI accounts, while the rejected candidate is broader and more media/post-type oriented.",
     "score_chosen": [
+      0.5
+    ],
+    "score_rejected": [
+      0.5
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0204",
+    "subset": "ai_content",
+    "category": "platform_information_ecology",
+    "prompt": "User profile and behavior context:\nBio: User follows ai content discussions where overlapping label categories are common.\nRecent visible activity:\n- Several reports describe `AI Promotional Account`: Accounts that regularly post promotional material for generative AI products\n- Another visible cluster describes `AI Imagery Post`: Individual posts containing AI Imagery.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly return to `Misinformation`: This post contains misleading content.\n- Profiles the user checks again later also include `Likely AI Account`: This Account is likely posting AI generated content.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: ai-labeler.bsky.social\nDisplay name: AI Account Labeler\nDescription: Subscribe to be notified of accounts that post text content which https://gptzero.me/ flags as being highly likely to be generated by AI, as well as posts reported as misleading.\n\nManaged by @vagabond-studio.bsky.social\nRubrics:\n- misinformation (Misinformation): This post contains misleading content.\n- likely-ai-account (Likely AI Account): This Account is likely posting AI generated content."
+    ],
+    "rejected": [
+      "Labeler handle: labeler.blackwall.gg\nDisplay name: AI Media Labeler\nDescription: Labels AI imagery, and audio\n\nConsider following our main account @blackwall.gg\n\nreporting with proof helps the verification process.\n\nif you are an artist, uploading timelapses of your work somewhere greatly helps in cases of false reports.\nRubrics:\n- indirectimageryaccount (Indirect AI Imagery Poster): Accounts that are known to post works that indirectly use AI imagery, such as tracing over them.\n- imageryaccount (AI Imagery Poster): Accounts that frequently or un-apologetically post AI images.\n- textaccount (LLM Text Poster): Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n- audioaccount (AI Audio Poster): Accounts that frequently or un-apologetically post AI Audio, such as AI generated voices or instrumentals.\n- imagerypost (AI Imagery Post): Individual posts containing AI Imagery.\n- indirectimagerypost (AI Imagery Post): Individual that indirectly contain AI generated elements, such as when traced over by a human\n- textpost (LLM Text Post): Individual posts containing LLM text\n- audiopost (AI Audio Post): Individual posts containing AI Modified or generated Audio.\n- protomionalaccount (AI Promotional Account): Accounts that regularly post promotional material for generative AI products\n- promotionalpost (AI Promotional Post): Posts that promote generative AI products"
+    ],
+    "error_key": "ai_content_auto_pair",
+    "error": "The chosen Labeler targets likely AI accounts, while the rejected candidate is broader and more media/post-type oriented.",
+    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -7308,42 +7344,6 @@
     ]
   },
   {
-    "id": "pref_0204",
-    "subset": "ai_content",
-    "category": "platform_information_ecology",
-    "prompt": "User profile and behavior context:\nBio: User follows ai content discussions where overlapping label categories are common.\nRecent visible activity:\n- Several reports describe `AI Promotional Account`: Accounts that regularly post promotional material for generative AI products\n- Another visible cluster describes `AI Imagery Post`: Individual posts containing AI Imagery.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly return to `Misinformation`: This post contains misleading content.\n- Profiles the user checks again later also include `Likely AI Account`: This Account is likely posting AI generated content.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: ai-labeler.bsky.social\nDisplay name: AI Account Labeler\nDescription: Subscribe to be notified of accounts that post text content which https://gptzero.me/ flags as being highly likely to be generated by AI, as well as posts reported as misleading.\n\nManaged by @vagabond-studio.bsky.social\nRubrics:\n- misinformation (Misinformation): This post contains misleading content.\n- likely-ai-account (Likely AI Account): This Account is likely posting AI generated content."
-    ],
-    "rejected": [
-      "Labeler handle: labeler.blackwall.gg\nDisplay name: AI Media Labeler\nDescription: Labels AI imagery, and audio\n\nConsider following our main account @blackwall.gg\n\nreporting with proof helps the verification process.\n\nif you are an artist, uploading timelapses of your work somewhere greatly helps in cases of false reports.\nRubrics:\n- indirectimageryaccount (Indirect AI Imagery Poster): Accounts that are known to post works that indirectly use AI imagery, such as tracing over them.\n- imageryaccount (AI Imagery Poster): Accounts that frequently or un-apologetically post AI images.\n- textaccount (LLM Text Poster): Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n- audioaccount (AI Audio Poster): Accounts that frequently or un-apologetically post AI Audio, such as AI generated voices or instrumentals.\n- imagerypost (AI Imagery Post): Individual posts containing AI Imagery.\n- indirectimagerypost (AI Imagery Post): Individual that indirectly contain AI generated elements, such as when traced over by a human\n- textpost (LLM Text Post): Individual posts containing LLM text\n- audiopost (AI Audio Post): Individual posts containing AI Modified or generated Audio.\n- protomionalaccount (AI Promotional Account): Accounts that regularly post promotional material for generative AI products\n- promotionalpost (AI Promotional Post): Posts that promote generative AI products"
-    ],
-    "error_key": "ai_content_auto_pair",
-    "error": "The chosen Labeler targets likely AI accounts, while the rejected candidate is broader and more media/post-type oriented.",
-    "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
     "id": "pref_0205",
     "subset": "ai_content",
     "category": "platform_information_ecology",
@@ -7357,18 +7357,18 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler targets likely AI accounts, while the rejected candidate is broader and more media/post-type oriented.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -7645,10 +7645,10 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler is about hostile anti-AI user behavior, while the rejected candidate classifies AI-generated media.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -7661,8 +7661,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -7825,42 +7825,6 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
     "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0219",
-    "subset": "ai_content",
-    "category": "platform_information_ecology",
-    "prompt": "User profile and behavior context:\nBio: User participates in ai content communities and often organizes bookmarked posts into private lists.\nRecent visible activity:\n- The visible feed often contains `AI Slur User` examples: Uses slurs for AI in earnest (i.e., not mention or mockery of the concept) or defends doing so.\n- Conversation partners also flag `LLM Text Poster` examples: Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\nBookmarked and followed behavior:\n- A smaller bookmark list repeatedly includes this pattern: `AI Imagery Post`: Individual that indirectly contain AI generated elements, such as when traced over by a human\n- The same list also contains examples adjacent to `LLM Text Poster`: Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: labeler.blackwall.gg\nDisplay name: AI Media Labeler\nDescription: Labels AI imagery, and audio\n\nConsider following our main account @blackwall.gg\n\nreporting with proof helps the verification process.\n\nif you are an artist, uploading timelapses of your work somewhere greatly helps in cases of false reports.\nRubrics:\n- indirectimageryaccount (Indirect AI Imagery Poster): Accounts that are known to post works that indirectly use AI imagery, such as tracing over them.\n- imageryaccount (AI Imagery Poster): Accounts that frequently or un-apologetically post AI images.\n- imagerypost (AI Imagery Post): Individual posts containing AI Imagery.\n- indirectimagerypost (AI Imagery Post): Individual that indirectly contain AI generated elements, such as when traced over by a human\n- textaccount (LLM Text Poster): Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n- textpost (LLM Text Post): Individual posts containing LLM text\n- audioaccount (AI Audio Poster): Accounts that frequently or un-apologetically post AI Audio, such as AI generated voices or instrumentals.\n- audiopost (AI Audio Post): Individual posts containing AI Modified or generated Audio.\n- promotionalpost (AI Promotional Post): Posts that promote generative AI products\n- protomionalaccount (AI Promotional Account): Accounts that regularly post promotional material for generative AI products"
-    ],
-    "rejected": [
-      "Labeler handle: antiantiai.bsky.social\nDisplay name: Anti \"Anti-AI\" Labeler\nDescription: Trying to make Bluesky usable for AI research and related discussion. Label and blocklist members should match 1:1.\n\nTo be added, like this post: https://bsky.app/profile/antiantiai.bsky.social/post/3mgxxy6spe22n\n\nAppeals go to @segyges.bsky.social\nRubrics:\n- ai-hater (AI Hater): Subscribes to anti-AI blocklists or otherwise seems poorly disposed for productive conversations.\n- ai-slurrer (AI Slur User): Uses slurs for AI in earnest (i.e., not mention or mockery of the concept) or defends doing so.\n- problem-not-otherwise-specified (Problem Not Otherwise Specified): Catch-all for serious problem users who are maybe not problems for AI-related reasons."
-    ],
-    "error_key": "ai_content_auto_pair",
-    "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
-    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -7879,6 +7843,42 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0219",
+    "subset": "ai_content",
+    "category": "platform_information_ecology",
+    "prompt": "User profile and behavior context:\nBio: User participates in ai content communities and often organizes bookmarked posts into private lists.\nRecent visible activity:\n- The visible feed often contains `AI Slur User` examples: Uses slurs for AI in earnest (i.e., not mention or mockery of the concept) or defends doing so.\n- Conversation partners also flag `LLM Text Poster` examples: Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\nBookmarked and followed behavior:\n- A smaller bookmark list repeatedly includes this pattern: `AI Imagery Post`: Individual that indirectly contain AI generated elements, such as when traced over by a human\n- The same list also contains examples adjacent to `LLM Text Poster`: Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: labeler.blackwall.gg\nDisplay name: AI Media Labeler\nDescription: Labels AI imagery, and audio\n\nConsider following our main account @blackwall.gg\n\nreporting with proof helps the verification process.\n\nif you are an artist, uploading timelapses of your work somewhere greatly helps in cases of false reports.\nRubrics:\n- indirectimageryaccount (Indirect AI Imagery Poster): Accounts that are known to post works that indirectly use AI imagery, such as tracing over them.\n- imageryaccount (AI Imagery Poster): Accounts that frequently or un-apologetically post AI images.\n- imagerypost (AI Imagery Post): Individual posts containing AI Imagery.\n- indirectimagerypost (AI Imagery Post): Individual that indirectly contain AI generated elements, such as when traced over by a human\n- textaccount (LLM Text Poster): Accounts that frequently or un-apologetically post LLM generated posts, articles, or other texts containing LLM generated content\n- textpost (LLM Text Post): Individual posts containing LLM text\n- audioaccount (AI Audio Poster): Accounts that frequently or un-apologetically post AI Audio, such as AI generated voices or instrumentals.\n- audiopost (AI Audio Post): Individual posts containing AI Modified or generated Audio.\n- promotionalpost (AI Promotional Post): Posts that promote generative AI products\n- protomionalaccount (AI Promotional Account): Accounts that regularly post promotional material for generative AI products"
+    ],
+    "rejected": [
+      "Labeler handle: antiantiai.bsky.social\nDisplay name: Anti \"Anti-AI\" Labeler\nDescription: Trying to make Bluesky usable for AI research and related discussion. Label and blocklist members should match 1:1.\n\nTo be added, like this post: https://bsky.app/profile/antiantiai.bsky.social/post/3mgxxy6spe22n\n\nAppeals go to @segyges.bsky.social\nRubrics:\n- ai-hater (AI Hater): Subscribes to anti-AI blocklists or otherwise seems poorly disposed for productive conversations.\n- ai-slurrer (AI Slur User): Uses slurs for AI in earnest (i.e., not mention or mockery of the concept) or defends doing so.\n- problem-not-otherwise-specified (Problem Not Otherwise Specified): Catch-all for serious problem users who are maybe not problems for AI-related reasons."
+    ],
+    "error_key": "ai_content_auto_pair",
+    "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
+    "score_chosen": [
+      0.5
+    ],
+    "score_rejected": [
+      0.5
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -7933,24 +7933,24 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
     "score_chosen": [
-      1.0
+      0.0
     ],
     "score_rejected": [
-      0.0
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -7969,10 +7969,10 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -7985,8 +7985,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -8005,10 +8005,10 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -8021,8 +8021,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -8041,18 +8041,18 @@
     "error_key": "ai_content_auto_pair",
     "error": "The chosen Labeler classifies AI media, while the rejected candidate labels anti-AI harassment and social conflict.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -8437,18 +8437,18 @@
     "error_key": "art_safety_auto_pair",
     "error": "The chosen Labeler helps discover furry creators and commission status, while the rejected candidate is a safety labeler for art theft.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -8545,18 +8545,18 @@
     "error_key": "art_safety_auto_pair",
     "error": "The chosen Labeler helps discover furry creators and commission status, while the rejected candidate is a safety labeler for art theft.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -8653,18 +8653,18 @@
     "error_key": "creator_discovery_auto_pair",
     "error": "The chosen Labeler has broader content-creator roles such as VTuber, podcast, educator, and video editor, while the rejected candidate is a narrower creator-label service.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -8797,10 +8797,10 @@
     "error_key": "creator_discovery_auto_pair",
     "error": "The chosen Labeler has broader content-creator roles such as VTuber, podcast, educator, and video editor, while the rejected candidate is a narrower creator-label service.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -8813,8 +8813,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -9265,10 +9265,10 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler provides post/media-level adult-content warnings such as porn, sexual content, and nudity, while the rejected candidate labels adult accounts.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -9281,8 +9281,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -9373,42 +9373,6 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler provides post/media-level adult-content warnings such as porn, sexual content, and nudity, while the rejected candidate labels adult accounts.",
     "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0262",
-    "subset": "adult_filtering",
-    "category": "safety_moderation",
-    "prompt": "User profile and behavior context:\nBio: User mainly browses adult filtering feeds, with several adjacent moderation concerns appearing together.\nRecent visible activity:\n- `Age Restricted` appears repeatedly in visible threads: Not safe for young audiences. Viewer discretion is advised.\n- `Adult Content` is also common in replies, but is less often the reason a post is saved for review: Not safe for all audiences. Viewer discretion is advised.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Self-Harm`: Promotes self-harm, including graphic images, glorifying discussions, or triggering stories.\n- Several followed accounts are associated with `Sensitive`: May be upsetting, covering topics like substance abuse or mental health issues, cautioning sensitive viewers.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: moderation.bsky.app\nDisplay name: Bluesky Moderation Service\nDescription: Official Bluesky moderation service. https://bsky.social/about/support/community-guidelines\nRubrics:\n- sexual-figurative (Sexually Suggestive (Cartoon)): Art with explicit or suggestive sexual themes, including provocative imagery or partial nudity.\n- self-harm (Self-Harm): Promotes self-harm, including graphic images, glorifying discussions, or triggering stories.\n- sensitive (Sensitive): May be upsetting, covering topics like substance abuse or mental health issues, cautioning sensitive viewers."
-    ],
-    "rejected": [
-      "Labeler handle: bigkidnow.bsky.social\nDisplay name: Big Kid Now: Adult Account Labeler\nDescription: An account labeler used to flag accounts as #NSFW, or for mature audiences only.\n\nLabeler by @asrie.lol, Tooling by @alice.mosphere.at\n\nTip Me: https://ko-fi.com/misutaaasriel/5\n\n♡: Add Label | Fail: Try Again Later\n\nOnly one label may be in use at a time.\nRubrics:\n- adult (Adult Content): Not safe for all audiences. Viewer discretion is advised.\n- restricted (Age Restricted): Not safe for young audiences. Viewer discretion is advised."
-    ],
-    "error_key": "adult_filtering_auto_pair",
-    "error": "The chosen Labeler provides post/media-level adult-content warnings such as porn, sexual content, and nudity, while the rejected candidate labels adult accounts.",
-    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -9427,6 +9391,42 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0262",
+    "subset": "adult_filtering",
+    "category": "safety_moderation",
+    "prompt": "User profile and behavior context:\nBio: User mainly browses adult filtering feeds, with several adjacent moderation concerns appearing together.\nRecent visible activity:\n- `Age Restricted` appears repeatedly in visible threads: Not safe for young audiences. Viewer discretion is advised.\n- `Adult Content` is also common in replies, but is less often the reason a post is saved for review: Not safe for all audiences. Viewer discretion is advised.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Self-Harm`: Promotes self-harm, including graphic images, glorifying discussions, or triggering stories.\n- Several followed accounts are associated with `Sensitive`: May be upsetting, covering topics like substance abuse or mental health issues, cautioning sensitive viewers.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: moderation.bsky.app\nDisplay name: Bluesky Moderation Service\nDescription: Official Bluesky moderation service. https://bsky.social/about/support/community-guidelines\nRubrics:\n- sexual-figurative (Sexually Suggestive (Cartoon)): Art with explicit or suggestive sexual themes, including provocative imagery or partial nudity.\n- self-harm (Self-Harm): Promotes self-harm, including graphic images, glorifying discussions, or triggering stories.\n- sensitive (Sensitive): May be upsetting, covering topics like substance abuse or mental health issues, cautioning sensitive viewers."
+    ],
+    "rejected": [
+      "Labeler handle: bigkidnow.bsky.social\nDisplay name: Big Kid Now: Adult Account Labeler\nDescription: An account labeler used to flag accounts as #NSFW, or for mature audiences only.\n\nLabeler by @asrie.lol, Tooling by @alice.mosphere.at\n\nTip Me: https://ko-fi.com/misutaaasriel/5\n\n♡: Add Label | Fail: Try Again Later\n\nOnly one label may be in use at a time.\nRubrics:\n- adult (Adult Content): Not safe for all audiences. Viewer discretion is advised.\n- restricted (Age Restricted): Not safe for young audiences. Viewer discretion is advised."
+    ],
+    "error_key": "adult_filtering_auto_pair",
+    "error": "The chosen Labeler provides post/media-level adult-content warnings such as porn, sexual content, and nudity, while the rejected candidate labels adult accounts.",
+    "score_chosen": [
+      0.0
+    ],
+    "score_rejected": [
+      1.0
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -9517,18 +9517,18 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -9553,10 +9553,10 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -9569,8 +9569,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -9625,10 +9625,10 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -9641,8 +9641,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -9661,18 +9661,18 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -9697,10 +9697,10 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -9713,8 +9713,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -9769,10 +9769,10 @@
     "error_key": "adult_filtering_auto_pair",
     "error": "The chosen Labeler flags adult or restricted accounts, while the rejected candidate is a broader content moderation service.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -9785,8 +9785,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -9841,10 +9841,10 @@
     "error_key": "adult_creator_discovery_auto_pair",
     "error": "The chosen Labeler verifies adult creators and platform links, while the rejected candidate broadly labels content creators and link posters.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -9857,8 +9857,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -10093,18 +10093,18 @@
     "error_key": "adult_creator_discovery_auto_pair",
     "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -10165,42 +10165,6 @@
     "error_key": "adult_creator_discovery_auto_pair",
     "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
     "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0284",
-    "subset": "adult_creator_discovery",
-    "category": "interest_community",
-    "prompt": "User profile and behavior context:\nBio: User follows adult creator discovery discussions where overlapping label categories are common.\nRecent visible activity:\n- Several reports describe `Chaturbate`: Indicates this user is a Chaturbate creator.\n- Another visible cluster describes `Tryst`: Indicates this user is a Tryst creator.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly return to `Content Creator`: Account's labeled as Content Creators\n- Profiles the user checks again later also include `Link posters`: Accounts who's posts regularly contain links to content.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: onlyfilters.dev\nDisplay name: OnlyFilters.dev\nDescription: A community BlueSky labler service designed to label Content Creators. This is NOT a blocklist, but a label that can filtered in the BlueSky client. \n\n\nMore details coming soon. Questions: @onlyfilters.dev\nRubrics:\n- post-links (Link posters): Accounts who's posts regularly contain links to content.\n- content-creator (Content Creator): Account's labeled as Content Creators"
-    ],
-    "rejected": [
-      "Labeler handle: verified.babesky.com\nDisplay name: Verified Adult Creator Labeler\nDescription: Subscribe to see adult industry creator labels, verified with AV by @Babesky.com 💖\n\nPlatform specific labels are opt-in (remove like to remove label): https://bsky.app/profile/verified.babesky.com/post/3mbtvkjjeak2v\n\n🔗 Browse Directory: club.babesky.com\nRubrics:\n- bbsky-verified-featured (Featured Model ⭐️): This creator is a featured model on Babesky.\n- bbsky-verified-creator (Verified Creator): This account has been verified as a creator on this platform.\n- link-onlyfans (OnlyFans): Indicates this user is an OnlyFans creator.\n- link-fansly (Fansly): Indicates this user is a Fansly creator.\n- link-chaturbate (Chaturbate): Indicates this user is a Chaturbate creator.\n- link-tryst (Tryst): Indicates this user is a Tryst creator.\n- link-patreon (Patreon): Indicates this user is a Patreon creator.\n- link-sextpanther (SextPanther): Indicates this user is a SextPanther creator.\n- link-niteflirt (NiteFlirt): Indicates this user is a NiteFlirt creator.\n- link-myfreecams (MyFreeCams): Indicates this user is a MyFreeCams creator."
-    ],
-    "error_key": "adult_creator_discovery_auto_pair",
-    "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
-    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -10219,6 +10183,42 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0284",
+    "subset": "adult_creator_discovery",
+    "category": "interest_community",
+    "prompt": "User profile and behavior context:\nBio: User follows adult creator discovery discussions where overlapping label categories are common.\nRecent visible activity:\n- Several reports describe `Chaturbate`: Indicates this user is a Chaturbate creator.\n- Another visible cluster describes `Tryst`: Indicates this user is a Tryst creator.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly return to `Content Creator`: Account's labeled as Content Creators\n- Profiles the user checks again later also include `Link posters`: Accounts who's posts regularly contain links to content.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: onlyfilters.dev\nDisplay name: OnlyFilters.dev\nDescription: A community BlueSky labler service designed to label Content Creators. This is NOT a blocklist, but a label that can filtered in the BlueSky client. \n\n\nMore details coming soon. Questions: @onlyfilters.dev\nRubrics:\n- post-links (Link posters): Accounts who's posts regularly contain links to content.\n- content-creator (Content Creator): Account's labeled as Content Creators"
+    ],
+    "rejected": [
+      "Labeler handle: verified.babesky.com\nDisplay name: Verified Adult Creator Labeler\nDescription: Subscribe to see adult industry creator labels, verified with AV by @Babesky.com 💖\n\nPlatform specific labels are opt-in (remove like to remove label): https://bsky.app/profile/verified.babesky.com/post/3mbtvkjjeak2v\n\n🔗 Browse Directory: club.babesky.com\nRubrics:\n- bbsky-verified-featured (Featured Model ⭐️): This creator is a featured model on Babesky.\n- bbsky-verified-creator (Verified Creator): This account has been verified as a creator on this platform.\n- link-onlyfans (OnlyFans): Indicates this user is an OnlyFans creator.\n- link-fansly (Fansly): Indicates this user is a Fansly creator.\n- link-chaturbate (Chaturbate): Indicates this user is a Chaturbate creator.\n- link-tryst (Tryst): Indicates this user is a Tryst creator.\n- link-patreon (Patreon): Indicates this user is a Patreon creator.\n- link-sextpanther (SextPanther): Indicates this user is a SextPanther creator.\n- link-niteflirt (NiteFlirt): Indicates this user is a NiteFlirt creator.\n- link-myfreecams (MyFreeCams): Indicates this user is a MyFreeCams creator."
+    ],
+    "error_key": "adult_creator_discovery_auto_pair",
+    "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
+    "score_chosen": [
+      0.5
+    ],
+    "score_rejected": [
+      0.5
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -10309,10 +10309,10 @@
     "error_key": "adult_creator_discovery_auto_pair",
     "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -10325,8 +10325,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -10345,18 +10345,18 @@
     "error_key": "adult_creator_discovery_auto_pair",
     "error": "The chosen Labeler broadly identifies content creators and link posters, while the rejected candidate is specific to verified adult creators.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -10561,18 +10561,18 @@
     "error_key": "crypto_safety_auto_pair",
     "error": "The chosen Labeler is crypto-specific and covers fake exchanges, rug pulls, FOMO promotion, and compromised crypto accounts, while the rejected candidate is broader platform safety.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -10705,18 +10705,18 @@
     "error_key": "crypto_safety_auto_pair",
     "error": "The chosen Labeler covers broader platform manipulation and suspicious behavior, while the rejected candidate is narrowly crypto-specific.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -10849,18 +10849,18 @@
     "error_key": "crypto_safety_auto_pair",
     "error": "The chosen Labeler covers broader platform manipulation and suspicious behavior, while the rejected candidate is narrowly crypto-specific.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -11317,18 +11317,18 @@
     "error_key": "spam_behavior_auto_pair",
     "error": "The chosen Labeler provides behavioral account-activity measurements, while the rejected candidate only flags engagement hacking and content spam.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -11353,18 +11353,18 @@
     "error_key": "spam_behavior_auto_pair",
     "error": "The chosen Labeler provides behavioral account-activity measurements, while the rejected candidate only flags engagement hacking and content spam.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -11425,10 +11425,10 @@
     "error_key": "spam_behavior_auto_pair",
     "error": "The chosen Labeler provides behavioral account-activity measurements, while the rejected candidate only flags engagement hacking and content spam.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -11441,8 +11441,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -11461,18 +11461,18 @@
     "error_key": "spam_behavior_auto_pair",
     "error": "The chosen Labeler provides behavioral account-activity measurements, while the rejected candidate only flags engagement hacking and content spam.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -11497,18 +11497,18 @@
     "error_key": "spam_behavior_auto_pair",
     "error": "The chosen Labeler provides behavioral account-activity measurements, while the rejected candidate only flags engagement hacking and content spam.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -11677,10 +11677,10 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler provides source ownership and organization context, while the rejected candidate classifies article topics.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -11693,8 +11693,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -11749,10 +11749,10 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler provides source ownership and organization context, while the rejected candidate classifies article topics.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -11765,8 +11765,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -11785,18 +11785,18 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler provides source ownership and organization context, while the rejected candidate classifies article topics.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -11857,18 +11857,18 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler classifies news topics, while the rejected candidate is about ownership or source context.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -11965,18 +11965,18 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler classifies news topics, while the rejected candidate is about ownership or source context.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -12037,10 +12037,10 @@
     "error_key": "news_source_context_auto_pair",
     "error": "The chosen Labeler classifies news topics, while the rejected candidate is about ownership or source context.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -12053,8 +12053,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -12361,10 +12361,10 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler provides fact-check categories such as false fact, true fact, satire, no information, and misleading, while the rejected candidate marks community-note annotation status.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -12377,8 +12377,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -12397,10 +12397,10 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler marks whether posts have community notes or proposed annotations, while the rejected candidate judges factual status.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
@@ -12413,8 +12413,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -12505,24 +12505,24 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler marks whether posts have community notes or proposed annotations, while the rejected candidate judges factual status.",
     "score_chosen": [
-      0.0
+      1.0
     ],
     "score_rejected": [
-      1.0
+      0.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -12541,10 +12541,10 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler marks whether posts have community notes or proposed annotations, while the rejected candidate judges factual status.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -12557,8 +12557,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -12577,18 +12577,18 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler marks whether posts have community notes or proposed annotations, while the rejected candidate judges factual status.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -12649,10 +12649,10 @@
     "error_key": "fact_checking_auto_pair",
     "error": "The chosen Labeler marks whether posts have community notes or proposed annotations, while the rejected candidate judges factual status.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -12665,8 +12665,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -12685,10 +12685,10 @@
     "error_key": "politics_filtering_auto_pair",
     "error": "The chosen Labeler maps US political account types, while the rejected candidate is about congressional donor or industry categories.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -12701,8 +12701,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -12937,10 +12937,10 @@
     "error_key": "politics_filtering_auto_pair",
     "error": "The chosen Labeler maps US political account types, while the rejected candidate is about congressional donor or industry categories.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -12953,8 +12953,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -13045,10 +13045,10 @@
     "error_key": "politics_filtering_auto_pair",
     "error": "The chosen Labeler is useful for congressional donor or industry context, while the rejected candidate only classifies political account types.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -13061,8 +13061,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -13199,14 +13199,14 @@
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -13225,18 +13225,18 @@
     "error_key": "politics_filtering_auto_pair",
     "error": "The chosen Labeler is useful for congressional donor or industry context, while the rejected candidate only classifies political account types.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -13873,18 +13873,18 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler describes profile and posting facts such as changed handles, incomplete profiles, reply-only behavior, and bridged accounts, while the rejected candidate only labels PDS hosting.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -14053,42 +14053,6 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler describes profile and posting facts such as changed handles, incomplete profiles, reply-only behavior, and bridged accounts, while the rejected candidate only labels PDS hosting.",
     "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0392",
-    "subset": "protocol_infrastructure",
-    "category": "platform_information_ecology",
-    "prompt": "User profile and behavior context:\nBio: User follows protocol infrastructure communities and keeps recurring examples from feeds, bookmarks, and followed accounts.\nRecent visible activity:\n- `Threads User` appears across several posts the user reopens: This user originates from Threads and has been bridged in by Bridgy.\n- `Changed Handle` appears in saved discussions and account notes: This user began using this handle on this account less than 14 days ago.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Incomplete Profile`: This user is missing a profile picture or display name.\n- Followed accounts the user returns to include `Threads User` and `Only Replies` examples: This user originates from Threads and has been bridged in by Bridgy.\n- Some adjacent threads also mention `Independent PDS` and `Other PDS`: Account is hosted by an independent PDS (any of them, combines with labels below)\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: profile-labels.bossett.social\nDisplay name: Profile Labeller\nDescription: Labels accounts based on facts about profile records, post history, etc. Automatic.\nSupport @bossett.social / Code https://github.com/Bossett/bsky-profile-labeller / Help out https://ko-fi.com/bossett\nRubrics:\n- threads (Threads User): This user originates from Threads and has been bridged in by Bridgy.\n- changedhandle (Changed Handle): This user began using this handle on this account less than 14 days ago.\n- incomplete (Incomplete Profile): This user is missing a profile picture or display name.\n- onlyreplies (Only Replies): This user has not made a non-reply post.\n- rapidposts (Periodic): This account has been posting at closely timed intervals without a break the last 30 posts.\n- nonplcdid (Non-PLC DID): This user has a did from a namespace other than did:plc: (and therefore handle history not available).\n- bridgy (Bridgy User): This user is on a non-ATProto network, bridged in from Bridgy (https://fed.brid.gy/docs).\n- nostr (Nostr User): This user originates from Nostr and has been bridged in via other networks by Bridgy. Does NOT include users who have just validated a handle with an npub signature."
-    ],
-    "rejected": [
-      "Labeler handle: pds.labeler.tny.im\nDisplay name: Independent PDS Labeler\nDescription: Labels accounts that are hosted on a PDS not operated by Bluesky PBC.\n\nBuilt by @gbl08ma.com\nSource: https://tangled.org/@gbl08ma.com/pdslabeler\n\nPlease ❤️ the labeler if you use it, for usage metrics.\n\n⚠️ To disable certain labels, use \"Off\" and not \"Hide\"!\nRubrics:\n- internal-independent (Independent PDS): Account is hosted by an independent PDS (any of them, combines with labels below)\n- internal-other (Other PDS): Account is hosted by a smaller independent PDS\n- link-mybluesky (mybluesky.link): Account is hosted by the mybluesky.link PDS\n- social-eurosky (eurosky.social): Account is hosted by the eurosky.social PDS\n- world-si46-pds (pds.si46.world): Account is hosted by the pds.si46.world PDS\n- sh-tngl (tngl.sh): Account is hosted by the tngl.sh PDS\n- app-blacksky (blacksky.app): Account is hosted by the blacksky.app PDS\n- info-keik (keik.info): Account is hosted by the keik.info PDS\n- social-surf (surf.social): Account is hosted by the surf.social PDS\n- computer-aesthetic-at (at.aesthetic.computer): Account is hosted by the at.aesthetic.computer PDS"
-    ],
-    "error_key": "protocol_infrastructure_auto_pair",
-    "error": "The chosen Labeler describes profile and posting facts such as changed handles, incomplete profiles, reply-only behavior, and bridged accounts, while the rejected candidate only labels PDS hosting.",
-    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -14107,6 +14071,42 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0392",
+    "subset": "protocol_infrastructure",
+    "category": "platform_information_ecology",
+    "prompt": "User profile and behavior context:\nBio: User follows protocol infrastructure communities and keeps recurring examples from feeds, bookmarks, and followed accounts.\nRecent visible activity:\n- `Threads User` appears across several posts the user reopens: This user originates from Threads and has been bridged in by Bridgy.\n- `Changed Handle` appears in saved discussions and account notes: This user began using this handle on this account less than 14 days ago.\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Incomplete Profile`: This user is missing a profile picture or display name.\n- Followed accounts the user returns to include `Threads User` and `Only Replies` examples: This user originates from Threads and has been bridged in by Bridgy.\n- Some adjacent threads also mention `Independent PDS` and `Other PDS`: Account is hosted by an independent PDS (any of them, combines with labels below)\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: profile-labels.bossett.social\nDisplay name: Profile Labeller\nDescription: Labels accounts based on facts about profile records, post history, etc. Automatic.\nSupport @bossett.social / Code https://github.com/Bossett/bsky-profile-labeller / Help out https://ko-fi.com/bossett\nRubrics:\n- threads (Threads User): This user originates from Threads and has been bridged in by Bridgy.\n- changedhandle (Changed Handle): This user began using this handle on this account less than 14 days ago.\n- incomplete (Incomplete Profile): This user is missing a profile picture or display name.\n- onlyreplies (Only Replies): This user has not made a non-reply post.\n- rapidposts (Periodic): This account has been posting at closely timed intervals without a break the last 30 posts.\n- nonplcdid (Non-PLC DID): This user has a did from a namespace other than did:plc: (and therefore handle history not available).\n- bridgy (Bridgy User): This user is on a non-ATProto network, bridged in from Bridgy (https://fed.brid.gy/docs).\n- nostr (Nostr User): This user originates from Nostr and has been bridged in via other networks by Bridgy. Does NOT include users who have just validated a handle with an npub signature."
+    ],
+    "rejected": [
+      "Labeler handle: pds.labeler.tny.im\nDisplay name: Independent PDS Labeler\nDescription: Labels accounts that are hosted on a PDS not operated by Bluesky PBC.\n\nBuilt by @gbl08ma.com\nSource: https://tangled.org/@gbl08ma.com/pdslabeler\n\nPlease ❤️ the labeler if you use it, for usage metrics.\n\n⚠️ To disable certain labels, use \"Off\" and not \"Hide\"!\nRubrics:\n- internal-independent (Independent PDS): Account is hosted by an independent PDS (any of them, combines with labels below)\n- internal-other (Other PDS): Account is hosted by a smaller independent PDS\n- link-mybluesky (mybluesky.link): Account is hosted by the mybluesky.link PDS\n- social-eurosky (eurosky.social): Account is hosted by the eurosky.social PDS\n- world-si46-pds (pds.si46.world): Account is hosted by the pds.si46.world PDS\n- sh-tngl (tngl.sh): Account is hosted by the tngl.sh PDS\n- app-blacksky (blacksky.app): Account is hosted by the blacksky.app PDS\n- info-keik (keik.info): Account is hosted by the keik.info PDS\n- social-surf (surf.social): Account is hosted by the surf.social PDS\n- computer-aesthetic-at (at.aesthetic.computer): Account is hosted by the at.aesthetic.computer PDS"
+    ],
+    "error_key": "protocol_infrastructure_auto_pair",
+    "error": "The chosen Labeler describes profile and posting facts such as changed handles, incomplete profiles, reply-only behavior, and bridged accounts, while the rejected candidate only labels PDS hosting.",
+    "score_chosen": [
+      0.5
+    ],
+    "score_rejected": [
+      0.5
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -14161,18 +14161,18 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler identifies independent PDS hosting, while the rejected candidate gives miscellaneous profile and posting facts.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -14269,24 +14269,24 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler identifies independent PDS hosting, while the rejected candidate gives miscellaneous profile and posting facts.",
     "score_chosen": [
-      0.0
+      1.0
     ],
     "score_rejected": [
-      1.0
+      0.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -14305,10 +14305,10 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler identifies independent PDS hosting, while the rejected candidate gives miscellaneous profile and posting facts.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -14321,8 +14321,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -14377,24 +14377,24 @@
     "error_key": "protocol_infrastructure_auto_pair",
     "error": "The chosen Labeler identifies independent PDS hosting, while the rejected candidate gives miscellaneous profile and posting facts.",
     "score_chosen": [
-      0.0
+      1.0
     ],
     "score_rejected": [
-      1.0
+      0.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -14557,10 +14557,10 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is WNBA-specific team fandom, while the rejected candidate is a broader sports/team-pride labeler.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -14573,8 +14573,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -14989,18 +14989,18 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is for Formula 1 fan identity, while the rejected candidate is for pro cycling community roles.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -15035,14 +15035,14 @@
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -15169,10 +15169,10 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is for Formula 1 fan identity, while the rejected candidate is for pro cycling community roles.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -15185,8 +15185,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -15241,18 +15241,18 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is for Formula 1 fan identity, while the rejected candidate is for pro cycling community roles.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -15313,10 +15313,10 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is for pro cycling community identity, while the rejected candidate is Formula 1 fandom.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -15329,8 +15329,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -15349,10 +15349,10 @@
     "error_key": "sports_fandom_auto_pair",
     "error": "The chosen Labeler is for pro cycling community identity, while the rejected candidate is Formula 1 fandom.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -15365,8 +15365,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -16177,6 +16177,42 @@
     "error_key": "fandom_content_warnings_auto_pair",
     "error": "The chosen Labeler targets Star Wars spoilers and rumors, while the rejected candidate is for FFXIV patch/content spoilers.",
     "score_chosen": [
+      1.0
+    ],
+    "score_rejected": [
+      0.0
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0451",
+    "subset": "fandom_content_warnings",
+    "category": "interest_community",
+    "prompt": "User profile and behavior context:\nBio: User participates in fandom content warnings communities and often organizes bookmarked posts into private lists.\nRecent visible activity:\n- The visible feed often contains `Endwalker Japanese Contents` examples: Please set off for non-Japanese users.\n- Conversation partners also flag `Galactic Content Creator` examples: Vanity label bestowed upon only the best Star Wars content creators in the galaxy\nBookmarked and followed behavior:\n- A smaller bookmark list repeatedly includes this pattern: `Star Wars`: Vanity label for curated content related to Star Wars\n- The same list also contains examples adjacent to `Galactic Content Creator`: Vanity label bestowed upon only the best Star Wars content creators in the galaxy\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: mod.shawn.party\nDisplay name: Spoiler Droid\nDescription: A 3rd party Bluesky labeler service account run by @shawn.party\n\nMy primary purpose is labeling #spoiler posts here on BlueSky\nRubrics:\n- rumor-parent (❕Rumors in Replies❕): Possible rumor spoilers have been found in the replies\n- Star Wars Fan (Star Wars Fan): Vanity label for fans of the Star Wars galaxy\n- star-wars-content (Star Wars): Vanity label for curated content related to Star Wars\n- star-wars-creator (Galactic Content Creator): Vanity label bestowed upon only the best Star Wars content creators in the galaxy\n- rumor (⚠️ Possible Rumor ⚠️): Posts containing rumors with possible spoilers\n- spoiler-parent (❕Spoilers in Replies❕): Possible spoilers have been found in the replies\n- spoiler (⚠️ Spoiler Content ⚠️): Posts marked as possible spoilers"
+    ],
+    "rejected": [
+      "Labeler handle: label.wol.blue\nDisplay name: FF14ヒカセンラベリング/FFXIV WoL Labeling\nDescription: 下記の2つのサービスを提供しています。\nThis labeler provides the following two services.\n\nコンテンツラベリング/Spoilers Labeling\nhttps://x.gd/or3VB\n\nジョブ・ワールドバッジ/Jobs and Worlds Badge\nhttps://x.gd/1ZT1N\n\nOperated By @usounds.work\n(c)SQUARE ENIX\nRubrics:\n- latest-patch (Latest patch): It will set it to label any post that includes #7.5spoiler.\n- latest-patch-contents (Latest Patch Japanese Contents): Please set off for non-Japanese users.\n- dawntrail (Dawntrail): It will set it to label any post that includes #7.5spoiler - #7.0spoiler.\n- endwalker (Endwalker): It will set it to label any post that includes #6.xspoiler.\n- stormblood (Stormblood Spoilers): It will set it to label any post that includes #4.0spoiler. \n- heavensward (Heavensward Spoilers): It will set it to label any post that includes #3.0spoiler. \n- arealmreborn (A Realm Reborn Spoilers): It will set it to label any post that includes #2.0spoiler.\n- dawntrail-contents (Downtrails Japanese Contents): Please set off for non-Japanese users.\n- endwalker-contents (Endwalker Japanese Contents): Please set off for non-Japanese users."
+    ],
+    "error_key": "fandom_content_warnings_auto_pair",
+    "error": "The chosen Labeler targets Star Wars spoilers and rumors, while the rejected candidate is for FFXIV patch/content spoilers.",
+    "score_chosen": [
       0.5
     ],
     "score_rejected": [
@@ -16200,10 +16236,10 @@
     ]
   },
   {
-    "id": "pref_0451",
+    "id": "pref_0452",
     "subset": "fandom_content_warnings",
     "category": "interest_community",
-    "prompt": "User profile and behavior context:\nBio: User participates in fandom content warnings communities and often organizes bookmarked posts into private lists.\nRecent visible activity:\n- The visible feed often contains `Endwalker Japanese Contents` examples: Please set off for non-Japanese users.\n- Conversation partners also flag `Galactic Content Creator` examples: Vanity label bestowed upon only the best Star Wars content creators in the galaxy\nBookmarked and followed behavior:\n- A smaller bookmark list repeatedly includes this pattern: `Star Wars`: Vanity label for curated content related to Star Wars\n- The same list also contains examples adjacent to `Galactic Content Creator`: Vanity label bestowed upon only the best Star Wars content creators in the galaxy\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "prompt": "User profile and behavior context:\nBio: User follows fandom content warnings discussions and keeps private lists of accounts, posts, and reports that recur across the feed.\nRecent visible activity:\n- `Latest patch` appears in several visible threads: It will set it to label any post that includes #7.5spoiler.\n- `❕Rumors in Replies❕` also appears in posts the user opens repeatedly: Possible rumor spoilers have been found in the replies\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Star Wars`: Vanity label for curated content related to Star Wars\n- Accounts the user returns to over multiple sessions include `❕Rumors in Replies❕` and `Galactic Content Creator` examples: Possible rumor spoilers have been found in the replies\n- A smaller set of followed threads still includes `Latest Patch Japanese Contents`: Please set off for non-Japanese users.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
     "chosen": [
       "Labeler handle: mod.shawn.party\nDisplay name: Spoiler Droid\nDescription: A 3rd party Bluesky labeler service account run by @shawn.party\n\nMy primary purpose is labeling #spoiler posts here on BlueSky\nRubrics:\n- rumor-parent (❕Rumors in Replies❕): Possible rumor spoilers have been found in the replies\n- Star Wars Fan (Star Wars Fan): Vanity label for fans of the Star Wars galaxy\n- star-wars-content (Star Wars): Vanity label for curated content related to Star Wars\n- star-wars-creator (Galactic Content Creator): Vanity label bestowed upon only the best Star Wars content creators in the galaxy\n- rumor (⚠️ Possible Rumor ⚠️): Posts containing rumors with possible spoilers\n- spoiler-parent (❕Spoilers in Replies❕): Possible spoilers have been found in the replies\n- spoiler (⚠️ Spoiler Content ⚠️): Posts marked as possible spoilers"
     ],
@@ -16231,42 +16267,6 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0452",
-    "subset": "fandom_content_warnings",
-    "category": "interest_community",
-    "prompt": "User profile and behavior context:\nBio: User follows fandom content warnings discussions and keeps private lists of accounts, posts, and reports that recur across the feed.\nRecent visible activity:\n- `Latest patch` appears in several visible threads: It will set it to label any post that includes #7.5spoiler.\n- `❕Rumors in Replies❕` also appears in posts the user opens repeatedly: Possible rumor spoilers have been found in the replies\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Star Wars`: Vanity label for curated content related to Star Wars\n- Accounts the user returns to over multiple sessions include `❕Rumors in Replies❕` and `Galactic Content Creator` examples: Possible rumor spoilers have been found in the replies\n- A smaller set of followed threads still includes `Latest Patch Japanese Contents`: Please set off for non-Japanese users.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: mod.shawn.party\nDisplay name: Spoiler Droid\nDescription: A 3rd party Bluesky labeler service account run by @shawn.party\n\nMy primary purpose is labeling #spoiler posts here on BlueSky\nRubrics:\n- rumor-parent (❕Rumors in Replies❕): Possible rumor spoilers have been found in the replies\n- Star Wars Fan (Star Wars Fan): Vanity label for fans of the Star Wars galaxy\n- star-wars-content (Star Wars): Vanity label for curated content related to Star Wars\n- star-wars-creator (Galactic Content Creator): Vanity label bestowed upon only the best Star Wars content creators in the galaxy\n- rumor (⚠️ Possible Rumor ⚠️): Posts containing rumors with possible spoilers\n- spoiler-parent (❕Spoilers in Replies❕): Possible spoilers have been found in the replies\n- spoiler (⚠️ Spoiler Content ⚠️): Posts marked as possible spoilers"
-    ],
-    "rejected": [
-      "Labeler handle: label.wol.blue\nDisplay name: FF14ヒカセンラベリング/FFXIV WoL Labeling\nDescription: 下記の2つのサービスを提供しています。\nThis labeler provides the following two services.\n\nコンテンツラベリング/Spoilers Labeling\nhttps://x.gd/or3VB\n\nジョブ・ワールドバッジ/Jobs and Worlds Badge\nhttps://x.gd/1ZT1N\n\nOperated By @usounds.work\n(c)SQUARE ENIX\nRubrics:\n- latest-patch (Latest patch): It will set it to label any post that includes #7.5spoiler.\n- latest-patch-contents (Latest Patch Japanese Contents): Please set off for non-Japanese users.\n- dawntrail (Dawntrail): It will set it to label any post that includes #7.5spoiler - #7.0spoiler.\n- endwalker (Endwalker): It will set it to label any post that includes #6.xspoiler.\n- stormblood (Stormblood Spoilers): It will set it to label any post that includes #4.0spoiler. \n- heavensward (Heavensward Spoilers): It will set it to label any post that includes #3.0spoiler. \n- arealmreborn (A Realm Reborn Spoilers): It will set it to label any post that includes #2.0spoiler.\n- dawntrail-contents (Downtrails Japanese Contents): Please set off for non-Japanese users.\n- endwalker-contents (Endwalker Japanese Contents): Please set off for non-Japanese users."
-    ],
-    "error_key": "fandom_content_warnings_auto_pair",
-    "error": "The chosen Labeler targets Star Wars spoilers and rumors, while the rejected candidate is for FFXIV patch/content spoilers.",
-    "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -16393,10 +16393,10 @@
     "error_key": "fandom_content_warnings_auto_pair",
     "error": "The chosen Labeler targets Star Wars spoilers and rumors, while the rejected candidate is for FFXIV patch/content spoilers.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -16409,8 +16409,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -16429,10 +16429,10 @@
     "error_key": "fandom_content_warnings_auto_pair",
     "error": "The chosen Labeler targets FFXIV patch and expansion spoilers, while the rejected candidate is for Star Wars.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -16445,8 +16445,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -16969,10 +16969,10 @@
     "error_key": "gaming_industry_auto_pair",
     "error": "The chosen Labeler covers broader games-industry roles, while the rejected candidate is specific to UEFN and Verse.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -16985,8 +16985,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -17005,10 +17005,10 @@
     "error_key": "gaming_industry_auto_pair",
     "error": "The chosen Labeler is specific to UEFN and Verse, while the rejected candidate is a broad games-industry role labeler.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -17021,8 +17021,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -17149,42 +17149,6 @@
     "error_key": "gaming_industry_auto_pair",
     "error": "The chosen Labeler is specific to UEFN and Verse, while the rejected candidate is a broad games-industry role labeler.",
     "score_chosen": [
-      0.5
-    ],
-    "score_rejected": [
-      0.5
-    ],
-    "judge_calls": [
-      [
-        {
-          "sample_index": 0,
-          "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        },
-        {
-          "sample_index": 0,
-          "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
-        }
-      ]
-    ]
-  },
-  {
-    "id": "pref_0478",
-    "subset": "gaming_industry",
-    "category": "interest_community",
-    "prompt": "User profile and behavior context:\nBio: User follows gaming industry discussions and keeps private lists of accounts, posts, and reports that recur across the feed.\nRecent visible activity:\n- `Games Archivist` appears in several visible threads: The diligent people that preserve some part of games industry history.\n- `UEFN` also appears in posts the user opens repeatedly: Provided to those who develop games using Unreal Engine for Fortnite (UEFN).\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Verse`: Provided to programmers who develop games using Epic’s own Verse Programming Language.\n- Accounts the user returns to over multiple sessions include `UEFN` and `UEFN` examples: Provided to those who develop games using Unreal Engine for Fortnite (UEFN).\n- A smaller set of followed threads still includes `Games Business`: Individuals involved with the business side of the games industry. This includes as marketing, PR, publishing, finance, etc.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
-    "chosen": [
-      "Labeler handle: uefn.pinefruit.dev\nDisplay name: UEFN Labeler\nDescription: Official labeler account for all things UEFN.\nReach out if you would like a new label added.\nNot Affiliated with Epic Games.\nManaged by @pinefruit.dev and @raybenefield.bsky.social\nRubrics:\n- uefn (UEFN): Provided to those who develop games using Unreal Engine for Fortnite (UEFN). \n- verse (Verse): Provided to programmers who develop games using Epic’s own Verse Programming Language. "
-    ],
-    "rejected": [
-      "Labeler handle: ozone.birb.house\nDisplay name: Games Industry Labeller\nDescription: A labeling service for the games industry. Check my posts for instructions.\n\nVerified labels are applied manually and may be delayed.\n\nManaged by @trezy.codes.\nRubrics:\n- games-archivist (Games Archivist): The diligent people that preserve some part of games industry history.\n- games-business (Games Business): Individuals involved with the business side of the games industry. This includes as marketing, PR, publishing, finance, etc.\n- games-educator (Games Educator): Professors, instructors, and others involved in educating the games industry.\n- games-media (Games Media): Non-credentialed accounts that cover and produce content about the games industry; Youtubers, podcasters, indie blogs, etc.\n- games-organizer (Games Organizer): Event organizers that focus on the games industry. Event size is irrelevant; everything from local meetups to international conferences counts.\n- game-dev (Game Dev): Anybody that is directly involved in the development of a game. This includes programmers, designers, narrative, animators, writers, artists, composers, QA, localisation, etc. This is available for any section of the industry, from AAA to indie to hobbyists.\n- games-research (Games Research): Anybody that focuses on researching games and the games industry.\n- game-studio (Game Studio): Companies that contribute to the development of games. This includes indie studios, AAA studios, consulting and outsourcing companies, etc.\n\n✅ This profile has been independently verified.\n- games-event (Games Event): An account representing a games industry event.\n\n✅ This profile has been independently verified.\n- games-journalist (Games Journalist): Individual journalists covering the games industry.\n\n✅ This profile has been independently verified."
-    ],
-    "error_key": "gaming_industry_auto_pair",
-    "error": "The chosen Labeler is specific to UEFN and Verse, while the rejected candidate is a broad games-industry role labeler.",
-    "score_chosen": [
       1.0
     ],
     "score_rejected": [
@@ -17203,6 +17167,42 @@
           "swapped": true,
           "winner": "B",
           "raw": "{\"winner\":\"B\"}"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "pref_0478",
+    "subset": "gaming_industry",
+    "category": "interest_community",
+    "prompt": "User profile and behavior context:\nBio: User follows gaming industry discussions and keeps private lists of accounts, posts, and reports that recur across the feed.\nRecent visible activity:\n- `Games Archivist` appears in several visible threads: The diligent people that preserve some part of games industry history.\n- `UEFN` also appears in posts the user opens repeatedly: Provided to those who develop games using Unreal Engine for Fortnite (UEFN).\nBookmarked and followed behavior:\n- Bookmarked posts repeatedly include `Verse`: Provided to programmers who develop games using Epic’s own Verse Programming Language.\n- Accounts the user returns to over multiple sessions include `UEFN` and `UEFN` examples: Provided to those who develop games using Unreal Engine for Fortnite (UEFN).\n- A smaller set of followed threads still includes `Games Business`: Individuals involved with the business side of the games industry. This includes as marketing, PR, publishing, finance, etc.\n\nTask: Choose which candidate Bluesky Labeler is more suitable to recommend to this user.",
+    "chosen": [
+      "Labeler handle: uefn.pinefruit.dev\nDisplay name: UEFN Labeler\nDescription: Official labeler account for all things UEFN.\nReach out if you would like a new label added.\nNot Affiliated with Epic Games.\nManaged by @pinefruit.dev and @raybenefield.bsky.social\nRubrics:\n- uefn (UEFN): Provided to those who develop games using Unreal Engine for Fortnite (UEFN). \n- verse (Verse): Provided to programmers who develop games using Epic’s own Verse Programming Language. "
+    ],
+    "rejected": [
+      "Labeler handle: ozone.birb.house\nDisplay name: Games Industry Labeller\nDescription: A labeling service for the games industry. Check my posts for instructions.\n\nVerified labels are applied manually and may be delayed.\n\nManaged by @trezy.codes.\nRubrics:\n- games-archivist (Games Archivist): The diligent people that preserve some part of games industry history.\n- games-business (Games Business): Individuals involved with the business side of the games industry. This includes as marketing, PR, publishing, finance, etc.\n- games-educator (Games Educator): Professors, instructors, and others involved in educating the games industry.\n- games-media (Games Media): Non-credentialed accounts that cover and produce content about the games industry; Youtubers, podcasters, indie blogs, etc.\n- games-organizer (Games Organizer): Event organizers that focus on the games industry. Event size is irrelevant; everything from local meetups to international conferences counts.\n- game-dev (Game Dev): Anybody that is directly involved in the development of a game. This includes programmers, designers, narrative, animators, writers, artists, composers, QA, localisation, etc. This is available for any section of the industry, from AAA to indie to hobbyists.\n- games-research (Games Research): Anybody that focuses on researching games and the games industry.\n- game-studio (Game Studio): Companies that contribute to the development of games. This includes indie studios, AAA studios, consulting and outsourcing companies, etc.\n\n✅ This profile has been independently verified.\n- games-event (Games Event): An account representing a games industry event.\n\n✅ This profile has been independently verified.\n- games-journalist (Games Journalist): Individual journalists covering the games industry.\n\n✅ This profile has been independently verified."
+    ],
+    "error_key": "gaming_industry_auto_pair",
+    "error": "The chosen Labeler is specific to UEFN and Verse, while the rejected candidate is a broad games-industry role labeler.",
+    "score_chosen": [
+      0.5
+    ],
+    "score_rejected": [
+      0.5
+    ],
+    "judge_calls": [
+      [
+        {
+          "sample_index": 0,
+          "swapped": false,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
+        },
+        {
+          "sample_index": 0,
+          "swapped": true,
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -17293,10 +17293,10 @@
     "error_key": "music_creator_auto_pair",
     "error": "The chosen Labeler is for general musician and music-lover identity, while the rejected candidate is specific to video-game music and audio.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -17309,8 +17309,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -17473,18 +17473,18 @@
     "error_key": "music_creator_auto_pair",
     "error": "The chosen Labeler is for general musician and music-lover identity, while the rejected candidate is specific to video-game music and audio.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -17581,10 +17581,10 @@
     "error_key": "music_creator_auto_pair",
     "error": "The chosen Labeler is specific to video-game music and audio roles, while the rejected candidate is a general musician identity labeler.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -17597,8 +17597,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -18409,18 +18409,18 @@
     "error_key": "employment_auto_pair",
     "error": "The chosen Labeler identifies programming-language skills, while the rejected candidate only marks job-search or hiring status.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -18553,18 +18553,18 @@
     "error_key": "verification_auto_pair",
     "error": "The chosen Labeler covers broad institutional and professional trust categories, while the rejected candidate verifies notable individuals such as voice actors and creators.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -18697,10 +18697,10 @@
     "error_key": "verification_auto_pair",
     "error": "The chosen Labeler covers broad institutional and professional trust categories, while the rejected candidate verifies notable individuals such as voice actors and creators.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -18713,8 +18713,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -18769,18 +18769,18 @@
     "error_key": "verification_auto_pair",
     "error": "The chosen Labeler verifies notable individual creators and voice actors, while the rejected candidate is broader institutional trust.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -19751,14 +19751,14 @@
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -19849,10 +19849,10 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler identifies pronouns, while the rejected candidate identifies zodiac signs.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -19865,8 +19865,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]
@@ -19885,18 +19885,18 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler identifies zodiac signs, while the rejected candidate identifies pronouns.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -19993,18 +19993,18 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler identifies zodiac signs, while the rejected candidate identifies pronouns.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -20029,18 +20029,18 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler identifies zodiac signs, while the rejected candidate identifies pronouns.",
     "score_chosen": [
-      0.0
+      0.5
     ],
     "score_rejected": [
-      1.0
+      0.5
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         },
         {
           "sample_index": 0,
@@ -20101,10 +20101,10 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler identifies zodiac signs, while the rejected candidate identifies pronouns.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -20117,8 +20117,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -20209,10 +20209,10 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler exposes time-zone and chronotype labels, while the rejected candidate exposes pronouns.",
     "score_chosen": [
-      0.5
+      1.0
     ],
     "score_rejected": [
-      0.5
+      0.0
     ],
     "judge_calls": [
       [
@@ -20225,8 +20225,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         }
       ]
     ]
@@ -20281,18 +20281,18 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler exposes time-zone and chronotype labels, while the rejected candidate exposes pronouns.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -20317,18 +20317,18 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler exposes time-zone and chronotype labels, while the rejected candidate exposes pronouns.",
     "score_chosen": [
-      0.5
+      0.0
     ],
     "score_rejected": [
-      0.5
+      1.0
     ],
     "judge_calls": [
       [
         {
           "sample_index": 0,
           "swapped": false,
-          "winner": "A",
-          "raw": "{\"winner\":\"A\"}"
+          "winner": "B",
+          "raw": "{\"winner\":\"B\"}"
         },
         {
           "sample_index": 0,
@@ -20641,10 +20641,10 @@
     "error_key": "community_identity_auto_pair",
     "error": "The chosen Labeler exposes pronouns, while the rejected candidate exposes time-zone and chronotype labels.",
     "score_chosen": [
-      1.0
+      0.5
     ],
     "score_rejected": [
-      0.0
+      0.5
     ],
     "judge_calls": [
       [
@@ -20657,8 +20657,8 @@
         {
           "sample_index": 0,
           "swapped": true,
-          "winner": "B",
-          "raw": "{\"winner\":\"B\"}"
+          "winner": "A",
+          "raw": "{\"winner\":\"A\"}"
         }
       ]
     ]

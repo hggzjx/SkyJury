@@ -1,6 +1,6 @@
 # SkyJury: Benchmarking Judge Models for User-Conditioned Labeler Selection in Decentralized Moderation
 
-SkyJury benchmarks whether judge models can reliably select the most suitable real-world moderation Labeler for a user, given user context and competing Labeler rubrics in a decentralized moderation ecosystem.
+SkyJury benchmarks whether judge models can reliably reason over competing real-world Bluesky Labeler rubrics and select the most suitable moderation policy for a user in a decentralized moderation ecosystem.
 
 ## 1. 研究背景
 
@@ -14,7 +14,7 @@ Bluesky / AT Protocol 的审核机制允许多个独立 Labelers 同时存在。
 
 因此，SkyJury 将问题建模为一个奖励模型 / Judge Model 的偏好判定任务：
 
-> 给定用户画像与行为上下文，以及两个候选 Labelers 的真实 rubrics，模型需要判断哪个 Labeler 更适合推荐给该用户订阅或启用。
+> 给定用户画像与行为上下文，以及两个候选 Labelers 的真实 rubrics，模型需要判断哪个 Labeler 所代表的 moderation policy 更适合推荐给该用户订阅或启用。
 
 这个任务与 reward model benchmark 的基本形式一致：
 
@@ -36,6 +36,8 @@ rejected candidate = 较不适合该用户的 Labeler 及其 rubrics
 
 Bluesky 的独特性不只是“平台上有多个标签”，而是它提供了一个真实的多 Labeler 生态。不同 Labelers 可能关注成人内容、诈骗、骚扰、AI 生成内容、艺术盗图、创作者认证、社区身份、剧透、粉丝文化或其他治理维度。
 
+更重要的是，这些差异并不是抽象存在的，而是被显式写在各自的 rubrics / label definitions 里。也就是说，rubrics 在 SkyJury 中不是背景说明，而是 moderation policy 的文本化载体：它规定了一个 Labeler 在管什么、怎么管、边界划在哪里，以及标签语义究竟覆盖哪些对象与情形。
+
 但这种开放性也带来选择成本：
 
 * 普通用户难以逐个阅读并理解大量 Labeler definitions；
@@ -45,15 +47,15 @@ Bluesky 的独特性不只是“平台上有多个标签”，而是它提供了
 
 因此，本项目关注：
 
-> Reward / Judge Models 能否根据用户画像与 Labeler rubrics，做出稳定、可解释的 Labeler 偏好判断？
+> Reward / Judge Models 能否基于用户画像，理解并比较两个竞争性 Labeler rubrics 所代表的 moderation policies，并做出稳定的偏好判断？
 
-这个问题比帖子级毒性分类更贴近 Bluesky 的实际机制：用户需要主动选择 Labelers，而 Judge / Reward Model 可以作为辅助决策工具，帮助用户理解和比较不同审核服务。
+这个问题比帖子级毒性分类更贴近 Bluesky 的实际机制：用户需要主动选择 Labelers，而 Judge / Reward Model 可以作为辅助决策工具，帮助用户理解和比较不同审核服务。SkyJury 因而不把 rubrics 视为附加元数据，而把它们视为任务的核心推理对象。模型真正需要做的，不是识别某个显眼关键词，而是比较两组相近但不完全相同的 rubric definitions，理解它们在适用对象、风险边界、社区语境和治理目标上的细粒度差异。
 
 同时，SkyJury 的有效性取决于题目是否足够困难。早期 pilot 中，一些样本呈现出“用户需求强烈指向 chosen、rejected 只是表面相关”的结构；这类样本可以验证 API、数据格式和基础理解能力，但对强 LLM-as-Judge 过于友好。若强模型在 normal order 与 small swapped sanity check 中都接近满分，说明 benchmark 不能有效区分模型的细粒度 rubric reasoning 能力。因此，正式版本必须将数据构造目标从“明显更合适”收窄为：
 
 > chosen 与 rejected 都应高度相关，且 chosen 只具有微弱、局部、需要仔细阅读 rubrics 才能发现的优势。
 
-SkyJury 的主实验不应奖励粗粒度关键词匹配，而应评测模型能否在多个相近 rubrics、相似用户信号和干扰性行为线索之间发现最小但决定性的偏好依据。
+SkyJury 的主实验不应奖励粗粒度关键词匹配，而应评测模型能否在真实 Bluesky labeler rubrics 构成的竞争性 moderation policy 空间中，针对特定用户，在两个都“看起来合理”的候选政策里，识别出那个仅有微弱优势的更优选择。
 
 ---
 
@@ -918,72 +920,103 @@ Auditor 只作用于 Verifier 通过的样本：
 
 然后对 chosen / rejected 的 rubrics 进行扰动，并重复采样比较偏好分布。
 
-### 6.2 Rubric 扰动
+### 6.2 Cross-candidate rubric perturbation
 
-扰动对象是 candidate Labelers 的 rubric fields，包括：
+正式 Auditor 仅保留两类语义保持扰动：
 
-* label definition paraphrase；
-* rubric order shuffle；
-* definition compression；
-* display name removal；
-* severity metadata removal；
-* 加入语义无关但格式相似的 distractor rubric；
-* chosen 与 rejected 展示顺序交换。
+1. **Length perturbation**
+   
+   在不改变语义的前提下，将每条 rubric definition 扩写为更长、更具体的表述。
 
-扰动必须满足：
+2. **Language perturbation**
+   
+   在不改变语义的前提下，将每条 rubric definition 翻译为另一种 Bluesky 语境中合理的语言。
 
-> 不改变 Labeler 的真实适用语义，只改变 rubrics 的表达、排序或呈现形式。
-
-### 6.3 重复采样与偏好分布
-
-对每个通过 Verifier 的样本 $i$，在原始 rubrics 下重复采样 $K$ 次，得到：
+对每类扰动，SkyJury 不只比较“chosen 与 rejected 同时扰动”相对于原始 rubrics 的变化，还进一步拆分候选侧影响。令：
 
 $$
-\mathcal{O}^{orig}_i = \{o^{orig}_{i1},...,o^{orig}_{iK}\}
+d_i=(u_i,\ell_i^+,\ell_i^-)
 $$
 
-在扰动 rubrics 下重复采样 $K$ 次，得到：
+原始样本为：
 
 $$
-\mathcal{O}^{pert}_i = \{o^{pert}_{i1},...,o^{pert}_{iK}\}
+d_i^{orig}=(u_i,\ell_i^+,\ell_i^-)
 $$
 
-将输出归一化为二元偏好分布：
+对扰动算子 $\mathcal{P}_k\in\{\mathcal{P}_{len},\mathcal{P}_{lang}\}$，构造三种 auditor variants：
 
 $$
-\widehat{p}^{orig}_i = [P(A), P(B)]
+d_{i,k}^{both}=(u_i,\mathcal{P}_k(\ell_i^+),\mathcal{P}_k(\ell_i^-))
 $$
 
 $$
-\widehat{p}^{pert}_i = [P(A), P(B)]
+d_{i,k}^{chosen}=(u_i,\mathcal{P}_k(\ell_i^+),\ell_i^-)
 $$
 
-### 6.4 JSD + 置换检验
-
-SkyJury 使用 Jensen-Shannon Distance 作为唯一分布差异度量：
-
 $$
-D_i^{JSD}=JSD(\widehat{p}^{orig}_i,\widehat{p}^{pert}_i)
+d_{i,k}^{rejected}=(u_i,\ell_i^+,\mathcal{P}_k(\ell_i^-))
 $$
 
-显著性检验使用置换检验。将原始与扰动条件下的 $2K$ 次输出合并，随机打乱 `orig` / `pert` 条件标签，每次重新计算 JSD，构造 null distribution。
+其中 `both` 表示双方 rubrics 同时扰动，`chosen` 表示只扰动 chosen Labeler rubrics，`rejected` 表示只扰动 rejected Labeler rubrics。这样每种扰动对应 3 个 robustness tests，两种扰动共形成 6 个 auditor reports。
 
-若观测到的 $D_i^{JSD}$ 在置换分布中显著偏大，即：
+### 6.3 Preference confidence
+
+Auditor 使用与 Verifier 一致的偏好置信度：
 
 $$
-p_i < \alpha
+C_\theta(d_i)=\sigma(s_\theta(u_i,\ell_i^+)-s_\theta(u_i,\ell_i^-))
 $$
 
-则认为该模型在该样本上存在 rubric perturbation sensitivity。
+对于 RM/DPO，$s_\theta$ 是 scalar reward / preference score。对于 LLM-as-Judge，$s_\theta$ 是 repeated bidirectional verification 中候选被选择的比例。
+
+交叉 Auditor 将推理与统计分离：如果已经得到原始与扰动后的候选侧得分，则无需重新推理，可直接组合不同候选侧得分计算：
+
+$$
+C_\theta(d_{i,k}^{chosen})=\sigma(s_\theta(u_i,\mathcal{P}_k(\ell_i^+))-s_\theta(u_i,\ell_i^-))
+$$
+
+$$
+C_\theta(d_{i,k}^{rejected})=\sigma(s_\theta(u_i,\ell_i^+)-s_\theta(u_i,\mathcal{P}_k(\ell_i^-)))
+$$
+
+对 RM/DPO，这种交叉计算直接对应候选独立打分；对 LLM-as-Judge，它是基于 repeated selection rate 的 score-level approximation。
+
+### 6.4 Paired permutation test
+
+对每个扰动类型 $k$ 与 variant $v\in\{both,chosen,rejected\}$，构造 paired confidence difference：
+
+$$
+\Delta_{i,k,v}=C_\theta(d_i^{orig})-C_\theta(d_{i,k}^{v})
+$$
+
+观测统计量为 paired t-statistic：
+
+$$
+\hat{t}_{obs}^{(k,v)}=
+\frac{\overline{\Delta_{i,k,v}}}{\mathrm{std}(\Delta_{i,k,v})/\sqrt{|S|}}
+$$
+
+显著性检验使用 paired sign-flip permutation test：
+
+$$
+\hat{t}_{perm}^{(b,k,v)}=
+\frac{\overline{\Delta_{i,k,v}\cdot z_i^{(b)}}}
+{\mathrm{std}(\Delta_{i,k,v}\cdot z_i^{(b)})/\sqrt{|S|}},
+\quad z_i^{(b)}\sim\mathcal{U}\{-1,1\}
+$$
+
+若扰动显著降低原始偏好置信度，则认为模型对该类 rubric 表达变化存在 robustness risk。所有 overall 与 category-level tests 使用 Benjamini-Hochberg 控制多重比较。
 
 ### 6.5 Auditor 指标
 
 Auditor 报告：
 
-* **Perturbation Failure Rate**：扰动后多数选择不再偏好 chosen 的比例；
-* **JSD Shift Rate**：JSD + permutation test 显著变化的样本比例；
-* **Mean JSD**：扰动前后平均偏好分布差异；
-* **Preference Stability**：扰动前后 majority preference 保持不变的比例。
+* **Effect size**：$\hat{e}_{k,v}=\overline{\Delta_{i,k,v}}/\mathrm{std}(\Delta_{i,k,v})$；
+* **Permutation p-value**：paired sign-flip permutation test 的单侧 p-value；
+* **BH significance**：Benjamini-Hochberg 校正后的显著性；
+* **Robustness risk report**：$\hat{e}_{k,v}\land\mathbb{I}^{*}(\hat{p}_{k,v},\bm{\alpha})$；
+* **Overall / category-level reports**：同时报告整体结果与每个主题簇下的结果。
 
 ---
 
@@ -1011,7 +1044,7 @@ Auditor 报告：
 
 6. **运行 Auditor**
    
-   对 Verifier 通过样本进行 rubric perturbation，重复采样，使用 JSD + 置换检验评估鲁棒性。
+   对 Verifier 通过样本进行 cross-candidate rubric perturbation，分别评估 `both`、`chosen-only` 与 `rejected-only` 三种候选侧扰动条件下的偏好置信度变化，并使用 paired sign-flip permutation test 与 BH 校正评估鲁棒性。
 
 ---
 
@@ -1037,7 +1070,7 @@ SkyJury 的贡献包括：
 
 5. **提出 rubric perturbation auditor**
    
-   对通过 Verifier 的样本扰动 rubrics，并用 JSD + 置换检验审计偏好分布是否稳定。
+   对通过 Verifier 的样本进行 length / language rubric perturbation，并进一步区分双方同时扰动、仅扰动 chosen、仅扰动 rejected 三种候选侧影响，用 paired permutation test 审计偏好置信度是否稳定。
 
 ---
 
@@ -1067,4 +1100,4 @@ SkyJury 的贡献包括：
 
 ## 10. 简短摘要
 
-SkyJury 将 Bluesky 的多 Labeler 生态建模为一个用户条件化偏好判定问题。给定用户画像与行为上下文，以及两个候选 Labelers 的真实 rubrics，reward / judge model 需要判断哪个 Labeler 更适合推荐给该用户。正式数据构造采用 rubric-mixed weak-margin 原则：用户画像同时包含 chosen 与 rejected 的 rubrics 信号，使两个候选都高度合理，而 chosen 只保留微弱、局部、需要细读 definition 才能发现的优势。Verifier 采用 reward model benchmark 中的 chosen/rejected Accuracy；Auditor 对 Verifier 通过样本进行 rubric perturbation，并使用 Jensen-Shannon Distance 与置换检验评估偏好分布鲁棒性。
+SkyJury 将 Bluesky 的多 Labeler 生态建模为一个用户条件化偏好判定问题。给定用户画像与行为上下文，以及两个候选 Labelers 的真实 rubrics，reward / judge model 需要判断哪个 Labeler 更适合推荐给该用户。正式数据构造采用 rubric-mixed weak-margin 原则：用户画像同时包含 chosen 与 rejected 的 rubrics 信号，使两个候选都高度合理，而 chosen 只保留微弱、局部、需要细读 definition 才能发现的优势。Verifier 采用 reward model benchmark 中的 chosen/rejected Accuracy；Auditor 对 Verifier 通过样本进行 cross-candidate rubric perturbation，并使用偏好置信度、paired permutation test 与 BH 校正评估模型对 rubric 表达变化的鲁棒性。

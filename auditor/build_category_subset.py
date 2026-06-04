@@ -11,7 +11,7 @@ from typing import Any
 DEFAULT_DATA_DIR = "/ssd1/lbh/zjx/skyjury/data/auditor"
 DEFAULT_OUTPUT_DIR = "/ssd1/lbh/zjx/skyjury/data/auditor/category50"
 DEFAULT_PREFIX = "skyjury_bench"
-PERTURBATIONS = ("length", "language", "length_language")
+PERTURBATIONS = ("length", "language")
 
 
 def parse_args() -> argparse.Namespace:
@@ -76,7 +76,6 @@ def main() -> None:
         "base": base_path,
         "rubric_length": data_dir / f"{args.prefix}_rubric_length.json",
         "rubric_language": data_dir / f"{args.prefix}_rubric_language.json",
-        "rubric_length_language": data_dir / f"{args.prefix}_rubric_length_language.json",
     }
     outputs = {}
     for name, path in active_files.items():

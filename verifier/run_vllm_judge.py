@@ -190,14 +190,16 @@ def main() -> None:
                 row["score_chosen"][idx] /= total
                 row["score_rejected"][idx] /= total
             else:
-                row["score_chosen"][idx] = 0.0
-                row["score_rejected"][idx] = 0.0
                 row_skipped = True
         if row_skipped:
             row["skipped"] = True
+            row["skip_reason"] = "No valid judge votes collected for at least one candidate pair."
+            row["score_chosen"] = []
+            row["score_rejected"] = []
             skipped_rows += 1
 
     metrics = compute_accuracy(rows)
+    valid_rows = sum(1 for row in rows if row.get("score_chosen") and row.get("score_rejected"))
     metrics.update(
         {
             "model": model_name,
@@ -211,6 +213,7 @@ def main() -> None:
             "tensor_parallel_size": args.tensor_parallel_size,
             "gpu_memory_utilization": args.gpu_memory_utilization,
             "max_model_len": args.max_model_len,
+            "valid_rows": valid_rows,
             "skipped_calls": skipped,
             "skipped_pairs": skipped_rows,
         }

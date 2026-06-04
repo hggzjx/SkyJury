@@ -1,0 +1,9 @@
+============================================================
+LLM-as-judge auditor: qwen3.5-plus
+original_predictions=/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_category50_audit/llm_judge_predictions/qwen3.5-plus/base/skyjury_bench_base_llm_judge_qwen3.5-plus_predictions.json
+data_dir=/ssd1/lbh/zjx/skyjury/data/auditor/category50
+data_prefix=skyjury_bench
+concurrency=24
+============================================================
+Running LLM judge perturbation: model=qwen3.5-plus perturbation=length concurrency=24
+LLM-as-judge:   0%|          | 0/200 [00:00<?, ?it/s]

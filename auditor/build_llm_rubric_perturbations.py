@@ -18,7 +18,7 @@ DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
 DEFAULT_OUTPUT_DIR = "/ssd1/lbh/zjx/skyjury/data/auditor"
 DEFAULT_BASE_URL = "https://api.chatanywhere.tech/v1/"
 DEFAULT_MODEL = "deepseek-v4-flash"
-PERTURBATION_TYPES = ("length", "language", "length_language")
+PERTURBATION_TYPES = ("length", "language")
 TARGET_LANGUAGE = "Spanish"
 
 RUBRICS_MARKER = "Rubrics:"
@@ -32,7 +32,6 @@ Return valid JSON only. Do not use Markdown.
 Definitions:
 - length: substantially expand each rubric definition in English while preserving exactly the original meaning and policy boundary. Write 70-100 English words per rubric when possible, or at least 2.5x the original definition length for very short definitions. Include the scope, boundary conditions, and what should not be inferred, but do not invent new policy criteria.
 - language: translate each original rubric definition fully into Spanish. Do not keep English text.
-- length_language: translate the expanded English definition from length fully into Spanish.
 
 Hard constraints:
 - Do not change label ids, label display names, label order, candidate identity, handles, descriptions, or non-rubric text.
@@ -128,7 +127,6 @@ def build_messages(row: dict[str, Any], rubric_items: list[dict[str, str]]) -> l
                 "id": "same id as input",
                 "length": "expanded English definition",
                 "language": "Spanish translation of the original definition",
-                "length_language": "Spanish translation of the expanded English definition",
             }
         ],
     }
@@ -355,7 +353,7 @@ def main() -> None:
         "model": args.model,
         "target_language": TARGET_LANGUAGE,
         "perturbation_scope": "rubrics_only",
-        "semantic_constraint": "length expands definitions without changing meaning; language translates original definitions to Spanish; length_language translates expanded definitions to Spanish.",
+        "semantic_constraint": "length expands definitions without changing meaning; language translates original definitions to Spanish.",
         "base_path": str(base_path),
         "progress_path": str(progress_path),
         "variants": {key: {"path": str(path)} for key, path in variant_paths.items()},

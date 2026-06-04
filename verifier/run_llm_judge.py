@@ -349,6 +349,7 @@ def main() -> None:
                 rows[index] = future.result()
 
     metrics = compute_accuracy(rows)
+    valid_rows = sum(1 for row in rows if row.get("score_chosen") and row.get("score_rejected"))
     metrics.update(
         {
             "model": args.model,
@@ -359,6 +360,7 @@ def main() -> None:
             "concurrency": args.concurrency,
             "max_tokens": args.max_tokens,
             "reasoning_effort": args.reasoning_effort,
+            "valid_rows": valid_rows,
             "skipped_pairs": sum(1 for row in rows if row.get("skipped")),
         }
     )

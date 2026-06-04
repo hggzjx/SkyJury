@@ -7,7 +7,7 @@ DATA_DIR="${3:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
 OUTPUT_DIR="${4:-/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_predictions}"
 DATA_PREFIX="${5:-skyjury_bench}"
 SAMPLES="${SAMPLES:-5}"
-TEMPERATURE="${TEMPERATURE:-0}"
+TEMPERATURE="${TEMPERATURE:-0.5}"
 MAX_TOKENS="${MAX_TOKENS:-1024}"
 REASONING_EFFORT="${REASONING_EFFORT:-minimal}"
 LIMIT_ARGS=()
@@ -34,7 +34,7 @@ else
 fi
 
 for model in "${MODELS[@]}"; do
-  for perturbation in length language length_language; do
+  for perturbation in length language; do
     DATA_PATH="${DATA_DIR}/${DATA_PREFIX}_rubric_${perturbation}.json"
     PERTURBATION_OUTPUT_DIR="${OUTPUT_DIR}/${model}/${perturbation}"
     echo "Running LLM judge perturbation: model=${model} perturbation=${perturbation} concurrency=${CONCURRENCY}"

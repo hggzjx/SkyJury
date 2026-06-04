@@ -10,7 +10,7 @@ SAMPLES="${SAMPLES:-5}"
 BATCH_SIZE="${BATCH_SIZE:-256}"
 MAX_NEW_TOKENS="${MAX_NEW_TOKENS:-128}"
 MAX_MODEL_LEN="${MAX_MODEL_LEN:-4096}"
-TEMPERATURE="${TEMPERATURE:-0}"
+TEMPERATURE="${TEMPERATURE:-0.5}"
 TOP_P="${TOP_P:-1.0}"
 TENSOR_PARALLEL_SIZE="${TENSOR_PARALLEL_SIZE:-1}"
 GPU_MEMORY_UTILIZATION="${GPU_MEMORY_UTILIZATION:-0.90}"
@@ -37,7 +37,7 @@ fi
 
 for model_path in "${MODELS[@]}"; do
   model_name="$(basename "$model_path")"
-  for perturbation in length language length_language; do
+  for perturbation in length language; do
     DATA_PATH="${DATA_DIR}/${DATA_PREFIX}_rubric_${perturbation}.json"
     PERTURBATION_OUTPUT_DIR="${OUTPUT_DIR}/${model_name}/${perturbation}"
     echo "Running vLLM judge perturbation: model=${model_name} perturbation=${perturbation}"

@@ -1,0 +1,75 @@
+{
+  "accuracy": 0.7070707070707071,
+  "correct_pairs": 140,
+  "total_pairs": 198,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.6666666666666666,
+    "account_behavior": 0.6666666666666666,
+    "account_verification": 1.0,
+    "adult_creator_discovery": 0.4,
+    "adult_filtering": 1.0,
+    "ai_content": 0.8666666666666667,
+    "art_safety": 0.6,
+    "community_identity": 0.9473684210526315,
+    "creator_discovery": 1.0,
+    "crypto_safety": 0.5714285714285714,
+    "crypto_spam": 1.0,
+    "developer_identity": 1.0,
+    "employment": 0.25,
+    "fact_checking": 0.5714285714285714,
+    "fandom_content_warnings": 1.0,
+    "fandom_identity": 0.75,
+    "gaming_industry": 0.75,
+    "medical_community": 1.0,
+    "music_creator": 0.6666666666666666,
+    "news_source_context": 0.5833333333333334,
+    "politics_filtering": 0.34782608695652173,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.8888888888888888,
+    "science_misinformation": 0.6,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.625,
+    "substack_filtering": 1.0,
+    "urbanism_community": 1.0,
+    "verification": 0.9090909090909091
+  },
+  "category_accuracy": {
+    "identity_trust": 0.86,
+    "interest_community": 0.6938775510204082,
+    "platform_information_ecology": 0.6326530612244898,
+    "safety_moderation": 0.64
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 43,
+      "total_pairs": 50,
+      "accuracy": 0.86
+    },
+    "interest_community": {
+      "correct_pairs": 34,
+      "total_pairs": 49,
+      "accuracy": 0.6938775510204082
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 31,
+      "total_pairs": 49,
+      "accuracy": 0.6326530612244898
+    },
+    "safety_moderation": {
+      "correct_pairs": 32,
+      "total_pairs": 50,
+      "accuracy": 0.64
+    }
+  },
+  "model": "deepseek-v4-pro",
+  "method": "llm_as_judge",
+  "base_url": "https://api.chatanywhere.tech/v1",
+  "order": "bidirectional",
+  "temperature": 0.5,
+  "concurrency": 48,
+  "max_tokens": 1024,
+  "reasoning_effort": "minimal",
+  "skipped_pairs": 2
+}

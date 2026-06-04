@@ -16,6 +16,10 @@ GPU_MEMORY_UTILIZATION="${GPU_MEMORY_UTILIZATION:-0.90}"
 DTYPE="${DTYPE:-auto}"
 LIMIT="${LIMIT:-}"
 
+if [[ -n "$LIMIT" ]]; then
+  OUTPUT_ROOT="${OUTPUT_ROOT}/debug_limit_${LIMIT}"
+fi
+
 if [[ -n "${MODEL_PATHS:-}" ]]; then
   read -r -a MODEL_LIST <<< "$MODEL_PATHS"
 else

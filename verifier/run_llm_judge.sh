@@ -15,6 +15,10 @@ RETRY_SLEEP="${RETRY_SLEEP:-3}"
 LIMIT="${LIMIT:-}"
 CONTINUE_ON_ERROR="${CONTINUE_ON_ERROR:-1}"
 
+if [[ -n "$LIMIT" ]]; then
+  OUTPUT_ROOT="${OUTPUT_ROOT}/debug_limit_${LIMIT}"
+fi
+
 if [[ -n "${MODELS:-}" ]]; then
   read -r -a MODEL_LIST <<< "$MODELS"
 else
@@ -24,8 +28,8 @@ else
     # "gpt-5-ca"
     # "gpt-5-nano"
     # "qwen3.5-plus"
-    # "deepseek-v4-pro"
-    "minimax-m2.7"
+    "deepseek-v4-pro"
+    # "minimax-m2.7"
   )
 fi
 

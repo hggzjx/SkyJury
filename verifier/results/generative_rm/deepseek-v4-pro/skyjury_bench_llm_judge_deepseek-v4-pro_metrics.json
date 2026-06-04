@@ -1,67 +1,67 @@
 {
-  "accuracy": 0.6493055555555556,
-  "correct_pairs": 374,
+  "accuracy": 0.6319444444444444,
+  "correct_pairs": 364,
   "total_pairs": 576,
   "num_samples": 576,
   "subset_accuracy": {
-    "accessibility": 0.675,
+    "accessibility": 0.65,
     "account_behavior": 0.5,
     "account_verification": 0.9166666666666666,
     "adult_creator_discovery": 0.65,
-    "adult_filtering": 0.55,
-    "ai_content": 0.6,
+    "adult_filtering": 0.5,
+    "ai_content": 0.525,
     "art_safety": 0.65,
     "community_identity": 0.65625,
-    "creator_discovery": 0.8333333333333334,
+    "creator_discovery": 0.7916666666666666,
     "crypto_safety": 0.55,
     "crypto_spam": 1.0,
     "developer_identity": 1.0,
     "employment": 0.5,
-    "fact_checking": 0.7,
-    "fandom_content_warnings": 0.6,
+    "fact_checking": 0.65,
+    "fandom_content_warnings": 0.8,
     "fandom_identity": 0.65,
     "fandom_spoiler": 1.0,
-    "gaming_industry": 0.6875,
+    "gaming_industry": 0.8125,
     "medical_community": 1.0,
-    "music_creator": 0.5,
-    "news_source_context": 0.5357142857142857,
-    "politics_filtering": 0.4772727272727273,
+    "music_creator": 0.4375,
+    "news_source_context": 0.5,
+    "politics_filtering": 0.38636363636363635,
     "promotion_filtering": 1.0,
-    "protocol_infrastructure": 0.6,
-    "science_misinformation": 0.65,
-    "spam_behavior": 0.5625,
+    "protocol_infrastructure": 0.65,
+    "science_misinformation": 0.6,
+    "spam_behavior": 0.625,
     "sports_authenticity": 1.0,
-    "sports_fandom": 0.625,
+    "sports_fandom": 0.525,
     "substack_filtering": 1.0,
     "urbanism_community": 0.75,
     "verification": 0.78125
   },
   "category_accuracy": {
-    "identity_trust": 0.7241379310344828,
-    "interest_community": 0.6607142857142857,
-    "platform_information_ecology": 0.5648148148148148,
-    "safety_moderation": 0.6328125
+    "identity_trust": 0.7155172413793104,
+    "interest_community": 0.65625,
+    "platform_information_ecology": 0.5092592592592593,
+    "safety_moderation": 0.6171875
   },
   "category_metrics": {
     "identity_trust": {
-      "correct_pairs": 84,
+      "correct_pairs": 83,
       "total_pairs": 116,
-      "accuracy": 0.7241379310344828
+      "accuracy": 0.7155172413793104
     },
     "interest_community": {
-      "correct_pairs": 148,
+      "correct_pairs": 147,
       "total_pairs": 224,
-      "accuracy": 0.6607142857142857
+      "accuracy": 0.65625
     },
     "platform_information_ecology": {
-      "correct_pairs": 61,
+      "correct_pairs": 55,
       "total_pairs": 108,
-      "accuracy": 0.5648148148148148
+      "accuracy": 0.5092592592592593
     },
     "safety_moderation": {
-      "correct_pairs": 81,
+      "correct_pairs": 79,
       "total_pairs": 128,
-      "accuracy": 0.6328125
+      "accuracy": 0.6171875
     }
   },
   "model": "deepseek-v4-pro",
@@ -72,5 +72,6 @@
   "concurrency": 48,
   "max_tokens": 1024,
   "reasoning_effort": "minimal",
+  "valid_rows": 576,
   "skipped_pairs": 0
 }

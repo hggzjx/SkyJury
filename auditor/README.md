@@ -14,7 +14,6 @@ The active auditor files are:
 skyjury_bench_base.json
 skyjury_bench_rubric_length.json
 skyjury_bench_rubric_language.json
-skyjury_bench_rubric_length_language.json
 skyjury_bench_rubric_perturbation_manifest.json
 ```
 
@@ -67,9 +66,15 @@ Perturbations:
 
 - `length`: expand each rubric definition in English while preserving the original scope.
 - `language`: translate each original rubric definition into Spanish.
-- `length_language`: translate the expanded English definition into Spanish.
 
 Only candidate Labeler `Rubrics:` sections are changed.
+
+The active cross-candidate auditor reports six robustness risks:
+
+```text
+length x {both, chosen_only, rejected_only}
+language x {both, chosen_only, rejected_only}
+```
 
 ## Run Perturbed Verifiers
 
@@ -126,18 +131,19 @@ confidence = sigmoid(chosen_score - rejected_score)
 
 For LLM-as-judge, `chosen_score` and `rejected_score` are repeated bidirectional selection rates.
 
-The auditor compares original vs perturbed confidence using paired permutation tests over the paired t-statistic, then applies Benjamini-Hochberg correction across the three perturbations. Reports include overall and per-`category` results. Because perturbed predictions are normally run on the 200-row category-balanced subset while original verifier predictions may be full-set, `run_audit_report.sh` aligns rows by id with `ALLOW_SUBSET=1` by default.
+The auditor compares original vs perturbed confidence using paired permutation tests over the paired t-statistic, then applies Benjamini-Hochberg correction across the six cross-candidate tests. Reports include overall and per-`category` results. Because perturbed predictions are normally run on the 200-row category-balanced subset while original verifier predictions may be full-set, the all-in-one auditor scripts first materialize the matching base subset from full verifier predictions.
 
 ## Report
 
 ```bash
-bash run_audit_report.sh \
-  <rm|dpo|llm_judge> \
-  /path/to/original_predictions.json \
-  /path/to/length_predictions.json \
-  /path/to/language_predictions.json \
-  /path/to/length_language_predictions.json \
-  /path/to/output_report_dir
+python audit_cross_candidate_perturbations.py \
+  --method <rm|dpo|llm_judge> \
+  --original /path/to/original_predictions.json \
+  --perturbed length=/path/to/length_predictions.json \
+  --perturbed language=/path/to/language_predictions.json \
+  --output-dir /path/to/output_report_dir \
+  --report-name <method>_cross_candidate_rubric_robustness \
+  --allow-subset
 ```
 
 Legacy cache-based perturbation scripts were moved to `archive_legacy_20260603/`.
