@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DATA_DIR="${DATA_DIR:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
+RESULT_ROOT="${RESULT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/dpo_category50_audit}"
+VERIFIER_RESULTS="${VERIFIER_RESULTS:-/ssd1/lbh/zjx/skyjury/verifier/results}"
+REF_MODEL_PATH="${REF_MODEL_PATH:-/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b}"
+DATA_PREFIX="${DATA_PREFIX:-skyjury_bench}"
+
+mkdir -p "$RESULT_ROOT"/{logs,dpo_predictions,reports/dpo}
+
+safe_name() {
+  basename "$1" | tr '/:' '__'
+}
+
+latest_prediction() {
+  local dir="$1"
+  find "$dir" -name '*_predictions.json' -type f | sort | tail -n 1
+}
+
+run_one() {
+  local model="$1"
+  local original_predictions="$2"
+  local cuda_devices="$3"
+  local device_map="$4"
+  local batch_size="$5"
+
+  local model_name
+  model_name="$(safe_name "$model")"
+  local model_report_dir="$RESULT_ROOT/reports/dpo/${model_name}"
+  local log_path="$RESULT_ROOT/logs/dpo_${model_name}.log"
+  mkdir -p "$model_report_dir"
+
+  {
+    echo "============================================================"
+    echo "DPO auditor: $model_name"
+    echo "model=$model"
+    echo "ref_model=$REF_MODEL_PATH"
+    echo "original_predictions=$original_predictions"
+    echo "data_dir=$DATA_DIR"
+    echo "data_prefix=$DATA_PREFIX"
+    echo "cuda_devices=$cuda_devices"
+    echo "device_map=$device_map"
+    echo "batch_size=$batch_size"
+    echo "============================================================"
+
+    CUDA_VISIBLE_DEVICES="$cuda_devices" \
+    DEVICE=cuda \
+    DEVICE_MAP="$device_map" \
+    BATCH_SIZE="$batch_size" \
+    MAX_LENGTH="${DPO_MAX_LENGTH:-2048}" \
+    MAX_PROMPT_LENGTH="${MAX_PROMPT_LENGTH:-1024}" \
+    TORCH_DTYPE="${TORCH_DTYPE:-auto}" \
+    bash /ssd1/lbh/zjx/skyjury/auditor/run_dpo_perturbations.sh \
+      "$model" \
+      "$DATA_DIR" \
+      "$RESULT_ROOT/dpo_predictions" \
+      "$REF_MODEL_PATH" \
+      "$DATA_PREFIX"
+
+    local pred_root="$RESULT_ROOT/dpo_predictions/${model_name}"
+    local length_pred language_pred length_language_pred
+    length_pred="$(latest_prediction "$pred_root/length")"
+    language_pred="$(latest_prediction "$pred_root/language")"
+    length_language_pred="$(latest_prediction "$pred_root/length_language")"
+
+    ALLOW_SUBSET=1 bash /ssd1/lbh/zjx/skyjury/auditor/run_audit_report.sh \
+      dpo \
+      "$original_predictions" \
+      "$length_pred" \
+      "$language_pred" \
+      "$length_language_pred" \
+      "$model_report_dir"
+  } 2>&1 | tee "$log_path"
+}
+
+run_one \
+  "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-13b" \
+  "$VERIFIER_RESULTS/dpo_models/allenai_tulu-2-dpo-13b/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_allenai_tulu-2-dpo-13b_predictions.json" \
+  "${TULU_CUDA_DEVICES:-0,1,2,3}" \
+  "${TULU_DEVICE_MAP:-auto}" \
+  "${TULU_BATCH_SIZE:-16}"
+
+run_one \
+  "/ssd1/lbh/zjx/models/skyjury_verifier/upstage_SOLAR-10.7B-Instruct-v1.0" \
+  "$VERIFIER_RESULTS/dpo_models/upstage_SOLAR-10.7B-Instruct-v1.0/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_upstage_SOLAR-10.7B-Instruct-v1.0_predictions.json" \
+  "${SOLAR_CUDA_DEVICES:-0,1,2,3}" \
+  "${SOLAR_DEVICE_MAP:-auto}" \
+  "${SOLAR_BATCH_SIZE:-16}"
+
+echo "All DPO auditor runs completed."

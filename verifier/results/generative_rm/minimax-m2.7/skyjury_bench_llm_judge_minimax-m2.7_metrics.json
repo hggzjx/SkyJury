@@ -1,0 +1,76 @@
+{
+  "accuracy": 0.6440972222222222,
+  "correct_pairs": 371,
+  "total_pairs": 576,
+  "num_samples": 576,
+  "subset_accuracy": {
+    "accessibility": 0.625,
+    "account_behavior": 0.5,
+    "account_verification": 0.9166666666666666,
+    "adult_creator_discovery": 0.65,
+    "adult_filtering": 0.5,
+    "ai_content": 0.8,
+    "art_safety": 0.65,
+    "community_identity": 0.65625,
+    "creator_discovery": 0.75,
+    "crypto_safety": 0.55,
+    "crypto_spam": 1.0,
+    "developer_identity": 1.0,
+    "employment": 0.5,
+    "fact_checking": 0.65,
+    "fandom_content_warnings": 0.8,
+    "fandom_identity": 0.6,
+    "fandom_spoiler": 0.75,
+    "gaming_industry": 0.75,
+    "medical_community": 1.0,
+    "music_creator": 0.5,
+    "news_source_context": 0.5714285714285714,
+    "politics_filtering": 0.4318181818181818,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.6,
+    "science_misinformation": 0.65,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.6,
+    "substack_filtering": 0.0,
+    "urbanism_community": 0.5,
+    "verification": 0.78125
+  },
+  "category_accuracy": {
+    "identity_trust": 0.7327586206896551,
+    "interest_community": 0.6473214285714286,
+    "platform_information_ecology": 0.5833333333333334,
+    "safety_moderation": 0.609375
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 85,
+      "total_pairs": 116,
+      "accuracy": 0.7327586206896551
+    },
+    "interest_community": {
+      "correct_pairs": 145,
+      "total_pairs": 224,
+      "accuracy": 0.6473214285714286
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 63,
+      "total_pairs": 108,
+      "accuracy": 0.5833333333333334
+    },
+    "safety_moderation": {
+      "correct_pairs": 78,
+      "total_pairs": 128,
+      "accuracy": 0.609375
+    }
+  },
+  "model": "minimax-m2.7",
+  "method": "llm_as_judge",
+  "base_url": "https://api.chatanywhere.tech/v1",
+  "order": "bidirectional",
+  "temperature": 0.0,
+  "concurrency": 48,
+  "max_tokens": 1024,
+  "reasoning_effort": "minimal",
+  "skipped_pairs": 0
+}

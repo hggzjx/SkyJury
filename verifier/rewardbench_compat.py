@@ -52,6 +52,14 @@ REWARD_MODEL_CONFIG: dict[str, RewardModelConfig] = {
         add_special_tokens=False,
         tokenize_chat_template=True,
     ),
+    "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2": RewardModelConfig(
+        torch_dtype="bfloat16",
+        attn_implementation="eager",
+        num_labels=1,
+        reward_score_index=0,
+        add_special_tokens=False,
+        tokenize_chat_template=True,
+    ),
     "openbmb/Eurus-RM-7b": RewardModelConfig(
         model_builder="auto_model",
         trust_remote_code=True,
@@ -74,6 +82,7 @@ LOCAL_MODEL_ALIASES = {
     "RLHFlow_ArmoRM-Llama3-8B-v0.1": "RLHFlow/ArmoRM-Llama3-8B-v0.1",
     "Ray2333_GRM_Llama3.1_8B_rewardmodel-ft": "Ray2333/GRM_Llama3.1_8B_rewardmodel-ft",
     "Skywork_Skywork-Reward-Gemma-2-27B-v0.2": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
+    "Skywork_Skywork-Reward-Llama-3.1-8B-v0.2": "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2",
     "openbmb_Eurus-RM-7b": "openbmb/Eurus-RM-7b",
     "allenai_tulu-2-dpo-7b": "allenai/tulu-2-dpo-7b",
     "allenai_tulu-2-dpo-13b": "allenai/tulu-2-dpo-13b",

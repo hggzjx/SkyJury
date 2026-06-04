@@ -1,0 +1,73 @@
+{
+  "accuracy": 0.545,
+  "correct_pairs": 109,
+  "total_pairs": 200,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.4444444444444444,
+    "account_behavior": 1.0,
+    "account_verification": 1.0,
+    "adult_creator_discovery": 0.8,
+    "adult_filtering": 0.8,
+    "ai_content": 0.4375,
+    "art_safety": 0.6,
+    "community_identity": 0.5789473684210527,
+    "creator_discovery": 0.16666666666666666,
+    "crypto_safety": 0.8571428571428571,
+    "crypto_spam": 1.0,
+    "developer_identity": 0.0,
+    "employment": 0.75,
+    "fact_checking": 0.14285714285714285,
+    "fandom_content_warnings": 0.6,
+    "fandom_identity": 0.5,
+    "gaming_industry": 0.25,
+    "medical_community": 0.0,
+    "music_creator": 0.3333333333333333,
+    "news_source_context": 0.5,
+    "politics_filtering": 0.391304347826087,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.4444444444444444,
+    "science_misinformation": 0.7,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.5,
+    "substack_filtering": 1.0,
+    "urbanism_community": 1.0,
+    "verification": 0.7272727272727273
+  },
+  "category_accuracy": {
+    "identity_trust": 0.62,
+    "interest_community": 0.48,
+    "platform_information_ecology": 0.44,
+    "safety_moderation": 0.64
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 31,
+      "total_pairs": 50,
+      "accuracy": 0.62
+    },
+    "interest_community": {
+      "correct_pairs": 24,
+      "total_pairs": 50,
+      "accuracy": 0.48
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 22,
+      "total_pairs": 50,
+      "accuracy": 0.44
+    },
+    "safety_moderation": {
+      "correct_pairs": 32,
+      "total_pairs": 50,
+      "accuracy": 0.64
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/RLHFlow_ArmoRM-Llama3-8B-v0.1",
+  "official_model_name": "RLHFlow/ArmoRM-Llama3-8B-v0.1",
+  "method": "rewardbench_compatible_reward_model",
+  "device": "cuda",
+  "torch_dtype": "auto",
+  "trust_remote_code": true,
+  "model_builder": "sequence_classification"
+}

@@ -1,0 +1,80 @@
+{
+  "accuracy": 0.5954861111111112,
+  "correct_pairs": 343,
+  "total_pairs": 576,
+  "num_samples": 576,
+  "subset_accuracy": {
+    "accessibility": 0.675,
+    "account_behavior": 0.75,
+    "account_verification": 0.75,
+    "adult_creator_discovery": 0.6,
+    "adult_filtering": 0.4,
+    "ai_content": 0.85,
+    "art_safety": 0.75,
+    "community_identity": 0.5,
+    "creator_discovery": 0.625,
+    "crypto_safety": 0.55,
+    "crypto_spam": 0.0,
+    "developer_identity": 1.0,
+    "employment": 0.5,
+    "fact_checking": 0.45,
+    "fandom_content_warnings": 0.45,
+    "fandom_identity": 0.65,
+    "fandom_spoiler": 1.0,
+    "gaming_industry": 0.5,
+    "medical_community": 1.0,
+    "music_creator": 0.5,
+    "news_source_context": 0.4642857142857143,
+    "politics_filtering": 0.4090909090909091,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.55,
+    "science_misinformation": 0.75,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.5,
+    "substack_filtering": 0.75,
+    "urbanism_community": 0.25,
+    "verification": 0.78125
+  },
+  "category_accuracy": {
+    "identity_trust": 0.646551724137931,
+    "interest_community": 0.5758928571428571,
+    "platform_information_ecology": 0.6111111111111112,
+    "safety_moderation": 0.5703125
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 75,
+      "total_pairs": 116,
+      "accuracy": 0.646551724137931
+    },
+    "interest_community": {
+      "correct_pairs": 129,
+      "total_pairs": 224,
+      "accuracy": 0.5758928571428571
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 66,
+      "total_pairs": 108,
+      "accuracy": 0.6111111111111112
+    },
+    "safety_moderation": {
+      "correct_pairs": 73,
+      "total_pairs": 128,
+      "accuracy": 0.5703125
+    }
+  },
+  "model": "Qwen_Qwen3-8B",
+  "model_path": "/ssd1/lbh/zjx/models/skyjury_verifier/Qwen_Qwen3-8B",
+  "method": "vllm_llm_as_judge",
+  "order": "bidirectional",
+  "samples": 1,
+  "temperature": 0.0,
+  "max_new_tokens": 128,
+  "batch_size": 256,
+  "tensor_parallel_size": 1,
+  "gpu_memory_utilization": 0.9,
+  "max_model_len": 4096,
+  "skipped_calls": 0,
+  "skipped_pairs": 0
+}

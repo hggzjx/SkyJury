@@ -7,7 +7,7 @@ This verifier follows the RM-Bench evaluation idea: given the same user profile 
 Default dataset:
 
 ```bash
-/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json
+/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json
 ```
 
 Each row is RM-Bench style:
@@ -70,7 +70,7 @@ cd /ssd1/lbh/zjx/skyjury/verifier
 source activate rm_dev
 python run_reward_model.py \
   --model /ssd1/lbh/zjx/models/skyjury_verifier/OpenAssistant_reward-model-deberta-v3-large-v2 \
-  --data /ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json \
+  --data /ssd1/lbh/zjx/skyjury/data/skyjury_bench.json \
   --batch-size 4 \
   --max-length 2048 \
   --local-files-only
@@ -89,7 +89,7 @@ With an optional reference model:
 ```bash
 bash /ssd1/lbh/zjx/skyjury/verifier/run_dpo.sh \
   /path/to/dpo_or_instruction_model \
-  /ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json \
+  /ssd1/lbh/zjx/skyjury/data/skyjury_bench.json \
   /path/to/reference_model
 ```
 
@@ -119,7 +119,7 @@ cd /ssd1/lbh/zjx/skyjury/verifier
 source activate rm_dev
 python run_llm_judge.py \
   --model gpt-4o-mini \
-  --data /ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json \
+  --data /ssd1/lbh/zjx/skyjury/data/skyjury_bench.json \
   --order bidirectional \
   --temperature 0 \
   --concurrency 4

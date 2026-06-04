@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DATA_PATH="${DATA_PATH:-${1:-/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json}}"
+DATA_PATH="${DATA_PATH:-${1:-/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json}}"
 CONCURRENCY="${CONCURRENCY:-${2:-48}}"
-SLOW_CONCURRENCY="${SLOW_CONCURRENCY:-48}"
+SLOW_CONCURRENCY="${SLOW_CONCURRENCY:-24}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-/ssd1/lbh/zjx/skyjury/verifier/results/generative_rm}"
 ORDER="${ORDER:-bidirectional}"
 TEMPERATURE="${TEMPERATURE:-0}"
@@ -23,9 +23,9 @@ else
     # "deepseek-v4-flash"
     # "gpt-5-ca"
     # "gpt-5-nano"
-    # "glm-5"
-    # "gemini-2.5-pro"
-    "qwen3.5-plus"
+    # "qwen3.5-plus"
+    # "deepseek-v4-pro"
+    "minimax-m2.7"
   )
 fi
 
@@ -34,9 +34,21 @@ cd /ssd1/lbh/zjx/skyjury/verifier
 
 for MODEL_NAME in "${MODEL_LIST[@]}"; do
   MODEL_CONCURRENCY="$CONCURRENCY"
+  MODEL_TIMEOUT="$TIMEOUT"
+  MODEL_RETRIES="$RETRIES"
   case "$MODEL_NAME" in
-    gpt-5*|qwen3.5-plus)
+    gpt-5*)
       MODEL_CONCURRENCY="$SLOW_CONCURRENCY"
+      ;;
+    qwen3.5-plus)
+      MODEL_CONCURRENCY="${QWEN_CONCURRENCY:-8}"
+      MODEL_TIMEOUT="${QWEN_TIMEOUT:-180}"
+      MODEL_RETRIES="${QWEN_RETRIES:-8}"
+      ;;
+    glm-5)
+      MODEL_CONCURRENCY="${GLM_CONCURRENCY:-8}"
+      MODEL_TIMEOUT="${GLM_TIMEOUT:-180}"
+      MODEL_RETRIES="${GLM_RETRIES:-8}"
       ;;
   esac
 
@@ -49,8 +61,8 @@ for MODEL_NAME in "${MODEL_LIST[@]}"; do
   echo "order=${ORDER}"
   echo "max_tokens=${MAX_TOKENS}"
   echo "reasoning_effort=${REASONING_EFFORT}"
-  echo "timeout=${TIMEOUT}"
-  echo "retries=${RETRIES}"
+  echo "timeout=${MODEL_TIMEOUT}"
+  echo "retries=${MODEL_RETRIES}"
   echo "output=${MODEL_OUTPUT_DIR}"
   if [[ -n "$LIMIT" ]]; then
     echo "limit=${LIMIT}"
@@ -65,9 +77,9 @@ for MODEL_NAME in "${MODEL_LIST[@]}"; do
     --temperature "$TEMPERATURE"
     --max-tokens "$MAX_TOKENS"
     --reasoning-effort "$REASONING_EFFORT"
-    --timeout "$TIMEOUT"
+    --timeout "$MODEL_TIMEOUT"
     --concurrency "$MODEL_CONCURRENCY"
-    --retries "$RETRIES"
+    --retries "$MODEL_RETRIES"
     --retry-sleep "$RETRY_SLEEP"
     --output-dir "$MODEL_OUTPUT_DIR"
   )

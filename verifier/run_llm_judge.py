@@ -18,7 +18,7 @@ from tqdm import tqdm
 from utils import compute_accuracy, load_preference_rows, write_result_bundle
 
 
-DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json"
+DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
 DEFAULT_BASE_URL = "https://api.chatanywhere.tech/v1/"
 
 
@@ -274,7 +274,7 @@ def evaluate_row(
                 ]
                 try:
                     parsed = call_with_retries(args, base_url, api_key, messages)
-                except EmptyJudgeResponseError as exc:
+                except Exception as exc:
                     row["skipped"] = True
                     row["skip_reason"] = str(exc)
                     row["score_chosen"] = []

@@ -1,0 +1,25 @@
+{
+  "source_data": "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json",
+  "source_data_sha256": "bfa14416f9dda38a8bb2e9bbaf4857e5db7f849bfea02e96e3b6d5f221160446",
+  "base_path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_success_cases_RLHFlow_ArmoRM-Llama3-8B-v0.1_base.json",
+  "source_verifier_predictions": "/ssd1/lbh/zjx/skyjury/verifier/results/reward_models/RLHFlow_ArmoRM-Llama3-8B-v0.1/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_RLHFlow_ArmoRM-Llama3-8B-v0.1_predictions.json",
+  "num_rows": 364,
+  "total_prediction_rows": 576,
+  "success_only": true,
+  "perturbation_scope": "rubrics_only",
+  "semantic_constraint": "Perturbations preserve the original rubric meaning.",
+  "variants": {
+    "length": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_success_cases_RLHFlow_ArmoRM-Llama3-8B-v0.1_rubric_length.json",
+      "changed_candidates": 728
+    },
+    "language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_success_cases_RLHFlow_ArmoRM-Llama3-8B-v0.1_rubric_language.json",
+      "changed_candidates": 728
+    },
+    "length_language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor/verifier_success_cases_RLHFlow_ArmoRM-Llama3-8B-v0.1_rubric_length_language.json",
+      "changed_candidates": 728
+    }
+  }
+}

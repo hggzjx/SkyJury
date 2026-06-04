@@ -1,143 +1,143 @@
 # SkyJury Auditor
 
-SkyJury Auditor measures whether a verifier is robust to meaning-preserving rubric perturbations.
-It follows the RewardAuditor framing, but adapts the statistic for SkyJury's labeler-preference task.
+SkyJury Auditor measures whether verifier preference confidence is robust to meaning-preserving rubric perturbations.
 
-## Verifier-to-Auditor Flow
+## Current Data
 
-The intended evaluation line is:
+- Base benchmark: `/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json`
+- Auditor datasets: `/ssd1/lbh/zjx/skyjury/data/auditor`
+- Default auditor subset: `/ssd1/lbh/zjx/skyjury/data/auditor/category50`
+
+The active auditor files are:
 
 ```text
-original dataset -> verifier predictions -> keep verifier-success cases -> rubric perturbations -> verifier rerun -> auditor report
+skyjury_bench_base.json
+skyjury_bench_rubric_length.json
+skyjury_bench_rubric_language.json
+skyjury_bench_rubric_length_language.json
+skyjury_bench_rubric_perturbation_manifest.json
 ```
 
-The auditor should normally operate only on cases that the verifier originally answered correctly. This avoids measuring robustness on examples where the verifier had already failed before any perturbation.
+The current auditor evaluation uses a fixed category-balanced subset rather than verifier-success filtering:
 
-Prepare perturbation datasets from verifier-success cases:
-
-```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/prepare_success_case_perturbations.sh \
-  /ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json \
-  /path/to/original_verifier_predictions.json \
-  /ssd1/lbh/zjx/skyjury/data/auditor \
-  verifier_success_cases
+```text
+50 samples per category x 4 categories = 200 samples
 ```
 
-This creates:
+This keeps cross-model auditor comparisons aligned on the same sample set while still reporting both overall and per-category robustness.
 
-- `verifier_success_cases_rubric_length.json`
-- `verifier_success_cases_rubric_language.json`
-- `verifier_success_cases_rubric_length_language.json`
-
-## Perturbations
-
-The auditor builds three rubric-only variants from `data/verifier_pilot_rmbench.json`:
-
-- `length`: lengthens rubric definitions with a semantic-preserving operational restatement.
-- `language`: adds Chinese language variation while anchoring the original definition.
-- `length_language`: combines longer wording and language variation.
-
-Only the candidate Labeler `Rubrics:` sections are changed. User profiles, chosen/rejected identities, handles, display names, and descriptions are left untouched.
-
-Build the perturbation datasets:
+Build or refresh the subset from the full auditor data:
 
 ```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/build_perturbations.sh
+python build_category_subset.py \
+  --data-dir /ssd1/lbh/zjx/skyjury/data/auditor \
+  --output-dir /ssd1/lbh/zjx/skyjury/data/auditor/category50 \
+  --prefix skyjury_bench \
+  --per-category 50 \
+  --seed 13
 ```
 
-Outputs are written to `/ssd1/lbh/zjx/skyjury/data/auditor/`.
+## Build Perturbations
 
-## Verifier Runs
-
-Run the same verifier on the original data and the three perturbed datasets.
-
-For LLM-as-judge perturbations:
+Use the direct LLM perturbation builder:
 
 ```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/run_llm_judge_perturbations.sh \
-  gpt-4o-ca \
-  8 \
-  /ssd1/lbh/zjx/skyjury/data/auditor \
+source activate rm_dev
+cd /ssd1/lbh/zjx/skyjury/auditor
+
+bash build_llm_rubric_perturbations.sh
+```
+
+Or run it manually:
+
+```bash
+python build_llm_rubric_perturbations.py \
+  --data /ssd1/lbh/zjx/skyjury/data/skyjury_bench.json \
+  --output-dir /ssd1/lbh/zjx/skyjury/data/auditor \
+  --prefix skyjury_bench \
+  --model deepseek-v4-flash \
+  --concurrency 8 \
+  --request-jitter 8 \
+  --timeout 180 \
+  --retries 8 \
+  --max-tokens 12000
+```
+
+Perturbations:
+
+- `length`: expand each rubric definition in English while preserving the original scope.
+- `language`: translate each original rubric definition into Spanish.
+- `length_language`: translate the expanded English definition into Spanish.
+
+Only candidate Labeler `Rubrics:` sections are changed.
+
+## Run Perturbed Verifiers
+
+LLM-as-judge:
+
+```bash
+bash run_llm_judge_perturbations.sh gpt-4o-ca 8 \
+  /ssd1/lbh/zjx/skyjury/data/auditor/category50 \
   /ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_predictions \
-  verifier_success_cases
+  skyjury_bench
 ```
 
-By default this runs 10 repeated bidirectional verifications per pair
-(`SAMPLES=10`, `--order bidirectional`). The LLM chosen score is the fraction
-of calls selecting the chosen Labeler; the rejected score is the fraction of
-calls selecting the rejected Labeler.
-
-For sequence-classification reward models:
+Reward model:
 
 ```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/run_rm_perturbations.sh /path/to/rm
+bash run_rm_perturbations.sh
 ```
 
-This calls the verifier-side RewardBench-compatible runner `verifier/run_reward_model.py`.
-Useful runtime knobs are inherited from the verifier scripts:
+By default this loops over the 5 local RM models and uses `BATCH_SIZE=4`.
+Pass a model path as the first argument to run a single RM.
+
+DPO/instruction model:
 
 ```bash
-DEVICE=cuda DEVICE_MAP=auto BATCH_SIZE=1 TORCH_DTYPE=auto \
-bash /ssd1/lbh/zjx/skyjury/auditor/run_rm_perturbations.sh \
-  /ssd1/lbh/zjx/models/skyjury_verifier/RLHFlow_ArmoRM-Llama3-8B-v0.1
+bash run_dpo_perturbations.sh
 ```
 
-For DPO/instruction models:
+By default this loops over the 2 local DPO/instruction models and uses `BATCH_SIZE=4`.
+Pass a model path as the first argument to run a single DPO model.
+
+LLM-as-judge:
 
 ```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/run_dpo_perturbations.sh /path/to/dpo
+bash run_llm_judge_perturbations.sh
 ```
 
-This calls the verifier-side RewardBench-compatible runner `verifier/run_dpo_lm.py`.
-By default it uses `/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b`
-as the reference model. Runtime knobs include `DEVICE`, `DEVICE_MAP`,
-`BATCH_SIZE`, `MAX_LENGTH`, `MAX_PROMPT_LENGTH`, `TORCH_DTYPE`, and
-`REF_FREE_TYPE`.
+By default this loops over `gpt-5-ca`, `gpt-4o-ca`, `deepseek-v4-flash`, `qwen3.5-plus`, and `glm-5` with concurrency 4.
+
+Full auditor runners by model family:
+
+```bash
+bash run_all_rm_auditor.sh
+bash run_all_dpo_auditor.sh
+bash run_all_llm_judge_auditor.sh
+```
 
 ## Statistics
 
-For RM, DPO, and LLM-as-judge outputs, the auditor follows the RewardAuditor paired-test style, but uses SkyJury preference confidence rather than loss:
-
-1. Compute margin: `chosen_score - rejected_score`.
-2. Transform margin to preference confidence: `sigmoid(chosen_score - rejected_score)`.
-3. Compare original vs perturbed confidence with a paired permutation test over the paired t-statistic.
-4. Use Cohen's d as the effect size.
-
-For LLM-as-judge, `chosen_score` and `rejected_score` are selection rates from repeated bidirectional verification rather than neural reward scores.
-
-The test is one-sided in the degradation direction:
-
-- `delta = original_confidence - perturbed_confidence`
-- small p-values indicate perturbed rubrics significantly decrease preference confidence for the verified chosen labeler.
-
-All perturbation tests are then corrected with Benjamini-Hochberg control. The report uses the compact format:
+All verifier types are converted to preference confidence:
 
 ```text
-effect_size^significance
+confidence = sigmoid(chosen_score - rejected_score)
 ```
 
-Examples: `0.0023^**`, `-0.1841^*`, `0.0312^`.
+For LLM-as-judge, `chosen_score` and `rejected_score` are repeated bidirectional selection rates.
 
-Reports include both an overall table and one table per `category`:
+The auditor compares original vs perturbed confidence using paired permutation tests over the paired t-statistic, then applies Benjamini-Hochberg correction across the three perturbations. Reports include overall and per-`category` results. Because perturbed predictions are normally run on the 200-row category-balanced subset while original verifier predictions may be full-set, `run_audit_report.sh` aligns rows by id with `ALLOW_SUBSET=1` by default.
 
-- `safety_moderation`
-- `identity_trust`
-- `interest_community`
-- `platform_information_ecology`
-
-## Generate Robustness Risk Report
-
-Pass the original prediction file and the three perturbed prediction files explicitly:
+## Report
 
 ```bash
-bash /ssd1/lbh/zjx/skyjury/auditor/run_audit_report.sh \
-  llm_judge \
+bash run_audit_report.sh \
+  <rm|dpo|llm_judge> \
   /path/to/original_predictions.json \
   /path/to/length_predictions.json \
   /path/to/language_predictions.json \
-  /path/to/length_language_predictions.json
+  /path/to/length_language_predictions.json \
+  /path/to/output_report_dir
 ```
 
-Reports are saved under `/ssd1/lbh/zjx/skyjury/auditor/results/`.
-
-`run_audit_report.sh` allows subset alignment by default, so the original prediction file can be full-size while the perturbed prediction files contain only verifier-success cases. Set `ALLOW_SUBSET=0` before the command if strict full-dataset alignment is required.
+Legacy cache-based perturbation scripts were moved to `archive_legacy_20260603/`.

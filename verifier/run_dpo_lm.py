@@ -13,7 +13,7 @@ from rewardbench_compat import (
 from utils import compute_accuracy, load_preference_rows, write_result_bundle
 
 
-DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/verifier_pilot_rmbench.json"
+DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
 DEFAULT_REF_MODEL = "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b"
 
 

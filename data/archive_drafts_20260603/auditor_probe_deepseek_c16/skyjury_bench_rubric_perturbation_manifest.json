@@ -1,0 +1,21 @@
+{
+  "source_data": "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json",
+  "num_rows": 16,
+  "model": "deepseek-v4-flash",
+  "target_language": "Spanish",
+  "perturbation_scope": "rubrics_only",
+  "semantic_constraint": "length expands definitions without changing meaning; language translates original definitions to Spanish; length_language translates expanded definitions to Spanish.",
+  "base_path": "/ssd1/lbh/zjx/skyjury/data/auditor_probe_deepseek_c16/skyjury_bench_base.json",
+  "progress_path": "/ssd1/lbh/zjx/skyjury/data/auditor_probe_deepseek_c16/skyjury_bench_llm_rubric_perturbation_progress.json",
+  "variants": {
+    "length": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor_probe_deepseek_c16/skyjury_bench_rubric_length.json"
+    },
+    "language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor_probe_deepseek_c16/skyjury_bench_rubric_language.json"
+    },
+    "length_language": {
+      "path": "/ssd1/lbh/zjx/skyjury/data/auditor_probe_deepseek_c16/skyjury_bench_rubric_length_language.json"
+    }
+  }
+}

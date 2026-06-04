@@ -1,0 +1,76 @@
+{
+  "accuracy": 0.555,
+  "correct_pairs": 111,
+  "total_pairs": 200,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.4444444444444444,
+    "account_behavior": 0.0,
+    "account_verification": 0.2,
+    "adult_creator_discovery": 0.6,
+    "adult_filtering": 0.8,
+    "ai_content": 0.5625,
+    "art_safety": 0.8,
+    "community_identity": 0.47368421052631576,
+    "creator_discovery": 0.5,
+    "crypto_safety": 0.5714285714285714,
+    "crypto_spam": 0.0,
+    "developer_identity": 1.0,
+    "employment": 0.75,
+    "fact_checking": 0.7142857142857143,
+    "fandom_content_warnings": 0.4,
+    "fandom_identity": 0.75,
+    "gaming_industry": 0.5,
+    "medical_community": 1.0,
+    "music_creator": 0.6666666666666666,
+    "news_source_context": 0.6666666666666666,
+    "politics_filtering": 0.43478260869565216,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.4444444444444444,
+    "science_misinformation": 0.7,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 0.0,
+    "sports_fandom": 0.5,
+    "substack_filtering": 0.0,
+    "urbanism_community": 1.0,
+    "verification": 0.8181818181818182
+  },
+  "category_accuracy": {
+    "identity_trust": 0.58,
+    "interest_community": 0.56,
+    "platform_information_ecology": 0.46,
+    "safety_moderation": 0.62
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 29,
+      "total_pairs": 50,
+      "accuracy": 0.58
+    },
+    "interest_community": {
+      "correct_pairs": 28,
+      "total_pairs": 50,
+      "accuracy": 0.56
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 23,
+      "total_pairs": 50,
+      "accuracy": 0.46
+    },
+    "safety_moderation": {
+      "correct_pairs": 31,
+      "total_pairs": 50,
+      "accuracy": 0.62
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-13b",
+  "official_model_name": "allenai/tulu-2-dpo-13b",
+  "ref_model": "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b",
+  "method": "rewardbench_compatible_dpo_logratio",
+  "device": "cuda",
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "ref_free_type": "avg",
+  "max_length": 2048,
+  "max_prompt_length": 1024
+}
