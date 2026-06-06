@@ -83,7 +83,7 @@ LLM-as-judge:
 ```bash
 bash run_llm_judge_perturbations.sh gpt-4o-ca 8 \
   /ssd1/lbh/zjx/skyjury/data/auditor/category50 \
-  /ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_predictions \
+  /ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_category50_audit/llm_judge_predictions \
   skyjury_bench
 ```
 

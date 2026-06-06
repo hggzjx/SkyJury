@@ -1,0 +1,76 @@
+{
+  "accuracy": 0.72,
+  "correct_pairs": 144,
+  "total_pairs": 200,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.6666666666666666,
+    "account_behavior": 0.6666666666666666,
+    "account_verification": 1.0,
+    "adult_creator_discovery": 0.4,
+    "adult_filtering": 0.8,
+    "ai_content": 0.75,
+    "art_safety": 0.6,
+    "community_identity": 0.9473684210526315,
+    "creator_discovery": 1.0,
+    "crypto_safety": 0.42857142857142855,
+    "crypto_spam": 1.0,
+    "developer_identity": 0.5,
+    "employment": 0.25,
+    "fact_checking": 1.0,
+    "fandom_content_warnings": 1.0,
+    "fandom_identity": 0.75,
+    "gaming_industry": 1.0,
+    "medical_community": 1.0,
+    "music_creator": 0.6666666666666666,
+    "news_source_context": 0.5833333333333334,
+    "politics_filtering": 0.43478260869565216,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.8888888888888888,
+    "science_misinformation": 0.6,
+    "spam_behavior": 0.7,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.5,
+    "substack_filtering": 1.0,
+    "urbanism_community": 1.0,
+    "verification": 0.9090909090909091
+  },
+  "category_accuracy": {
+    "identity_trust": 0.84,
+    "interest_community": 0.7,
+    "platform_information_ecology": 0.64,
+    "safety_moderation": 0.7
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 42,
+      "total_pairs": 50,
+      "accuracy": 0.84
+    },
+    "interest_community": {
+      "correct_pairs": 35,
+      "total_pairs": 50,
+      "accuracy": 0.7
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 32,
+      "total_pairs": 50,
+      "accuracy": 0.64
+    },
+    "safety_moderation": {
+      "correct_pairs": 35,
+      "total_pairs": 50,
+      "accuracy": 0.7
+    }
+  },
+  "model": "qwen3.5-plus",
+  "method": "llm_as_judge",
+  "base_url": "https://api.chatanywhere.tech/v1",
+  "order": "bidirectional",
+  "temperature": 0.5,
+  "concurrency": 24,
+  "max_tokens": 1024,
+  "reasoning_effort": "minimal",
+  "valid_rows": 200,
+  "skipped_pairs": 0
+}

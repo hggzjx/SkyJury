@@ -1,0 +1,75 @@
+{
+  "accuracy": 0.5657142857142857,
+  "correct_pairs": 99,
+  "total_pairs": 175,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.625,
+    "account_behavior": 0.6666666666666666,
+    "account_verification": 1.0,
+    "adult_creator_discovery": 0.4,
+    "adult_filtering": 0.8,
+    "ai_content": 0.6923076923076923,
+    "art_safety": 0.6,
+    "community_identity": 0.42105263157894735,
+    "creator_discovery": 0.6,
+    "crypto_safety": 0.5,
+    "employment": 0.25,
+    "fact_checking": 0.16666666666666666,
+    "fandom_content_warnings": 0.75,
+    "fandom_identity": 0.6666666666666666,
+    "gaming_industry": 0.5,
+    "music_creator": 1.0,
+    "news_source_context": 0.4,
+    "politics_filtering": 0.3333333333333333,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.6666666666666666,
+    "science_misinformation": 0.5,
+    "spam_behavior": 0.5,
+    "sports_fandom": 0.75,
+    "urbanism_community": 1.0,
+    "verification": 0.9090909090909091
+  },
+  "category_accuracy": {
+    "identity_trust": 0.6,
+    "interest_community": 0.6222222222222222,
+    "platform_information_ecology": 0.5,
+    "safety_moderation": 0.5333333333333333
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 27,
+      "total_pairs": 45,
+      "accuracy": 0.6
+    },
+    "interest_community": {
+      "correct_pairs": 28,
+      "total_pairs": 45,
+      "accuracy": 0.6222222222222222
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 20,
+      "total_pairs": 40,
+      "accuracy": 0.5
+    },
+    "safety_moderation": {
+      "correct_pairs": 24,
+      "total_pairs": 45,
+      "accuracy": 0.5333333333333333
+    }
+  },
+  "model": "Qwen_Qwen3-8B",
+  "model_path": "/ssd1/lbh/zjx/models/skyjury_verifier/Qwen_Qwen3-8B",
+  "method": "vllm_llm_as_judge",
+  "order": "bidirectional",
+  "samples": 5,
+  "temperature": 0.5,
+  "max_new_tokens": 128,
+  "batch_size": 256,
+  "tensor_parallel_size": 1,
+  "gpu_memory_utilization": 0.9,
+  "max_model_len": 4096,
+  "valid_rows": 175,
+  "skipped_calls": 256,
+  "skipped_pairs": 25
+}

@@ -4,7 +4,7 @@ set -euo pipefail
 MODEL_NAME="${1:-all}"
 CONCURRENCY="${2:-4}"
 DATA_DIR="${3:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
-OUTPUT_DIR="${4:-/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_predictions}"
+OUTPUT_DIR="${4:-/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_category50_audit/llm_judge_predictions}"
 DATA_PREFIX="${5:-skyjury_bench}"
 SAMPLES="${SAMPLES:-5}"
 TEMPERATURE="${TEMPERATURE:-0.5}"

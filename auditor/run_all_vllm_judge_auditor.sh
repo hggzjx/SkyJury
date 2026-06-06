@@ -3,7 +3,7 @@ set -euo pipefail
 
 MODEL_PATH="${1:-all}"
 DATA_DIR="${DATA_DIR:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
-OUTPUT_ROOT="${OUTPUT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/generative_rm_category50_audit}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/llm_judge_category50_audit}"
 VERIFIER_RESULTS="${VERIFIER_RESULTS:-/ssd1/lbh/zjx/skyjury/verifier/results/generative_rm}"
 DATA_PREFIX="${DATA_PREFIX:-skyjury_bench}"
 ORDER="${ORDER:-bidirectional}"
@@ -32,7 +32,7 @@ fi
 materialize_base_subset() {
   local full_predictions="$1"
   local model_name="$2"
-  local output_path="${OUTPUT_ROOT}/generative_rm_predictions/${model_name}/base/${DATA_PREFIX}_base_vllm_judge_${model_name}_predictions.json"
+  local output_path="${OUTPUT_ROOT}/llm_judge_predictions/${model_name}/base/${DATA_PREFIX}_base_vllm_judge_${model_name}_predictions.json"
   python /ssd1/lbh/zjx/skyjury/auditor/materialize_base_subset.py \
     --base-data "$DATA_DIR/${DATA_PREFIX}_base.json" \
     --full-predictions "$full_predictions" \
@@ -51,7 +51,7 @@ fi
 for model_path in "${MODELS[@]}"; do
   model_name="$(basename "$model_path")"
   full_predictions="${VERIFIER_RESULTS}/${model_name}/skyjury_bench_vllm_judge_${model_name}_predictions.json"
-  base_output_dir="${OUTPUT_ROOT}/generative_rm_predictions/${model_name}/base"
+  base_output_dir="${OUTPUT_ROOT}/llm_judge_predictions/${model_name}/base"
 
   if [[ -f "$full_predictions" ]]; then
     echo "============================================================"
@@ -86,12 +86,12 @@ for model_path in "${MODELS[@]}"; do
   bash run_vllm_judge_perturbations.sh \
     "$model_path" \
     "$DATA_DIR" \
-    "${OUTPUT_ROOT}/generative_rm_predictions" \
+    "${OUTPUT_ROOT}/llm_judge_predictions" \
     "$DATA_PREFIX"
 
-  length_predictions="$(find "${OUTPUT_ROOT}/generative_rm_predictions/${model_name}/length" -maxdepth 1 -name '*_predictions.json' | sort | tail -n 1)"
-  language_predictions="$(find "${OUTPUT_ROOT}/generative_rm_predictions/${model_name}/language" -maxdepth 1 -name '*_predictions.json' | sort | tail -n 1)"
-  report_dir="${OUTPUT_ROOT}/reports/generative_rm/${model_name}"
+  length_predictions="$(find "${OUTPUT_ROOT}/llm_judge_predictions/${model_name}/length" -maxdepth 1 -name '*_predictions.json' | sort | tail -n 1)"
+  language_predictions="$(find "${OUTPUT_ROOT}/llm_judge_predictions/${model_name}/language" -maxdepth 1 -name '*_predictions.json' | sort | tail -n 1)"
+  report_dir="${OUTPUT_ROOT}/reports/llm_judge/${model_name}"
   mkdir -p "$report_dir"
 
   python audit_cross_candidate_perturbations.py \
@@ -100,7 +100,7 @@ for model_path in "${MODELS[@]}"; do
     --perturbed "length=${length_predictions}" \
     --perturbed "language=${language_predictions}" \
     --output-dir "$report_dir" \
-    --report-name "generative_rm_cross_candidate_rubric_robustness" \
+    --report-name "llm_judge_cross_candidate_rubric_robustness" \
     --permutations "$PERMUTATIONS" \
     --alpha "$ALPHA" \
     --allow-subset
