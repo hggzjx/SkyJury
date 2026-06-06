@@ -1,4 +1,5 @@
 .env
+.env.example
 verifier/.env
 paper_skyjury
 analysis
