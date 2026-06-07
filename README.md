@@ -1,4 +1,4 @@
-# SkyJury
+# SkyJury: Benchmarking LLM-Based Policy Judgment for User-Conditioned Labeler Selection in Decentralized Moderation
 
 SkyJury is a benchmark for **user-conditioned labeler selection** in decentralized moderation. Given a user profile and two plausible Bluesky labelers, a model must decide which labeler is the better match for that user's moderation needs.
 
