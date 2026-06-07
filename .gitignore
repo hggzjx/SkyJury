@@ -3,5 +3,5 @@
 verifier/.env
 paper_skyjury
 analysis
-skyjury/proposal_reward_model_labeler_preference.md
-skyjury/skyjury_data_schema.md
+proposal_reward_model_labeler_preference.md
+skyjury_data_schema.md
