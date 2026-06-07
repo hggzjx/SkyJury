@@ -102,7 +102,7 @@ run_one() {
 #   "$VERIFIER_RESULTS/generative_rm/minimax-m2.7/skyjury_bench_llm_judge_minimax-m2.7_predictions.json"
 
 run_one \
-  "gpt-5-nano-ca" \
-  "$VERIFIER_RESULTS/generative_rm/gpt-5-nano-ca/skyjury_bench_llm_judge_gpt-5-nano-ca_predictions.json"
+  "gpt-5-ca" \
+  "$VERIFIER_RESULTS/generative_rm/gpt-5-ca/skyjury_bench_llm_judge_gpt-5-ca_predictions.json"
 
 echo "All LLM-as-judge auditor runs completed."

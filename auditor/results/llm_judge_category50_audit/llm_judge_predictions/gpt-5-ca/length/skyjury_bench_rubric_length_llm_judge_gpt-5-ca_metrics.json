@@ -1,6 +1,6 @@
 {
-  "accuracy": 0.585,
-  "correct_pairs": 117,
+  "accuracy": 0.675,
+  "correct_pairs": 135,
   "total_pairs": 200,
   "num_samples": 200,
   "subset_accuracy": {
@@ -9,61 +9,61 @@
     "account_verification": 1.0,
     "adult_creator_discovery": 0.4,
     "adult_filtering": 0.8,
-    "ai_content": 0.625,
+    "ai_content": 0.75,
     "art_safety": 0.6,
-    "community_identity": 0.6842105263157895,
-    "creator_discovery": 0.5,
-    "crypto_safety": 0.42857142857142855,
-    "crypto_spam": 0.0,
+    "community_identity": 0.8947368421052632,
+    "creator_discovery": 1.0,
+    "crypto_safety": 0.2857142857142857,
+    "crypto_spam": 1.0,
     "developer_identity": 1.0,
     "employment": 0.25,
-    "fact_checking": 0.5714285714285714,
+    "fact_checking": 0.7142857142857143,
     "fandom_content_warnings": 0.8,
     "fandom_identity": 0.75,
-    "gaming_industry": 0.25,
+    "gaming_industry": 0.75,
     "medical_community": 1.0,
-    "music_creator": 1.0,
+    "music_creator": 0.6666666666666666,
     "news_source_context": 0.5833333333333334,
     "politics_filtering": 0.391304347826087,
     "promotion_filtering": 1.0,
-    "protocol_infrastructure": 0.4444444444444444,
+    "protocol_infrastructure": 0.8888888888888888,
     "science_misinformation": 0.6,
     "spam_behavior": 0.6,
     "sports_authenticity": 1.0,
     "sports_fandom": 0.625,
     "substack_filtering": 1.0,
     "urbanism_community": 1.0,
-    "verification": 0.5454545454545454
+    "verification": 0.8181818181818182
   },
   "category_accuracy": {
-    "identity_trust": 0.68,
-    "interest_community": 0.58,
-    "platform_information_ecology": 0.5,
-    "safety_moderation": 0.58
+    "identity_trust": 0.82,
+    "interest_community": 0.66,
+    "platform_information_ecology": 0.62,
+    "safety_moderation": 0.6
   },
   "category_metrics": {
     "identity_trust": {
-      "correct_pairs": 34,
+      "correct_pairs": 41,
       "total_pairs": 50,
-      "accuracy": 0.68
+      "accuracy": 0.82
     },
     "interest_community": {
-      "correct_pairs": 29,
+      "correct_pairs": 33,
       "total_pairs": 50,
-      "accuracy": 0.58
+      "accuracy": 0.66
     },
     "platform_information_ecology": {
-      "correct_pairs": 25,
+      "correct_pairs": 31,
       "total_pairs": 50,
-      "accuracy": 0.5
+      "accuracy": 0.62
     },
     "safety_moderation": {
-      "correct_pairs": 29,
+      "correct_pairs": 30,
       "total_pairs": 50,
-      "accuracy": 0.58
+      "accuracy": 0.6
     }
   },
-  "model": "gpt-5-nano-ca",
+  "model": "gpt-5-ca",
   "method": "llm_as_judge",
   "base_url": "https://api.chatanywhere.tech/v1",
   "order": "bidirectional",

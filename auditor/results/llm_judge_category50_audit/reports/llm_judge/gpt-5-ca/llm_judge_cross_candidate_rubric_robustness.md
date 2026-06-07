@@ -8,53 +8,53 @@
 
 | perturbation | variant | n | effect^sig | p_value | robustness_risk | confidence |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| language | both | 200 | -0.0051^ | 0.526047 | 0.0000 | 0.5404 -> 0.5410 |
-| language | chosen_only | 200 | -0.0046^ | 0.522148 | 0.0000 | 0.5404 -> 0.5407 |
-| language | rejected_only | 200 | -0.0046^ | 0.519848 | 0.0000 | 0.5404 -> 0.5407 |
-| length | both | 200 | -0.0368^ | 0.684732 | 0.0000 | 0.5404 -> 0.5457 |
-| length | chosen_only | 200 | -0.0360^ | 0.689531 | 0.0000 | 0.5404 -> 0.5430 |
-| length | rejected_only | 200 | -0.0360^ | 0.686331 | 0.0000 | 0.5404 -> 0.5430 |
+| language | both | 200 | 0.0741^ | 0.142586 | 0.0000 | 0.6109 -> 0.6053 |
+| language | chosen_only | 200 | 0.0699^ | 0.160884 | 0.0000 | 0.6109 -> 0.6083 |
+| language | rejected_only | 200 | 0.0699^ | 0.163884 | 0.0000 | 0.6109 -> 0.6083 |
+| length | both | 200 | 0.2439^*** | 0.000400 | 0.2439 | 0.6109 -> 0.5905 |
+| length | chosen_only | 200 | 0.2394^*** | 0.000800 | 0.2394 | 0.6109 -> 0.6012 |
+| length | rejected_only | 200 | 0.2394^*** | 0.000400 | 0.2394 | 0.6109 -> 0.6012 |
 
 ## Category: `identity_trust`
 
 | perturbation | variant | n | effect^sig | p_value | robustness_risk | confidence |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| language | both | 50 | 0.0586^ | 0.333767 | 0.0000 | 0.5277 -> 0.5217 |
-| language | chosen_only | 50 | 0.0607^ | 0.341366 | 0.0000 | 0.5277 -> 0.5245 |
-| language | rejected_only | 50 | 0.0607^ | 0.334367 | 0.0000 | 0.5277 -> 0.5245 |
-| length | both | 50 | -0.4228^ | 0.997600 | 0.0000 | 0.5277 -> 0.5883 |
-| length | chosen_only | 50 | -0.4325^ | 0.998000 | 0.0000 | 0.5277 -> 0.5580 |
-| length | rejected_only | 50 | -0.4325^ | 0.998300 | 0.0000 | 0.5277 -> 0.5580 |
+| language | both | 50 | -0.0195^ | 0.549845 | 0.0000 | 0.6479 -> 0.6490 |
+| language | chosen_only | 50 | -0.0325^ | 0.586441 | 0.0000 | 0.6479 -> 0.6488 |
+| language | rejected_only | 50 | -0.0325^ | 0.591141 | 0.0000 | 0.6479 -> 0.6488 |
+| length | both | 50 | 0.1830^ | 0.106689 | 0.0000 | 0.6479 -> 0.6364 |
+| length | chosen_only | 50 | 0.1712^ | 0.118888 | 0.0000 | 0.6479 -> 0.6426 |
+| length | rejected_only | 50 | 0.1712^ | 0.121988 | 0.0000 | 0.6479 -> 0.6426 |
 
 ## Category: `interest_community`
 
 | perturbation | variant | n | effect^sig | p_value | robustness_risk | confidence |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| language | both | 50 | -0.0922^ | 0.735226 | 0.0000 | 0.5462 -> 0.5563 |
-| language | chosen_only | 50 | -0.0915^ | 0.742126 | 0.0000 | 0.5462 -> 0.5511 |
-| language | rejected_only | 50 | -0.0915^ | 0.734227 | 0.0000 | 0.5462 -> 0.5511 |
-| length | both | 50 | 0.0966^ | 0.253575 | 0.0000 | 0.5462 -> 0.5347 |
-| length | chosen_only | 50 | 0.1026^ | 0.240376 | 0.0000 | 0.5462 -> 0.5401 |
-| length | rejected_only | 50 | 0.1026^ | 0.241076 | 0.0000 | 0.5462 -> 0.5401 |
+| language | both | 50 | 0.0470^ | 0.413859 | 0.0000 | 0.6248 -> 0.6217 |
+| language | chosen_only | 50 | 0.0498^ | 0.411359 | 0.0000 | 0.6248 -> 0.6232 |
+| language | rejected_only | 50 | 0.0498^ | 0.404960 | 0.0000 | 0.6248 -> 0.6232 |
+| length | both | 50 | 0.4307^** | 0.001600 | 0.4307 | 0.6248 -> 0.5945 |
+| length | chosen_only | 50 | 0.4317^*** | 0.000800 | 0.4317 | 0.6248 -> 0.6103 |
+| length | rejected_only | 50 | 0.4317^** | 0.001200 | 0.4317 | 0.6248 -> 0.6103 |
 
 ## Category: `platform_information_ecology`
 
 | perturbation | variant | n | effect^sig | p_value | robustness_risk | confidence |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| language | both | 50 | 0.0921^ | 0.271573 | 0.0000 | 0.5323 -> 0.5265 |
-| language | chosen_only | 50 | 0.0911^ | 0.262674 | 0.0000 | 0.5323 -> 0.5294 |
-| language | rejected_only | 50 | 0.0911^ | 0.276072 | 0.0000 | 0.5323 -> 0.5294 |
-| length | both | 50 | 0.0952^ | 0.268073 | 0.0000 | 0.5323 -> 0.5177 |
-| length | chosen_only | 50 | 0.0999^ | 0.247375 | 0.0000 | 0.5323 -> 0.5248 |
-| length | rejected_only | 50 | 0.0999^ | 0.239776 | 0.0000 | 0.5323 -> 0.5248 |
+| language | both | 50 | -0.0052^ | 0.516348 | 0.0000 | 0.5647 -> 0.5651 |
+| language | chosen_only | 50 | -0.0040^ | 0.501550 | 0.0000 | 0.5647 -> 0.5649 |
+| language | rejected_only | 50 | -0.0040^ | 0.517548 | 0.0000 | 0.5647 -> 0.5649 |
+| length | both | 50 | -0.0046^ | 0.520548 | 0.0000 | 0.5647 -> 0.5651 |
+| length | chosen_only | 50 | 0.0016^ | 0.496550 | 0.0000 | 0.5647 -> 0.5646 |
+| length | rejected_only | 50 | 0.0016^ | 0.496050 | 0.0000 | 0.5647 -> 0.5646 |
 
 ## Category: `safety_moderation`
 
 | perturbation | variant | n | effect^sig | p_value | robustness_risk | confidence |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| language | both | 50 | -0.0312^ | 0.575042 | 0.0000 | 0.5555 -> 0.5594 |
-| language | chosen_only | 50 | -0.0334^ | 0.599940 | 0.0000 | 0.5555 -> 0.5576 |
-| language | rejected_only | 50 | -0.0334^ | 0.596040 | 0.0000 | 0.5555 -> 0.5576 |
-| length | both | 50 | 0.0981^ | 0.245675 | 0.0000 | 0.5555 -> 0.5420 |
-| length | chosen_only | 50 | 0.0945^ | 0.257374 | 0.0000 | 0.5555 -> 0.5489 |
-| length | rejected_only | 50 | 0.0945^ | 0.253775 | 0.0000 | 0.5555 -> 0.5489 |
+| language | both | 50 | 0.2300^ | 0.059194 | 0.0000 | 0.6063 -> 0.5853 |
+| language | chosen_only | 50 | 0.2251^ | 0.063994 | 0.0000 | 0.6063 -> 0.5963 |
+| language | rejected_only | 50 | 0.2251^ | 0.060994 | 0.0000 | 0.6063 -> 0.5963 |
+| length | both | 50 | 0.4050^** | 0.003100 | 0.4050 | 0.6063 -> 0.5661 |
+| length | chosen_only | 50 | 0.3969^** | 0.003600 | 0.3969 | 0.6063 -> 0.5871 |
+| length | rejected_only | 50 | 0.3969^** | 0.003900 | 0.3969 | 0.6063 -> 0.5871 |

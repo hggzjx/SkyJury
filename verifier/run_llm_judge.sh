@@ -26,7 +26,7 @@ else
     # "gpt-4o-ca"
     # "deepseek-v4-flash"
     # "gpt-5-ca"
-    "gpt-5-nano-ca"
+    "gpt-5-ca"
     # "qwen3.5-plus"
     # "deepseek-v4-pro"
     # "minimax-m2.7"
