@@ -43,7 +43,7 @@ def row_preference_confidence(row: dict[str, Any]) -> float:
 def paired_t_statistic(values: np.ndarray) -> float:
     if values.ndim != 1:
         raise ValueError("paired_t_statistic expects a 1D array.")
-    if len(values) == 0:
+    if len(values) < 2:
         return 0.0
     std = np.std(values, ddof=1)
     if std == 0 or np.isnan(std):
@@ -74,6 +74,17 @@ def paired_permutation_t_test(
     delta = original_values - perturbed_values
     observed_t = paired_t_statistic(delta)
     effect = cohens_d(delta)
+    if len(delta) < 2:
+        return {
+            "statistic": "paired_t",
+            "effect_size": effect,
+            "p_value": 1.0,
+            "t_observed": observed_t,
+            "mean_original": float(np.mean(original_values)) if len(original_values) else 0.0,
+            "mean_perturbed": float(np.mean(perturbed_values)) if len(perturbed_values) else 0.0,
+            "mean_delta": float(np.mean(delta)) if len(delta) else 0.0,
+            "num_samples": int(len(delta)),
+        }
 
     rng = np.random.RandomState(seed)
     signs = rng.choice(np.array([-1.0, 1.0]), size=(permutations, len(delta)))

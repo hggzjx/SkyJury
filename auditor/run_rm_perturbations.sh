@@ -10,6 +10,7 @@ BATCH_SIZE="${BATCH_SIZE:-4}"
 MAX_LENGTH="${MAX_LENGTH:-2048}"
 TORCH_DTYPE="${TORCH_DTYPE:-auto}"
 DEVICE_MAP="${DEVICE_MAP:-none}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 LOCAL_FILES_ARGS=()
 LIMIT_ARGS=()
 
@@ -50,6 +51,7 @@ for model in "${MODELS[@]}"; do
       --device "$DEVICE" \
       --torch-dtype "$TORCH_DTYPE" \
       --device-map "$DEVICE_MAP" \
+      --prompt-template "$PROMPT_TEMPLATE" \
       --output-dir "$PERTURBATION_OUTPUT_DIR" \
       "${LOCAL_FILES_ARGS[@]}" \
       "${LIMIT_ARGS[@]}"

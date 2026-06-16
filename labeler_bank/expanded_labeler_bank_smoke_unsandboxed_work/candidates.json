@@ -1,0 +1,1485 @@
+{
+  "did:plc:ar7c4by46qjdydhdevvrndac": {
+    "did": "did:plc:ar7c4by46qjdydhdevvrndac",
+    "handle_hint": "moderation.bsky.app",
+    "discovery_sources": [
+      "legacy_bank",
+      "seed_handle"
+    ],
+    "search_terms": []
+  },
+  "did:plc:d2mkddsbmnrgr3domzg5qexf": {
+    "did": "did:plc:d2mkddsbmnrgr3domzg5qexf",
+    "handle_hint": "moderation.blacksky.app",
+    "discovery_sources": [
+      "legacy_bank",
+      "seed_handle"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3lh2yd5jfacaonp4ftezbd5a": {
+    "did": "did:plc:3lh2yd5jfacaonp4ftezbd5a",
+    "handle_hint": "moderation.beehivesafety.com",
+    "discovery_sources": [
+      "legacy_bank",
+      "seed_handle"
+    ],
+    "search_terms": []
+  },
+  "did:plc:qezlipqc4yfk2lebu7533zyr": {
+    "did": "did:plc:qezlipqc4yfk2lebu7533zyr",
+    "handle_hint": "newsdetective.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:3gghjh7wuif2v3ykx5ttmm6c": {
+    "did": "did:plc:3gghjh7wuif2v3ykx5ttmm6c",
+    "handle_hint": "stemlabels.xyz",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:avy6ofacxe26c6x3jcizas6l": {
+    "did": "did:plc:avy6ofacxe26c6x3jcizas6l",
+    "handle_hint": "cryptolabeler.sats4.life",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:smtbhjnwsvcxzvez2nbf7mar": {
+    "did": "did:plc:smtbhjnwsvcxzvez2nbf7mar",
+    "handle_hint": "cryptolabeler.w3igg.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:oxmtwjxecdj66x4ia7ucd6zk": {
+    "did": "did:plc:oxmtwjxecdj66x4ia7ucd6zk",
+    "handle_hint": "sky-clearer.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:c5d5thu6uwhb5odxgk7ejvni": {
+    "did": "did:plc:c5d5thu6uwhb5odxgk7ejvni",
+    "handle_hint": "labeler.urbanism.plus",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:qkty4ninplgtzeychgz4yyrh": {
+    "did": "did:plc:qkty4ninplgtzeychgz4yyrh",
+    "handle_hint": "labeler.bikesky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:qhed3m2uw3mqcv5lgtvlyog5": {
+    "did": "did:plc:qhed3m2uw3mqcv5lgtvlyog5",
+    "handle_hint": "verified.babesky.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:gqaoe3na6isc3zyvp7iuqpu7": {
+    "did": "did:plc:gqaoe3na6isc3zyvp7iuqpu7",
+    "handle_hint": "arttheft.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:l624mewisyr6hymexmrjkprc": {
+    "did": "did:plc:l624mewisyr6hymexmrjkprc",
+    "handle_hint": "creatorlabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:djcot74d3xbuxbe3dkfvchwe": {
+    "did": "did:plc:djcot74d3xbuxbe3dkfvchwe",
+    "handle_hint": "labeler.pikaparty.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:s45hbf5dqdkjpwuuq4djo6l2": {
+    "did": "did:plc:s45hbf5dqdkjpwuuq4djo6l2",
+    "handle_hint": "antiantiai.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:wa5b3th4wc5qivxpq5iy3omb": {
+    "did": "did:plc:wa5b3th4wc5qivxpq5iy3omb",
+    "handle_hint": "ai-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:flwugseenu2x4o3h2ymutc3x": {
+    "did": "did:plc:flwugseenu2x4o3h2ymutc3x",
+    "handle_hint": "labeler.blackwall.gg",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:m4z7d2wfa7lovi7toqwpjwr6": {
+    "did": "did:plc:m4z7d2wfa7lovi7toqwpjwr6",
+    "handle_hint": "ao3labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:wp7hxfjl5l4zlptn7y6774lk": {
+    "did": "did:plc:wp7hxfjl5l4zlptn7y6774lk",
+    "handle_hint": "baatl.mastod.one",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3eivfiql4memqxkryeu4tqnk": {
+    "did": "did:plc:3eivfiql4memqxkryeu4tqnk",
+    "handle_hint": "mod.shawn.party",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:bv3lcacietc6fkdokxfqtdkj": {
+    "did": "did:plc:bv3lcacietc6fkdokxfqtdkj",
+    "handle_hint": "labeler.nunnybabbit.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4qctc5gtrcmjpoqmyxvdqbdf": {
+    "did": "did:plc:4qctc5gtrcmjpoqmyxvdqbdf",
+    "handle_hint": "haileys-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:setic5jsb2w2yjiopvyortdr": {
+    "did": "did:plc:setic5jsb2w2yjiopvyortdr",
+    "handle_hint": "nikolabel.juicey.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4u3hmjlouc435trzucpfhjcf": {
+    "did": "did:plc:4u3hmjlouc435trzucpfhjcf",
+    "handle_hint": "labeler.protopro.blue",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:vnzvtgtwden4hpeierfcfan2": {
+    "did": "did:plc:vnzvtgtwden4hpeierfcfan2",
+    "handle_hint": "atproto-spoilers.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:xpxsa5aviwecd7cv6bzbmr5n": {
+    "did": "did:plc:xpxsa5aviwecd7cv6bzbmr5n",
+    "handle_hint": "github-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:nwxpzxyajtoqytsorxuwgolt": {
+    "did": "did:plc:nwxpzxyajtoqytsorxuwgolt",
+    "handle_hint": "middleearth.quest",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:npns6hnu6v47oatctk4ruxv2": {
+    "did": "did:plc:npns6hnu6v47oatctk4ruxv2",
+    "handle_hint": "gnl-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:h2btirb6mgshvzf2jqrsggbc": {
+    "did": "did:plc:h2btirb6mgshvzf2jqrsggbc",
+    "handle_hint": "nflair.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:i54lpx4fcztc55vsaiheypxo": {
+    "did": "did:plc:i54lpx4fcztc55vsaiheypxo",
+    "handle_hint": "pokemon.sonasky.app",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:uxjwly6emtgik7juvxxdpl3c": {
+    "did": "did:plc:uxjwly6emtgik7juvxxdpl3c",
+    "handle_hint": "labeler.antisubstack.fyi",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:uyauirpjzk6le4ygqzatcwnq": {
+    "did": "did:plc:uyauirpjzk6le4ygqzatcwnq",
+    "handle_hint": "pds.labeler.tny.im",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:lqstuil6alvccbl2uedtnv3m": {
+    "did": "did:plc:lqstuil6alvccbl2uedtnv3m",
+    "handle_hint": "altgov-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:zal76px7lfptnpgn4j3v6i7d": {
+    "did": "did:plc:zal76px7lfptnpgn4j3v6i7d",
+    "handle_hint": "dev-labels.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:2qhdv5xwffbogrfoqcqzpady": {
+    "did": "did:plc:2qhdv5xwffbogrfoqcqzpady",
+    "handle_hint": "labeler.radial.racing",
+    "discovery_sources": [
+      "legacy_bank",
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:4grtcppa6rdgx3hgomz6kfdj": {
+    "did": "did:plc:4grtcppa6rdgx3hgomz6kfdj",
+    "handle_hint": "verified.moll.blue",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:w6yx4bltuzdmiolooi4kd6zt": {
+    "did": "did:plc:w6yx4bltuzdmiolooi4kd6zt",
+    "handle_hint": "bookmarks.bluecanary.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ffv7lgt5rzmhnhzfum6ktzwm": {
+    "did": "did:plc:ffv7lgt5rzmhnhzfum6ktzwm",
+    "handle_hint": "sports-labeler.hooray.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:erl76ixakiifywkveug2fzkh": {
+    "did": "did:plc:erl76ixakiifywkveug2fzkh",
+    "handle_hint": "jerrified.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4cbvrwtii4d5p4hymgu5sv2q": {
+    "did": "did:plc:4cbvrwtii4d5p4hymgu5sv2q",
+    "handle_hint": "nfl.sickos.club",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:oubsyca6hhgqhmbbk27lvs7c": {
+    "did": "did:plc:oubsyca6hhgqhmbbk27lvs7c",
+    "handle_hint": "stechlab-labels.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:mkj5rmeswytaiaqdd4bmdnfy": {
+    "did": "did:plc:mkj5rmeswytaiaqdd4bmdnfy",
+    "handle_hint": "perfect-skeeties.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:fcikraffwejtuqffifeykcml": {
+    "did": "did:plc:fcikraffwejtuqffifeykcml",
+    "handle_hint": "label.wol.blue",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:rh3vjqs4npfpmnkkmx4u4bzj": {
+    "did": "did:plc:rh3vjqs4npfpmnkkmx4u4bzj",
+    "handle_hint": "alt-text-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:im3bgdj4u42mgrzlyouk7czv": {
+    "did": "did:plc:im3bgdj4u42mgrzlyouk7czv",
+    "handle_hint": "adcontrols.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4mvnkzobjzwuaxlnvcky3oh6": {
+    "did": "did:plc:4mvnkzobjzwuaxlnvcky3oh6",
+    "handle_hint": "voresky.app",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:hmru2ho6zjm2kuigwfirq6td": {
+    "did": "did:plc:hmru2ho6zjm2kuigwfirq6td",
+    "handle_hint": "random-labeler.bsky.girigiribauer.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:bxnuth7kms5l57v2milp5gb3": {
+    "did": "did:plc:bxnuth7kms5l57v2milp5gb3",
+    "handle_hint": "handle.invalid",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:yv4nuaj3jshcuh2d2ivykgiz": {
+    "did": "did:plc:yv4nuaj3jshcuh2d2ivykgiz",
+    "handle_hint": "sortinghat.bsky.sh",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:saslbwamakedc4h6c5bmshvz": {
+    "did": "did:plc:saslbwamakedc4h6c5bmshvz",
+    "handle_hint": "labeler.hailey.at",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:kbhrkjhfe2d3okspxbtzb7ga": {
+    "did": "did:plc:kbhrkjhfe2d3okspxbtzb7ga",
+    "handle_hint": "mlb.blueskysportslabeler.xyz",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:dm6tjhimvcxsgh2yxbppbqkx": {
+    "did": "did:plc:dm6tjhimvcxsgh2yxbppbqkx",
+    "handle_hint": "eras.bsky.sh",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:eeptyms6w2crpi6h73ok7qjt": {
+    "did": "did:plc:eeptyms6w2crpi6h73ok7qjt",
+    "handle_hint": "labeler.shreyanjain.net",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:mjyeurqmqjeexbgigk3yytvb": {
+    "did": "did:plc:mjyeurqmqjeexbgigk3yytvb",
+    "handle_hint": "nogifsplease.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:f7fr3fmpevkmhodlzktuobvx": {
+    "did": "did:plc:f7fr3fmpevkmhodlzktuobvx",
+    "handle_hint": "engagement-hacks.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:m2gxxmtdgygsrommldrsggtw": {
+    "did": "did:plc:m2gxxmtdgygsrommldrsggtw",
+    "handle_hint": "myfavoritecolor.bsky.sh",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:dsjk7d74slgc2xyrhehf2sxk": {
+    "did": "did:plc:dsjk7d74slgc2xyrhehf2sxk",
+    "handle_hint": "built.blue",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:lcobjfmuulklb5d4gyujdnqw": {
+    "did": "did:plc:lcobjfmuulklb5d4gyujdnqw",
+    "handle_hint": "uefn.pinefruit.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:bqaoaao7n5qqv2pf7rtyncqs": {
+    "did": "did:plc:bqaoaao7n5qqv2pf7rtyncqs",
+    "handle_hint": "handle.invalid",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:jcce2sa3fgue4wiocvf7e7xj": {
+    "did": "did:plc:jcce2sa3fgue4wiocvf7e7xj",
+    "handle_hint": "labeler.flicknow.xyz",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:m6adptn62dcahfaq34tce3j5": {
+    "did": "did:plc:m6adptn62dcahfaq34tce3j5",
+    "handle_hint": "joined-labeler.shatteredsky.net",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:vcwvdve2iuxbsqbd3edxvm7e": {
+    "did": "did:plc:vcwvdve2iuxbsqbd3edxvm7e",
+    "handle_hint": "epl-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:2pduupjftektqoitfekc2x76": {
+    "did": "did:plc:2pduupjftektqoitfekc2x76",
+    "handle_hint": "ab4n-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:cdbp64nijvsmhuhodbuoqcwi": {
+    "did": "did:plc:cdbp64nijvsmhuhodbuoqcwi",
+    "handle_hint": "zodiacsigns.bsky.sh",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3bslxjzm3z3i67r5iwht4y5v": {
+    "did": "did:plc:3bslxjzm3z3i67r5iwht4y5v",
+    "handle_hint": "label-iam.so-asano.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:dtvn3ttc5bwjqebzyzjh5rdh": {
+    "did": "did:plc:dtvn3ttc5bwjqebzyzjh5rdh",
+    "handle_hint": "ozone.tophhie.cloud",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:vud7oo5sc7k256jjplfxlnhm": {
+    "did": "did:plc:vud7oo5sc7k256jjplfxlnhm",
+    "handle_hint": "pronounsinb.io",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:eivabf3dhre6rtqs2tkyj6f2": {
+    "did": "did:plc:eivabf3dhre6rtqs2tkyj6f2",
+    "handle_hint": "vs.air2.earth",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:kwrnsjs7shplkwzpentb7yqv": {
+    "did": "did:plc:kwrnsjs7shplkwzpentb7yqv",
+    "handle_hint": "kys.makersfield.co",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4p3ilpfcl77fqgoofjmghznc": {
+    "did": "did:plc:4p3ilpfcl77fqgoofjmghznc",
+    "handle_hint": "puzzmo-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:mpogduvvraozdcbp6w2lafqg": {
+    "did": "did:plc:mpogduvvraozdcbp6w2lafqg",
+    "handle_hint": "warlabel.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:n3kv33h2wkmbbu6xklw2aqzd": {
+    "did": "did:plc:n3kv33h2wkmbbu6xklw2aqzd",
+    "handle_hint": "labeler.ivgorchestra.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:6k2b2myab3zpqivzvyym4cp5": {
+    "did": "did:plc:6k2b2myab3zpqivzvyym4cp5",
+    "handle_hint": "enneagram.blue",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:657bbv43hgcuypiqbkuuiz4s": {
+    "did": "did:plc:657bbv43hgcuypiqbkuuiz4s",
+    "handle_hint": "silencebrand.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:36inn6r2ttwfrt6tpywsjcmt": {
+    "did": "did:plc:36inn6r2ttwfrt6tpywsjcmt",
+    "handle_hint": "phobial.mastod.one",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:6djesjurxf3uqewul23yuflj": {
+    "did": "did:plc:6djesjurxf3uqewul23yuflj",
+    "handle_hint": "labeler.oak.coop",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3ej5knrqezo3meltfsb4vwnv": {
+    "did": "did:plc:3ej5knrqezo3meltfsb4vwnv",
+    "handle_hint": "tda-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:e4elbtctnfqocyfcml6h2lf7": {
+    "did": "did:plc:e4elbtctnfqocyfcml6h2lf7",
+    "handle_hint": "skywatch.blue",
+    "discovery_sources": [
+      "legacy_bank",
+      "seed_handle"
+    ],
+    "search_terms": []
+  },
+  "did:plc:dsae6lz5garrdkbicuor4chs": {
+    "did": "did:plc:dsae6lz5garrdkbicuor4chs",
+    "handle_hint": "ozone.birb.house",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:cug2evrqa3nhdbvlfd2cvtky": {
+    "did": "did:plc:cug2evrqa3nhdbvlfd2cvtky",
+    "handle_hint": "flatlander.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:b6irkivf4f6kr5zetwycnzxd": {
+    "did": "did:plc:b6irkivf4f6kr5zetwycnzxd",
+    "handle_hint": "milk.meowing.zip",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:indwvpzxq36ay7cafeymjm4p": {
+    "did": "did:plc:indwvpzxq36ay7cafeymjm4p",
+    "handle_hint": "holofanbase.zomrade.live",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:6awpdvr4kfiwd467of4nlkac": {
+    "did": "did:plc:6awpdvr4kfiwd467of4nlkac",
+    "handle_hint": "label.onlyhumanhub.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ymhqgxqmgxyozvhj32nbywbv": {
+    "did": "did:plc:ymhqgxqmgxyozvhj32nbywbv",
+    "handle_hint": "pwnedlabels.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:roj4uljbc4iupezb3sv2mhee": {
+    "did": "did:plc:roj4uljbc4iupezb3sv2mhee",
+    "handle_hint": "teletextlabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:cseeitm726srf7cg2kx2jwvh": {
+    "did": "did:plc:cseeitm726srf7cg2kx2jwvh",
+    "handle_hint": "umbracolabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:e2pq4mw6ivyle3lavxptuh56": {
+    "did": "did:plc:e2pq4mw6ivyle3lavxptuh56",
+    "handle_hint": "ohnozone.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:5xba6d65xjraakkuojru42qj": {
+    "did": "did:plc:5xba6d65xjraakkuojru42qj",
+    "handle_hint": "hololabel.ayrl.in",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:asypmx5zv6bmq4fes6fjsojq": {
+    "did": "did:plc:asypmx5zv6bmq4fes6fjsojq",
+    "handle_hint": "moderation-nl.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:5wjv77wuqykwphe7lgimldh6": {
+    "did": "did:plc:5wjv77wuqykwphe7lgimldh6",
+    "handle_hint": "lancelotlabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:h46ix6jqd54twwjd3boypg5x": {
+    "did": "did:plc:h46ix6jqd54twwjd3boypg5x",
+    "handle_hint": "prts-label.rhodesisland.space",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:rprd6z2sgvsdokjsbadytyun": {
+    "did": "did:plc:rprd6z2sgvsdokjsbadytyun",
+    "handle_hint": "labels.lio.systems",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:kgpqgx33bhqf4sn7lb7thnzw": {
+    "did": "did:plc:kgpqgx33bhqf4sn7lb7thnzw",
+    "handle_hint": "moderation.at.yugoslavia.best",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:tazmeohzhvmcci2cy7sygwmu": {
+    "did": "did:plc:tazmeohzhvmcci2cy7sygwmu",
+    "handle_hint": "bookmarks.indexx.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:joapxy5523zx5mm4ii4b6ieo": {
+    "did": "did:plc:joapxy5523zx5mm4ii4b6ieo",
+    "handle_hint": "bondsdogs.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:olmiw2wkm3qoxinal7w5fbnl": {
+    "did": "did:plc:olmiw2wkm3qoxinal7w5fbnl",
+    "handle_hint": "blue-cosmos.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:lyfdahuzifj577o5o6vphfl5": {
+    "did": "did:plc:lyfdahuzifj577o5o6vphfl5",
+    "handle_hint": "ozone.fifo-f.eu",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:gqeseqwqqcx7jz2gtvpmpelh": {
+    "did": "did:plc:gqeseqwqqcx7jz2gtvpmpelh",
+    "handle_hint": "manikinekoshield.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:gsyd3gta5usbdwtcnlmh7mou": {
+    "did": "did:plc:gsyd3gta5usbdwtcnlmh7mou",
+    "handle_hint": "moderation.yunya.pet",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:non7ijavgj2dcxoi2b2pgrjd": {
+    "did": "did:plc:non7ijavgj2dcxoi2b2pgrjd",
+    "handle_hint": "mod.berlin-user.eurosky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ryh4jmxfdxr6itkv7ers2jkz": {
+    "did": "did:plc:ryh4jmxfdxr6itkv7ers2jkz",
+    "handle_hint": "moderation.social.optize.net",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:m4jxet5jry3f5xjxxedu6mt3": {
+    "did": "did:plc:m4jxet5jry3f5xjxxedu6mt3",
+    "handle_hint": "mod.live2025demo.eurosky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4zw4oscaj6edhpud42ehhsnh": {
+    "did": "did:plc:4zw4oscaj6edhpud42ehhsnh",
+    "handle_hint": "handle.invalid",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:rzptgjf46q2t6npdkzh4g7rh": {
+    "did": "did:plc:rzptgjf46q2t6npdkzh4g7rh",
+    "handle_hint": "moderation.nahida.blue",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:45scnhbnhc6zm4vn4br4q3wp": {
+    "did": "did:plc:45scnhbnhc6zm4vn4br4q3wp",
+    "handle_hint": "moderation.tokimeki.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:xzakyqf64ysa44ego3soia3v": {
+    "did": "did:plc:xzakyqf64ysa44ego3soia3v",
+    "handle_hint": "mod.berlin-demo.eurosky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:tlngewbs2n4qosiw7o2u5s45": {
+    "did": "did:plc:tlngewbs2n4qosiw7o2u5s45",
+    "handle_hint": "handle.invalid",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:24da43eyk5hjxypr5lvkn4uu": {
+    "did": "did:plc:24da43eyk5hjxypr5lvkn4uu",
+    "handle_hint": "es256.app",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:skibpmllbhxvbvwgtjxl3uao": {
+    "did": "did:plc:skibpmllbhxvbvwgtjxl3uao",
+    "handle_hint": "anti-aging.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ah4tjc3trzqfivi2owt7iibw": {
+    "did": "did:plc:ah4tjc3trzqfivi2owt7iibw",
+    "handle_hint": "moderation.popfeed.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:exlb5xx2t4pgtjqzdm6ntsgh": {
+    "did": "did:plc:exlb5xx2t4pgtjqzdm6ntsgh",
+    "handle_hint": "exml.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:glu5zy2vxbuqwh76tjuwfqbm": {
+    "did": "did:plc:glu5zy2vxbuqwh76tjuwfqbm",
+    "handle_hint": "mla-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:lydl7umexooxibfhdtwcijn2": {
+    "did": "did:plc:lydl7umexooxibfhdtwcijn2",
+    "handle_hint": "moderation.veryun.cool",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:6eumqlmq3ue6re55kjmtn6b6": {
+    "did": "did:plc:6eumqlmq3ue6re55kjmtn6b6",
+    "handle_hint": "politicians.money",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:z7wmj3d5t7ytjf4nrh5nq6zx": {
+    "did": "did:plc:z7wmj3d5t7ytjf4nrh5nq6zx",
+    "handle_hint": "lapor.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:k6cbpggz5h33idrah4yk4tst": {
+    "did": "did:plc:k6cbpggz5h33idrah4yk4tst",
+    "handle_hint": "trustcollective.org",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:jqujmqpwe3vcvlobzzkncpmo": {
+    "did": "did:plc:jqujmqpwe3vcvlobzzkncpmo",
+    "handle_hint": "labels4theculture.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ef2icomujrtf3n3oob5hluqh": {
+    "did": "did:plc:ef2icomujrtf3n3oob5hluqh",
+    "handle_hint": "perchpicsmod.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:57fl6zy4wmpuknwpgtjqkvlz": {
+    "did": "did:plc:57fl6zy4wmpuknwpgtjqkvlz",
+    "handle_hint": "bluenotes-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ttgjhhe2za2fnusmymensjsx": {
+    "did": "did:plc:ttgjhhe2za2fnusmymensjsx",
+    "handle_hint": "blueskyharbor.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:fmug4zegnl7lf6ljp7aokpeh": {
+    "did": "did:plc:fmug4zegnl7lf6ljp7aokpeh",
+    "handle_hint": "moderation.medsky.network",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:i65enriuag7n5fgkopbqtkyk": {
+    "did": "did:plc:i65enriuag7n5fgkopbqtkyk",
+    "handle_hint": "profile-labels.bossett.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:pbmxe3tfpkts72wi74weijpo": {
+    "did": "did:plc:pbmxe3tfpkts72wi74weijpo",
+    "handle_hint": "khronos.world",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:hr236rnywyk3xjl4vt4emyc3": {
+    "did": "did:plc:hr236rnywyk3xjl4vt4emyc3",
+    "handle_hint": "furskycreators.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:vfibt4bgozsdx6rnnnpha3x7": {
+    "did": "did:plc:vfibt4bgozsdx6rnnnpha3x7",
+    "handle_hint": "recordcollector.edavis.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:nhiydy3lysovgbaaxu5zx62x": {
+    "did": "did:plc:nhiydy3lysovgbaaxu5zx62x",
+    "handle_hint": "no-opinions.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3pyykdccdni5mdw2kgd465fw": {
+    "did": "did:plc:3pyykdccdni5mdw2kgd465fw",
+    "handle_hint": "bigkidnow.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:swmumnkmw5osopckigoal7ox": {
+    "did": "did:plc:swmumnkmw5osopckigoal7ox",
+    "handle_hint": "labeler-test.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:sr7hpjhseg2zqomswzw4tmin": {
+    "did": "did:plc:sr7hpjhseg2zqomswzw4tmin",
+    "handle_hint": "creatorlabeler.blackwall.gg",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:xje4wfji5zjiwgrhwpc3itv2": {
+    "did": "did:plc:xje4wfji5zjiwgrhwpc3itv2",
+    "handle_hint": "label.directioners.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:qlg3c5mwnaxffbztey23l34n": {
+    "did": "did:plc:qlg3c5mwnaxffbztey23l34n",
+    "handle_hint": "test.fandomsky.net",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ix4ghsjkw7zpivorhafvxsa2": {
+    "did": "did:plc:ix4ghsjkw7zpivorhafvxsa2",
+    "handle_hint": "noalt.danirod.es",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:d6loa4hv3xt7ufl3md44nfkh": {
+    "did": "did:plc:d6loa4hv3xt7ufl3md44nfkh",
+    "handle_hint": "no-pol-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:r5ju6hyf6p7lufdpelj37wnk": {
+    "did": "did:plc:r5ju6hyf6p7lufdpelj37wnk",
+    "handle_hint": "uspol-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:op6ql6dg7zzmwrm6wzolqzwr": {
+    "did": "did:plc:op6ql6dg7zzmwrm6wzolqzwr",
+    "handle_hint": "pol.conmodsys.net",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:jjotg3xptjqggin2pfgug2k2": {
+    "did": "did:plc:jjotg3xptjqggin2pfgug2k2",
+    "handle_hint": "uspol.n3rdsky.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:hyj7zzpmaaksf4bvugohv7xw": {
+    "did": "did:plc:hyj7zzpmaaksf4bvugohv7xw",
+    "handle_hint": "politicslabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:nqgmfo2ic7bax5ce47abgdit": {
+    "did": "did:plc:nqgmfo2ic7bax5ce47abgdit",
+    "handle_hint": "handle.invalid",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:agq6tlzsv5oqn4du7444yiia": {
+    "did": "did:plc:agq6tlzsv5oqn4du7444yiia",
+    "handle_hint": "musicianlabeler.xyz",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:2dnldc4omasiothhuqbmosyx": {
+    "did": "did:plc:2dnldc4omasiothhuqbmosyx",
+    "handle_hint": "harpersletter.fyi",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:yxuxzi4hpnovvszinzn33dp3": {
+    "did": "did:plc:yxuxzi4hpnovvszinzn33dp3",
+    "handle_hint": "czkraje.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:r2wnx7eo2i4rflu6mlwxja6v": {
+    "did": "did:plc:r2wnx7eo2i4rflu6mlwxja6v",
+    "handle_hint": "trulioo-test.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4vf7tgwlg6edds2g2nixyjda": {
+    "did": "did:plc:4vf7tgwlg6edds2g2nixyjda",
+    "handle_hint": "labeler-test.bsky.day",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:7hpffigzovmuhbafrsiy7ne3": {
+    "did": "did:plc:7hpffigzovmuhbafrsiy7ne3",
+    "handle_hint": "nhllabeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:ecl4csxtybwgw5r45kmaditp": {
+    "did": "did:plc:ecl4csxtybwgw5r45kmaditp",
+    "handle_hint": "verified.observer",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:5pei2ow2wxbwwtae24ioixzb": {
+    "did": "did:plc:5pei2ow2wxbwwtae24ioixzb",
+    "handle_hint": "wnba.sickos.club",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:rgigpkvlpcux67chfthapgat": {
+    "did": "did:plc:rgigpkvlpcux67chfthapgat",
+    "handle_hint": "featurerequest.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:7q62iuxezg2w723o5k4ce6r5": {
+    "did": "did:plc:7q62iuxezg2w723o5k4ce6r5",
+    "handle_hint": "labelfreakybobteam.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3wd5oaohfolufznimfhhddch": {
+    "did": "did:plc:3wd5oaohfolufznimfhhddch",
+    "handle_hint": "formula1.is.extraordinarily.cool",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:5rzpsoy4ziaq3njwinrp6ypc": {
+    "did": "did:plc:5rzpsoy4ziaq3njwinrp6ypc",
+    "handle_hint": "footballclublabels.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:yx4ako43dvnqcahmhccuuoyf": {
+    "did": "did:plc:yx4ako43dvnqcahmhccuuoyf",
+    "handle_hint": "media-ownership.aendra.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:5qgvgk3swxadfjxzlk2vp55m": {
+    "did": "did:plc:5qgvgk3swxadfjxzlk2vp55m",
+    "handle_hint": "news.aendra.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:pznot3wakcw635bl72cxgklk": {
+    "did": "did:plc:pznot3wakcw635bl72cxgklk",
+    "handle_hint": "labeler.bsky.build",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:yvejepssvhj7c4upf5x3kh7s": {
+    "did": "did:plc:yvejepssvhj7c4upf5x3kh7s",
+    "handle_hint": "pl-labeler.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:znm6hcs2ydm2o3u7zwrspjlu": {
+    "did": "did:plc:znm6hcs2ydm2o3u7zwrspjlu",
+    "handle_hint": "oshi.support",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:p3xrn75k25pxb7rpnkx3dznw": {
+    "did": "did:plc:p3xrn75k25pxb7rpnkx3dznw",
+    "handle_hint": "radiantpaths.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:7cdjyk7fw3s6aq7jdi35dvk4": {
+    "did": "did:plc:7cdjyk7fw3s6aq7jdi35dvk4",
+    "handle_hint": "jocasta.pacificchime.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:axw5uhxtlbapr77lfqz2gdk6": {
+    "did": "did:plc:axw5uhxtlbapr77lfqz2gdk6",
+    "handle_hint": "propter-games.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:sbnsfdwbgbtfgsp35377cysf": {
+    "did": "did:plc:sbnsfdwbgbtfgsp35377cysf",
+    "handle_hint": "pushpin-labeler.knightlab.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:adzprud3ccqhgldhortugwar": {
+    "did": "did:plc:adzprud3ccqhgldhortugwar",
+    "handle_hint": "facelabels.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:4wgmwsq4t3tg55ffl3r7ocec": {
+    "did": "did:plc:4wgmwsq4t3tg55ffl3r7ocec",
+    "handle_hint": "self-labeler.snarfed.org",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:fdb3ib72zi3sotun72nl6vop": {
+    "did": "did:plc:fdb3ib72zi3sotun72nl6vop",
+    "handle_hint": "zktls-verifier-v0.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:newitj5jo3uel7o4mnf3vj2o": {
+    "did": "did:plc:newitj5jo3uel7o4mnf3vj2o",
+    "handle_hint": "xblock.aendra.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:3ehw5dwwptcy3xuzugwq2u6t": {
+    "did": "did:plc:3ehw5dwwptcy3xuzugwq2u6t",
+    "handle_hint": "stopthebeans.haileyok.com",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:xss2sw5p4bfhjqjorl7gk6z4": {
+    "did": "did:plc:xss2sw5p4bfhjqjorl7gk6z4",
+    "handle_hint": "bluesky.ms",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:jh52vvcnlqyxssqvjwctaj5c": {
+    "did": "did:plc:jh52vvcnlqyxssqvjwctaj5c",
+    "handle_hint": "oneshot.iroiro.party",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:wcrkcbo7kopfp4fxihpqbe4n": {
+    "did": "did:plc:wcrkcbo7kopfp4fxihpqbe4n",
+    "handle_hint": "onlyfilters.dev",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:hzyne5ulm2d3dcyqnjegt2yp": {
+    "did": "did:plc:hzyne5ulm2d3dcyqnjegt2yp",
+    "handle_hint": "label-bot.0x0e.top",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:lf6kzcrw6mntttgrtawemegz": {
+    "did": "did:plc:lf6kzcrw6mntttgrtawemegz",
+    "handle_hint": "pebble-lbl-test.bsky.social",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:dp4ojyjjkiesztj6cdjq5ojh": {
+    "did": "did:plc:dp4ojyjjkiesztj6cdjq5ojh",
+    "handle_hint": "flashes-ozone.pds.merklehost.xyz",
+    "discovery_sources": [
+      "legacy_bank"
+    ],
+    "search_terms": []
+  },
+  "did:plc:t6xqfwencuwg4sjm5uhloc7r": {
+    "did": "did:plc:t6xqfwencuwg4sjm5uhloc7r",
+    "handle_hint": "skywatch.bsky.social",
+    "discovery_sources": [
+      "search",
+      "seed_handle"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:53re3k5syr2tfjxqhb47zj7s": {
+    "did": "did:plc:53re3k5syr2tfjxqhb47zj7s",
+    "handle_hint": "labeler.margin.cafe",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:ugdiki2sjvpxvhzsvuvaygaw": {
+    "did": "did:plc:ugdiki2sjvpxvhzsvuvaygaw",
+    "handle_hint": "larry.earth",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:hd564mpf6bekrwzyhvujs54b": {
+    "did": "did:plc:hd564mpf6bekrwzyhvujs54b",
+    "handle_hint": "medsky.network",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:okzqw5sogjhkxyfhsb5bbbu7": {
+    "did": "did:plc:okzqw5sogjhkxyfhsb5bbbu7",
+    "handle_hint": "malwhere.northsky.social",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:qikkkyqc4wkjcxou4ghnmrmh": {
+    "did": "did:plc:qikkkyqc4wkjcxou4ghnmrmh",
+    "handle_hint": "labelwatch.neutral.zone",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  },
+  "did:plc:nyqdb6aemlt2kqjzwp4pverf": {
+    "did": "did:plc:nyqdb6aemlt2kqjzwp4pverf",
+    "handle_hint": "jamienemeth.bsky.social",
+    "discovery_sources": [
+      "search"
+    ],
+    "search_terms": [
+      "labeler"
+    ]
+  }
+}

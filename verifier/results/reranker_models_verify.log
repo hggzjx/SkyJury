@@ -1,0 +1,81 @@
+Skipping verifier for bge_m3; not in RUN_MODEL_NAMES
+Skipping verifier for qwen3_embedding_8b; not in RUN_MODEL_NAMES
+Skipping verifier for kalm_gemma3_12b; not in RUN_MODEL_NAMES
+Running verifier for bge_reranker_v2_m3: /ssd2/lbh/zjx/models/BAAI_bge-reranker-v2-m3
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7260.42it/s]
+[reranker:bge] batch 1/144
+[reranker:bge] batch 25/144
+[reranker:bge] batch 50/144
+[reranker:bge] batch 75/144
+[reranker:bge] batch 100/144
+[reranker:bge] batch 125/144
+[reranker:bge] batch 144/144
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7196.77it/s]
+[reranker:bge] batch 1/144
+[reranker:bge] batch 25/144
+[reranker:bge] batch 50/144
+[reranker:bge] batch 75/144
+[reranker:bge] batch 100/144
+[reranker:bge] batch 125/144
+[reranker:bge] batch 144/144
+accuracy=0.4566 (263/576)
+predictions=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/bge_reranker_v2_m3/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/bge_reranker_v2_m3/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_metrics.json
+Running verifier for qwen3_reranker_8b: /ssd2/lbh/zjx/models/Qwen_Qwen3-Reranker-8B
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7362.57it/s]
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+[reranker:qwen3] batch 1/144
+[reranker:qwen3] batch 25/144
+[reranker:qwen3] batch 50/144
+[reranker:qwen3] batch 75/144
+[reranker:qwen3] batch 100/144
+[reranker:qwen3] batch 125/144
+[reranker:qwen3] batch 144/144
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7602.69it/s]
+[reranker:qwen3] batch 1/144
+[reranker:qwen3] batch 25/144
+[reranker:qwen3] batch 50/144
+[reranker:qwen3] batch 75/144
+[reranker:qwen3] batch 100/144
+[reranker:qwen3] batch 125/144
+[reranker:qwen3] batch 144/144
+accuracy=0.4097 (236/576)
+predictions=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/qwen3_reranker_8b/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/qwen3_reranker_8b/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_metrics.json
+Running verifier for jina_reranker_v3: /ssd2/lbh/zjx/models/jinaai_jina-reranker-v3
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/312 [00:00<?, ?it/s]Loading weights: 100%|██████████| 312/312 [00:00<00:00, 7225.33it/s]
+[reranker:jina-v3] pair 1/576
+[reranker:jina-v3] pair 25/576
+[reranker:jina-v3] pair 50/576
+[reranker:jina-v3] pair 75/576
+[reranker:jina-v3] pair 100/576
+[reranker:jina-v3] pair 125/576
+[reranker:jina-v3] pair 150/576
+[reranker:jina-v3] pair 175/576
+[reranker:jina-v3] pair 200/576
+[reranker:jina-v3] pair 225/576
+[reranker:jina-v3] pair 250/576
+[reranker:jina-v3] pair 275/576
+[reranker:jina-v3] pair 300/576
+[reranker:jina-v3] pair 325/576
+[reranker:jina-v3] pair 350/576
+[reranker:jina-v3] pair 375/576
+[reranker:jina-v3] pair 400/576
+[reranker:jina-v3] pair 425/576
+[reranker:jina-v3] pair 450/576
+[reranker:jina-v3] pair 475/576
+[reranker:jina-v3] pair 500/576
+[reranker:jina-v3] pair 525/576
+[reranker:jina-v3] pair 550/576
+[reranker:jina-v3] pair 575/576
+[reranker:jina-v3] pair 576/576
+accuracy=0.5642 (325/576)
+predictions=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/jina_reranker_v3/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/verifier/results/reranker_models/jina_reranker_v3/skyjury_bench_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_metrics.json

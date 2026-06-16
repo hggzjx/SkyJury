@@ -13,6 +13,7 @@ MAX_PROMPT_LENGTH="${MAX_PROMPT_LENGTH:-1024}"
 TORCH_DTYPE="${TORCH_DTYPE:-auto}"
 DEVICE_MAP="${DEVICE_MAP:-auto}"
 REF_FREE_TYPE="${REF_FREE_TYPE:-avg}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 LOCAL_FILES_ARGS=()
 LIMIT_ARGS=()
 
@@ -52,6 +53,7 @@ for model in "${MODELS[@]}"; do
       --torch-dtype "$TORCH_DTYPE"
       --device-map "$DEVICE_MAP"
       --ref-free-type "$REF_FREE_TYPE"
+      --prompt-template "$PROMPT_TEMPLATE"
       --output-dir "$PERTURBATION_OUTPUT_DIR"
       "${LOCAL_FILES_ARGS[@]}")
 

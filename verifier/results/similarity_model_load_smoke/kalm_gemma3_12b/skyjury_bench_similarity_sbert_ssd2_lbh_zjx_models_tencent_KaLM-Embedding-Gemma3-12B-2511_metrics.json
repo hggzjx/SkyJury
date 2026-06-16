@@ -1,0 +1,30 @@
+{
+  "accuracy": 0.5,
+  "correct_pairs": 1,
+  "total_pairs": 2,
+  "num_samples": 2,
+  "subset_accuracy": {
+    "crypto_safety": 0.5
+  },
+  "category_accuracy": {
+    "safety_moderation": 0.5
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 1,
+      "total_pairs": 2,
+      "accuracy": 0.5
+    }
+  },
+  "method": "similarity_sbert",
+  "similarity_method": "sbert",
+  "model": "/ssd2/lbh/zjx/models/tencent_KaLM-Embedding-Gemma3-12B-2511",
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
+  ],
+  "score_definition": "similarity(user_profile, labeler_text)",
+  "mean_chosen_score": 0.7158766984939575,
+  "mean_rejected_score": 0.7142091989517212,
+  "mean_margin": 0.0016675293445587158,
+  "median_margin": 0.0016675293445587158
+}

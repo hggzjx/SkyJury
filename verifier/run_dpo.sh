@@ -11,6 +11,7 @@ MAX_PROMPT_LENGTH="${MAX_PROMPT_LENGTH:-1024}"
 TORCH_DTYPE="${TORCH_DTYPE:-auto}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-/ssd1/lbh/zjx/skyjury/verifier/results/dpo_models}"
 BATCH_SIZE="${BATCH_SIZE:-1}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 
 MODELS=(
   "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-13b"
@@ -30,6 +31,7 @@ echo "device_map=$DEVICE_MAP"
 echo "max_length=$MAX_LENGTH"
 echo "max_prompt_length=$MAX_PROMPT_LENGTH"
 echo "output_root=$OUTPUT_ROOT"
+echo "prompt_template=$PROMPT_TEMPLATE"
 echo
 
 for model in "${MODELS[@]}"; do
@@ -57,12 +59,19 @@ for model in "${MODELS[@]}"; do
   echo "log=$log_path"
   echo "============================================================"
 
-  OUTPUT_DIR="$model_output_dir" \
-  DEVICE="$DEVICE" \
-  DEVICE_MAP="$DEVICE_MAP" \
-  BATCH_SIZE="$BATCH_SIZE" \
-  MAX_LENGTH="$MAX_LENGTH" \
-  MAX_PROMPT_LENGTH="$MAX_PROMPT_LENGTH" \
-  TORCH_DTYPE="$TORCH_DTYPE" \
-  bash run_dpo.sh "$model" "$DATA_PATH" "$REF_MODEL_PATH" 2>&1 | tee "$log_path"
+  python run_dpo_lm.py \
+    --model "$model" \
+    --ref-model "$REF_MODEL_PATH" \
+    --data "$DATA_PATH" \
+    --output-dir "$model_output_dir" \
+    --batch-size "$BATCH_SIZE" \
+    --max-length "$MAX_LENGTH" \
+    --max-prompt-length "$MAX_PROMPT_LENGTH" \
+    --device "$DEVICE" \
+    --torch-dtype "$TORCH_DTYPE" \
+    --device-map "$DEVICE_MAP" \
+    --prompt-template "$PROMPT_TEMPLATE" \
+    --local-files-only \
+    ${LIMIT:+--limit "$LIMIT"} \
+    2>&1 | tee "$log_path"
 done

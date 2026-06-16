@@ -1,0 +1,89 @@
+{
+  "accuracy": 0.59,
+  "correct_pairs": 118,
+  "total_pairs": 200,
+  "num_samples": 200,
+  "subset_accuracy": {
+    "accessibility": 0.3333333333333333,
+    "account_behavior": 0.0,
+    "account_verification": 0.8,
+    "adult_creator_discovery": 0.6,
+    "adult_filtering": 0.8,
+    "ai_content": 0.4375,
+    "art_safety": 0.8,
+    "community_identity": 0.47368421052631576,
+    "creator_discovery": 0.6666666666666666,
+    "crypto_safety": 0.5714285714285714,
+    "crypto_spam": 1.0,
+    "developer_identity": 0.0,
+    "employment": 0.75,
+    "fact_checking": 0.8571428571428571,
+    "fandom_content_warnings": 0.8,
+    "fandom_identity": 0.75,
+    "gaming_industry": 0.75,
+    "medical_community": 0.0,
+    "music_creator": 0.6666666666666666,
+    "news_source_context": 0.6666666666666666,
+    "politics_filtering": 0.5217391304347826,
+    "promotion_filtering": 0.5,
+    "protocol_infrastructure": 0.7777777777777778,
+    "science_misinformation": 0.7,
+    "spam_behavior": 0.4,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.625,
+    "substack_filtering": 0.5,
+    "urbanism_community": 1.0,
+    "verification": 0.6363636363636364
+  },
+  "category_accuracy": {
+    "identity_trust": 0.58,
+    "interest_community": 0.62,
+    "platform_information_ecology": 0.54,
+    "safety_moderation": 0.62
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 29,
+      "total_pairs": 50,
+      "accuracy": 0.58
+    },
+    "interest_community": {
+      "correct_pairs": 31,
+      "total_pairs": 50,
+      "accuracy": 0.62
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 27,
+      "total_pairs": 50,
+      "accuracy": 0.54
+    },
+    "safety_moderation": {
+      "correct_pairs": 31,
+      "total_pairs": 50,
+      "accuracy": 0.62
+    }
+  },
+  "method": "similarity_sbert",
+  "similarity_method": "sbert",
+  "model": "/ssd2/lbh/zjx/models/Qwen_Qwen3-Embedding-8B",
+  "device": "cuda",
+  "cuda_devices": "0,1,2,3",
+  "device_map": null,
+  "data_parallel": true,
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "pooling": "last_token",
+  "query_instruction": "Given a user profile, retrieve the labeler policy description that best matches the user's moderation needs",
+  "progress_every": 10,
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_base.json",
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_rubric_length.json",
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_rubric_language.json",
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_rubric_length_language.json"
+  ],
+  "score_definition": "similarity(user_profile, labeler_text)",
+  "mean_chosen_score": 0.7663599252700806,
+  "mean_rejected_score": 0.7470949292182922,
+  "mean_margin": 0.019264928996562958,
+  "median_margin": 0.02056056261062622
+}

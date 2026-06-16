@@ -1,0 +1,88 @@
+{
+  "accuracy": 0.4097222222222222,
+  "correct_pairs": 236,
+  "total_pairs": 576,
+  "num_samples": 576,
+  "subset_accuracy": {
+    "accessibility": 0.425,
+    "account_behavior": 0.75,
+    "account_verification": 0.25,
+    "adult_creator_discovery": 0.2,
+    "adult_filtering": 0.7,
+    "ai_content": 0.65,
+    "art_safety": 0.25,
+    "community_identity": 0.5625,
+    "creator_discovery": 0.2916666666666667,
+    "crypto_safety": 0.65,
+    "crypto_spam": 1.0,
+    "developer_identity": 0.5,
+    "employment": 0.875,
+    "fact_checking": 0.55,
+    "fandom_content_warnings": 0.7,
+    "fandom_identity": 0.0,
+    "fandom_spoiler": 0.75,
+    "gaming_industry": 0.25,
+    "medical_community": 1.0,
+    "music_creator": 0.25,
+    "news_source_context": 0.10714285714285714,
+    "politics_filtering": 0.25,
+    "promotion_filtering": 0.25,
+    "protocol_infrastructure": 0.55,
+    "science_misinformation": 0.35,
+    "spam_behavior": 0.8125,
+    "sports_authenticity": 0.25,
+    "sports_fandom": 0.125,
+    "substack_filtering": 0.0,
+    "urbanism_community": 0.25,
+    "verification": 0.34375
+  },
+  "category_accuracy": {
+    "identity_trust": 0.3448275862068966,
+    "interest_community": 0.34375,
+    "platform_information_ecology": 0.4444444444444444,
+    "safety_moderation": 0.5546875
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 40,
+      "total_pairs": 116,
+      "accuracy": 0.3448275862068966
+    },
+    "interest_community": {
+      "correct_pairs": 77,
+      "total_pairs": 224,
+      "accuracy": 0.34375
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 48,
+      "total_pairs": 108,
+      "accuracy": 0.4444444444444444
+    },
+    "safety_moderation": {
+      "correct_pairs": 71,
+      "total_pairs": 128,
+      "accuracy": 0.5546875
+    }
+  },
+  "method": "similarity_reranker",
+  "similarity_method": "reranker",
+  "model": "/ssd2/lbh/zjx/models/Qwen_Qwen3-Reranker-8B",
+  "model_name": "Qwen/Qwen3-Reranker-8B",
+  "device": "cuda",
+  "cuda_devices": "0,1,2,3",
+  "device_map": null,
+  "data_parallel": false,
+  "torch_dtype": "auto",
+  "trust_remote_code": true,
+  "pooling": "mean",
+  "query_instruction": null,
+  "progress_every": 25,
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
+  ],
+  "score_definition": "reranker_score(user_profile, labeler_text)",
+  "mean_chosen_score": 0.9898969862196181,
+  "mean_rejected_score": 0.9842281209097968,
+  "mean_margin": 0.005668865309821235,
+  "median_margin": 0.0
+}

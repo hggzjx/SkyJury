@@ -1,0 +1,1193 @@
+{
+  "metadata": {
+    "created_at": "2026-06-11T08:19:14.795012+00:00",
+    "collector": "collect_public_labeler_census.py",
+    "seed_handles": 167,
+    "candidate_dids_found": 0,
+    "services_returned": 0,
+    "labelers_saved": 0,
+    "discovery_terms": [
+      "labeler",
+      "moderation service",
+      "community labeler",
+      "safety labeler",
+      "content labeler",
+      "moderation labeler",
+      "verification labeler",
+      "identity labeler",
+      "creator labeler",
+      "artist labeler",
+      "accessibility labeler",
+      "alt text labeler",
+      "politics labeler",
+      "spoiler labeler",
+      "sports labeler",
+      "news labeler",
+      "misinformation labeler",
+      "spam labeler",
+      "scam labeler",
+      "crypto labeler",
+      "ai labeler",
+      "pronoun labeler",
+      "fandom labeler",
+      "bookmark labeler",
+      "PDS labeler"
+    ]
+  },
+  "labelers": [],
+  "domain_counts": {},
+  "collection_errors": [
+    {
+      "stage": "getProfile:ab4n-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ab4n-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ab4n-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:adcontrols.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=adcontrols.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=adcontrols.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ai-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ai-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ai-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:alt-text-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=alt-text-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=alt-text-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:altgov-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=altgov-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=altgov-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:anti-aging.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=anti-aging.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=anti-aging.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:antiantiai.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=antiantiai.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=antiantiai.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ao3labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ao3labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ao3labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:arttheft.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=arttheft.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=arttheft.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:atproto-spoilers.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=atproto-spoilers.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=atproto-spoilers.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:baatl.mastod.one",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=baatl.mastod.one",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=baatl.mastod.one']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bigkidnow.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bigkidnow.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bigkidnow.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:blue-cosmos.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=blue-cosmos.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=blue-cosmos.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bluenotes-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bluenotes-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bluenotes-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bluesky.ms",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bluesky.ms",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bluesky.ms']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:blueskyharbor.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=blueskyharbor.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=blueskyharbor.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bondsdogs.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bondsdogs.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bondsdogs.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bookmarks.bluecanary.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bookmarks.bluecanary.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bookmarks.bluecanary.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:bookmarks.indexx.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bookmarks.indexx.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=bookmarks.indexx.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:built.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=built.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=built.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:creatorlabeler.blackwall.gg",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=creatorlabeler.blackwall.gg",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=creatorlabeler.blackwall.gg']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:creatorlabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=creatorlabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=creatorlabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:cryptolabeler.sats4.life",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=cryptolabeler.sats4.life",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=cryptolabeler.sats4.life']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:cryptolabeler.w3igg.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=cryptolabeler.w3igg.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=cryptolabeler.w3igg.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:czkraje.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=czkraje.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=czkraje.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:dev-labels.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=dev-labels.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=dev-labels.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:engagement-hacks.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=engagement-hacks.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=engagement-hacks.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:enneagram.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=enneagram.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=enneagram.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:epl-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=epl-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=epl-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:eras.bsky.sh",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=eras.bsky.sh",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=eras.bsky.sh']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:es256.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=es256.app",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=es256.app']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:exml.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=exml.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=exml.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:facelabels.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=facelabels.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=facelabels.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:featurerequest.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=featurerequest.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=featurerequest.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:flashes-ozone.pds.merklehost.xyz",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=flashes-ozone.pds.merklehost.xyz",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=flashes-ozone.pds.merklehost.xyz']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:flatlander.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=flatlander.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=flatlander.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:footballclublabels.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=footballclublabels.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=footballclublabels.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:formula1.is.extraordinarily.cool",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=formula1.is.extraordinarily.cool",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=formula1.is.extraordinarily.cool']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:furskycreators.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=furskycreators.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=furskycreators.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:github-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=github-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=github-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:gnl-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=gnl-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=gnl-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:haileys-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=haileys-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=haileys-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:handle.invalid",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=handle.invalid",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=handle.invalid']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:harpersletter.fyi",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=harpersletter.fyi",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=harpersletter.fyi']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:holofanbase.zomrade.live",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=holofanbase.zomrade.live",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=holofanbase.zomrade.live']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:hololabel.ayrl.in",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=hololabel.ayrl.in",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=hololabel.ayrl.in']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:jerrified.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jerrified.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jerrified.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:jocasta.pacificchime.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jocasta.pacificchime.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=jocasta.pacificchime.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:joined-labeler.shatteredsky.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=joined-labeler.shatteredsky.net",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=joined-labeler.shatteredsky.net']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:khronos.world",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=khronos.world",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=khronos.world']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:kys.makersfield.co",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=kys.makersfield.co",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=kys.makersfield.co']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:label-bot.0x0e.top",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label-bot.0x0e.top",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label-bot.0x0e.top']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:label-iam.so-asano.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label-iam.so-asano.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label-iam.so-asano.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:label.directioners.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.directioners.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.directioners.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:label.onlyhumanhub.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.onlyhumanhub.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.onlyhumanhub.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:label.wol.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.wol.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=label.wol.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler-test.bsky.day",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler-test.bsky.day",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler-test.bsky.day']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler-test.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler-test.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler-test.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.antisubstack.fyi",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.antisubstack.fyi",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.antisubstack.fyi']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.bikesky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.bikesky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.bikesky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.blackwall.gg",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.blackwall.gg",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.blackwall.gg']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.bsky.build",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.bsky.build",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.bsky.build']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.flicknow.xyz",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.flicknow.xyz",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.flicknow.xyz']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.hailey.at",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.hailey.at",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.hailey.at']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.ivgorchestra.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.ivgorchestra.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.ivgorchestra.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.nunnybabbit.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.nunnybabbit.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.nunnybabbit.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.oak.coop",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.oak.coop",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.oak.coop']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.pikaparty.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.pikaparty.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.pikaparty.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.protopro.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.protopro.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.protopro.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.radial.racing",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.radial.racing",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.radial.racing']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.shreyanjain.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.shreyanjain.net",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.shreyanjain.net']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labeler.urbanism.plus",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.urbanism.plus",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labeler.urbanism.plus']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labelfreakybobteam.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labelfreakybobteam.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labelfreakybobteam.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labels.lio.systems",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labels.lio.systems",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labels.lio.systems']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:labels4theculture.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labels4theculture.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=labels4theculture.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:lancelotlabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=lancelotlabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=lancelotlabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:lapor.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=lapor.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=lapor.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:manikinekoshield.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=manikinekoshield.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=manikinekoshield.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:media-ownership.aendra.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=media-ownership.aendra.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=media-ownership.aendra.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:middleearth.quest",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=middleearth.quest",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=middleearth.quest']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:milk.meowing.zip",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=milk.meowing.zip",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=milk.meowing.zip']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mla-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mla-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mla-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mlb.blueskysportslabeler.xyz",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mlb.blueskysportslabeler.xyz",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mlb.blueskysportslabeler.xyz']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mod.berlin-demo.eurosky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.berlin-demo.eurosky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.berlin-demo.eurosky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mod.berlin-user.eurosky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.berlin-user.eurosky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.berlin-user.eurosky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mod.live2025demo.eurosky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.live2025demo.eurosky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.live2025demo.eurosky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:mod.shawn.party",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.shawn.party",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=mod.shawn.party']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation-nl.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation-nl.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation-nl.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.at.yugoslavia.best",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.at.yugoslavia.best",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.at.yugoslavia.best']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.beehivesafety.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.beehivesafety.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.beehivesafety.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.blacksky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.blacksky.app",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.blacksky.app']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.bsky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.bsky.app",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.bsky.app']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.medsky.network",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.medsky.network",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.medsky.network']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.nahida.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.nahida.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.nahida.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.popfeed.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.popfeed.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.popfeed.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.social.optize.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.social.optize.net",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.social.optize.net']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.tokimeki.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.tokimeki.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.tokimeki.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.veryun.cool",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.veryun.cool",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.veryun.cool']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:moderation.yunya.pet",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.yunya.pet",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.yunya.pet']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:musicianlabeler.xyz",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=musicianlabeler.xyz",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=musicianlabeler.xyz']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:myfavoritecolor.bsky.sh",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=myfavoritecolor.bsky.sh",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=myfavoritecolor.bsky.sh']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:news.aendra.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=news.aendra.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=news.aendra.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:newsdetective.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=newsdetective.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=newsdetective.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:nfl.sickos.club",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nfl.sickos.club",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nfl.sickos.club']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:nflair.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nflair.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nflair.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:nhllabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nhllabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nhllabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:nikolabel.juicey.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nikolabel.juicey.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nikolabel.juicey.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:no-opinions.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=no-opinions.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=no-opinions.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:no-pol-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=no-pol-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=no-pol-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:noalt.danirod.es",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=noalt.danirod.es",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=noalt.danirod.es']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:nogifsplease.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nogifsplease.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=nogifsplease.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ohnozone.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ohnozone.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ohnozone.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:oneshot.iroiro.party",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=oneshot.iroiro.party",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=oneshot.iroiro.party']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:onlyfilters.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=onlyfilters.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=onlyfilters.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:oshi.support",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=oshi.support",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=oshi.support']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ozone.birb.house",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.birb.house",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.birb.house']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ozone.fifo-f.eu",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.fifo-f.eu",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.fifo-f.eu']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:ozone.tophhie.cloud",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.tophhie.cloud",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=ozone.tophhie.cloud']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pds.labeler.tny.im",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pds.labeler.tny.im",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pds.labeler.tny.im']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pebble-lbl-test.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pebble-lbl-test.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pebble-lbl-test.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:perchpicsmod.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=perchpicsmod.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=perchpicsmod.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:perfect-skeeties.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=perfect-skeeties.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=perfect-skeeties.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:phobial.mastod.one",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=phobial.mastod.one",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=phobial.mastod.one']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pl-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pl-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pl-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pokemon.sonasky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pokemon.sonasky.app",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pokemon.sonasky.app']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pol.conmodsys.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pol.conmodsys.net",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pol.conmodsys.net']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:politicians.money",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=politicians.money",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=politicians.money']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:politicslabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=politicslabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=politicslabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:profile-labels.bossett.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=profile-labels.bossett.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=profile-labels.bossett.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pronounsinb.io",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pronounsinb.io",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pronounsinb.io']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:propter-games.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=propter-games.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=propter-games.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:prts-label.rhodesisland.space",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=prts-label.rhodesisland.space",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=prts-label.rhodesisland.space']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pushpin-labeler.knightlab.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pushpin-labeler.knightlab.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pushpin-labeler.knightlab.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:puzzmo-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=puzzmo-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=puzzmo-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:pwnedlabels.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pwnedlabels.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=pwnedlabels.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:radiantpaths.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=radiantpaths.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=radiantpaths.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:random-labeler.bsky.girigiribauer.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=random-labeler.bsky.girigiribauer.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=random-labeler.bsky.girigiribauer.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:recordcollector.edavis.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=recordcollector.edavis.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=recordcollector.edavis.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:self-labeler.snarfed.org",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=self-labeler.snarfed.org",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=self-labeler.snarfed.org']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:silencebrand.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=silencebrand.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=silencebrand.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:sky-clearer.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sky-clearer.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sky-clearer.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:skywatch.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:skywatch.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:sortinghat.bsky.sh",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sortinghat.bsky.sh",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sortinghat.bsky.sh']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:sports-labeler.hooray.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sports-labeler.hooray.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=sports-labeler.hooray.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:stechlab-labels.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stechlab-labels.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stechlab-labels.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:stemlabels.xyz",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stemlabels.xyz",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stemlabels.xyz']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:stopthebeans.haileyok.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stopthebeans.haileyok.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=stopthebeans.haileyok.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:tda-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=tda-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=tda-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:teletextlabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=teletextlabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=teletextlabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:test.fandomsky.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=test.fandomsky.net",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=test.fandomsky.net']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:trulioo-test.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=trulioo-test.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=trulioo-test.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:trustcollective.org",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=trustcollective.org",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=trustcollective.org']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:uefn.pinefruit.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uefn.pinefruit.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uefn.pinefruit.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:umbracolabeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=umbracolabeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=umbracolabeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:uspol-labeler.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uspol-labeler.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uspol-labeler.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:uspol.n3rdsky.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uspol.n3rdsky.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=uspol.n3rdsky.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:verified.babesky.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.babesky.com",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.babesky.com']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:verified.moll.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.moll.blue",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.moll.blue']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:verified.observer",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.observer",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=verified.observer']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:voresky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=voresky.app",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=voresky.app']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:vs.air2.earth",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=vs.air2.earth",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=vs.air2.earth']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:warlabel.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=warlabel.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=warlabel.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:wnba.sickos.club",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=wnba.sickos.club",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=wnba.sickos.club']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:xblock.aendra.dev",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=xblock.aendra.dev",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=xblock.aendra.dev']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:zktls-verifier-v0.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=zktls-verifier-v0.bsky.social",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=zktls-verifier-v0.bsky.social']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "getProfile:zodiacsigns.bsky.sh",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=zodiacsigns.bsky.sh",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=zodiacsigns.bsky.sh']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:moderation service:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+service&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+service&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:community labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=community+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=community+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:safety labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=safety+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=safety+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:content labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=content+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=content+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:moderation labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:verification labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=verification+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=verification+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:identity labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=identity+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=identity+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:creator labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=creator+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=creator+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:artist labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=artist+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=artist+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:accessibility labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=accessibility+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=accessibility+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:alt text labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=alt+text+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=alt+text+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:politics labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=politics+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=politics+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:spoiler labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spoiler+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spoiler+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:sports labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=sports+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=sports+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:news labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=news+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=news+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:misinformation labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=misinformation+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=misinformation+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:spam labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spam+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spam+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:scam labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=scam+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=scam+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:crypto labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=crypto+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=crypto+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:ai labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=ai+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=ai+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:pronoun labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=pronoun+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=pronoun+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:fandom labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=fandom+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=fandom+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:bookmark labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=bookmark+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=bookmark+labeler&limit=100']' returned non-zero exit status 7."
+    },
+    {
+      "stage": "searchActors:PDS labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=PDS+labeler&limit=100",
+      "error_type": "CalledProcessError",
+      "message": "Command '['curl', '-sS', '--fail', '--retry', '2', '--connect-timeout', '20', 'https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=PDS+labeler&limit=100']' returned non-zero exit status 7."
+    }
+  ]
+}

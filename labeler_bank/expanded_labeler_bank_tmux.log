@@ -1,0 +1,64 @@
+[progress] term='labeler' candidates=170
+[progress] term='labeling service' candidates=170
+[progress] term='moderation service' candidates=170
+[progress] term='moderation labeler' candidates=170
+[progress] term='community labeler' candidates=170
+[progress] term='safety labeler' candidates=170
+[progress] term='content labeler' candidates=170
+[progress] term='verification labeler' candidates=170
+[progress] term='identity labeler' candidates=170
+[progress] term='creator labeler' candidates=170
+[progress] term='artist labeler' candidates=170
+[progress] term='accessibility labeler' candidates=170
+[progress] term='alt text labeler' candidates=170
+[progress] term='news labeler' candidates=170
+[progress] term='misinformation labeler' candidates=170
+[progress] term='fact check labeler' candidates=170
+[progress] term='spam labeler' candidates=170
+[progress] term='scam labeler' candidates=170
+[progress] term='phishing labeler' candidates=170
+[progress] term='crypto labeler' candidates=170
+[progress] term='ai labeler' candidates=170
+[progress] term='AI generated labeler' candidates=170
+[progress] term='art theft labeler' candidates=170
+[progress] term='fandom labeler' candidates=170
+[progress] term='spoiler labeler' candidates=170
+[progress] term='AO3 labeler' candidates=170
+[progress] term='sports labeler' candidates=170
+[progress] term='team labeler' candidates=170
+[progress] term='politics labeler' candidates=170
+[progress] term='US politics labeler' candidates=170
+[progress] term='community notes labeler' candidates=170
+[progress] term='bookmark labeler' candidates=170
+[progress] term='PDS labeler' candidates=170
+[progress] term='developer labeler' candidates=170
+[progress] term='github labeler' candidates=170
+[progress] term='programming labeler' candidates=170
+[progress] term='pronoun labeler' candidates=170
+[progress] term='language labeler' candidates=170
+[progress] term='vtuber labeler' candidates=170
+[progress] term='music labeler' candidates=170
+[progress] term='writer labeler' candidates=170
+[progress] term='anime labeler' candidates=170
+[progress] term='manga labeler' candidates=170
+[progress] term='hololive labeler' candidates=170
+[progress] term='medical labeler' candidates=170
+[progress] term='healthcare labeler' candidates=170
+[progress] term='onlyfans labeler' candidates=170
+[progress] term='sex work labeler' candidates=170
+[progress] term='furry labeler' candidates=170
+[progress] term='adult labeler' candidates=170
+[progress] term='nsfw labeler' candidates=170
+[progress] term='label service' candidates=170
+[progress] term='ozone labeler' candidates=170
+[progress] candidate_dids=170
+[progress] services=0
+{
+  "output": "/ssd1/lbh/zjx/skyjury/labeler_bank/expanded_labeler_bank.json",
+  "summary": "/ssd1/lbh/zjx/skyjury/labeler_bank/expanded_labeler_bank_summary.md",
+  "candidate_dids_found": 170,
+  "services_returned": 0,
+  "labelers_saved": 0,
+  "labeler_values_saved": 0,
+  "errors": 65
+}

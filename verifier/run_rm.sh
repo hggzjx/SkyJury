@@ -8,6 +8,7 @@ MAX_LENGTH="${MAX_LENGTH:-2048}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-/ssd1/lbh/zjx/skyjury/verifier/results/reward_models}"
 TORCH_DTYPE="${TORCH_DTYPE:-auto}"
 DEVICE_MAP="${DEVICE_MAP:-auto}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 
 MODELS=(
   "/ssd1/lbh/zjx/models/skyjury_verifier/RLHFlow_ArmoRM-Llama3-8B-v0.1"
@@ -60,6 +61,7 @@ echo "cuda_devices_pool=$CUDA_DEVICES"
 echo "device=$DEVICE"
 echo "max_length=$MAX_LENGTH"
 echo "output_root=$OUTPUT_ROOT"
+echo "prompt_template=$PROMPT_TEMPLATE"
 echo
 
 for model in "${MODELS[@]}"; do
@@ -100,6 +102,7 @@ for model in "${MODELS[@]}"; do
     --device "$DEVICE" \
     --torch-dtype "$TORCH_DTYPE" \
     --device-map "$model_device_map" \
+    --prompt-template "$PROMPT_TEMPLATE" \
     --local-files-only \
     ${LIMIT:+--limit "$LIMIT"} \
     2>&1 | tee "$log_path"

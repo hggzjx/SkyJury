@@ -1,0 +1,98 @@
+{
+  "overall::length": {
+    "statistic": "paired_t",
+    "effect_size": 0.9774638283053698,
+    "p_value": 0.5031496850314968,
+    "t_observed": 0.97746382830537,
+    "mean_original": 0.5552149291830003,
+    "mean_perturbed": 0.5162444847086479,
+    "mean_delta": 0.038970444474352384,
+    "num_samples": 2,
+    "metric": "preference_confidence=sigmoid(chosen_score - rejected_score)",
+    "direction": "right-tailed test on original_confidence - perturbed_confidence",
+    "permutations": 10000,
+    "audited_num_samples": 2,
+    "audited_row_ids": [
+      "pref_0001",
+      "pref_0005"
+    ],
+    "audited_num_samples_raw": 2,
+    "dropped_invalid_score_rows": 0,
+    "dropped_invalid_score_row_ids": [],
+    "p_value_bh_significant": false,
+    "significance": "ns",
+    "robustness_risk": 0.0
+  },
+  "category:safety_moderation::length": {
+    "statistic": "paired_t",
+    "effect_size": 0.9774638283053698,
+    "p_value": 0.4938506149385061,
+    "t_observed": 0.97746382830537,
+    "mean_original": 0.5552149291830003,
+    "mean_perturbed": 0.5162444847086479,
+    "mean_delta": 0.038970444474352384,
+    "num_samples": 2,
+    "metric": "preference_confidence=sigmoid(chosen_score - rejected_score)",
+    "direction": "right-tailed test on original_confidence - perturbed_confidence",
+    "permutations": 10000,
+    "audited_num_samples": 2,
+    "audited_row_ids": [
+      "pref_0001",
+      "pref_0005"
+    ],
+    "audited_num_samples_raw": 2,
+    "dropped_invalid_score_rows": 0,
+    "dropped_invalid_score_row_ids": [],
+    "p_value_bh_significant": false,
+    "significance": "ns",
+    "robustness_risk": 0.0
+  },
+  "overall::language": {
+    "statistic": "paired_t",
+    "effect_size": 1.1509518201836872,
+    "p_value": 0.2532746725327467,
+    "t_observed": 1.1509518201836872,
+    "mean_original": 0.5552149291830003,
+    "mean_perturbed": 0.5310485195548716,
+    "mean_delta": 0.02416640962812866,
+    "num_samples": 2,
+    "metric": "preference_confidence=sigmoid(chosen_score - rejected_score)",
+    "direction": "right-tailed test on original_confidence - perturbed_confidence",
+    "permutations": 10000,
+    "audited_num_samples": 2,
+    "audited_row_ids": [
+      "pref_0001",
+      "pref_0005"
+    ],
+    "audited_num_samples_raw": 2,
+    "dropped_invalid_score_rows": 0,
+    "dropped_invalid_score_row_ids": [],
+    "p_value_bh_significant": false,
+    "significance": "ns",
+    "robustness_risk": 0.0
+  },
+  "category:safety_moderation::language": {
+    "statistic": "paired_t",
+    "effect_size": 1.1509518201836872,
+    "p_value": 0.24367563243675633,
+    "t_observed": 1.1509518201836872,
+    "mean_original": 0.5552149291830003,
+    "mean_perturbed": 0.5310485195548716,
+    "mean_delta": 0.02416640962812866,
+    "num_samples": 2,
+    "metric": "preference_confidence=sigmoid(chosen_score - rejected_score)",
+    "direction": "right-tailed test on original_confidence - perturbed_confidence",
+    "permutations": 10000,
+    "audited_num_samples": 2,
+    "audited_row_ids": [
+      "pref_0001",
+      "pref_0005"
+    ],
+    "audited_num_samples_raw": 2,
+    "dropped_invalid_score_rows": 0,
+    "dropped_invalid_score_row_ids": [],
+    "p_value_bh_significant": false,
+    "significance": "ns",
+    "robustness_risk": 0.0
+  }
+}

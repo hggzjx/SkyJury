@@ -1,0 +1,39 @@
+{
+  "accuracy": 0.0,
+  "correct_pairs": 0,
+  "total_pairs": 2,
+  "num_samples": 2,
+  "subset_accuracy": {
+    "crypto_safety": 0.0
+  },
+  "category_accuracy": {
+    "safety_moderation": 0.0
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 0,
+      "total_pairs": 2,
+      "accuracy": 0.0
+    }
+  },
+  "method": "similarity_sbert",
+  "similarity_method": "sbert",
+  "model": "/ssd2/lbh/zjx/models/Qwen_Qwen3-Embedding-8B",
+  "device": "cuda",
+  "cuda_devices": "0",
+  "device_map": null,
+  "data_parallel": false,
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "pooling": "last_token",
+  "query_instruction": "Given a user profile, retrieve the labeler policy description that best matches the user's moderation needs",
+  "progress_every": 1,
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
+  ],
+  "score_definition": "similarity(user_profile, labeler_text)",
+  "mean_chosen_score": 0.5895388126373291,
+  "mean_rejected_score": 0.6781020760536194,
+  "mean_margin": -0.08856326341629028,
+  "median_margin": -0.08856326341629028
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-METHOD="${1:?Usage: run_audit_report.sh <rm|dpo|llm_judge> <original_predictions> <length_predictions> <language_predictions> [output_dir]}"
+METHOD="${1:?Usage: run_audit_report.sh <rm|dpo|llm_judge|similarity> <original_predictions> <length_predictions> <language_predictions> [output_dir]}"
 ORIGINAL_PREDICTIONS="${2:?Missing original predictions JSON}"
 LENGTH_PREDICTIONS="${3:?Missing length perturbation predictions JSON}"
 LANGUAGE_PREDICTIONS="${4:?Missing language perturbation predictions JSON}"

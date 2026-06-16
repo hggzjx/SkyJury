@@ -1,0 +1,536 @@
+{
+  "metadata": {
+    "created_at": "2026-06-11T10:10:34.045960+00:00",
+    "collector": "collect_expanded_labeler_bank.py",
+    "pages_per_term": 8,
+    "search_limit": 100,
+    "with_plc": false,
+    "candidate_dids_found": 170,
+    "services_returned": 0,
+    "labelers_saved": 0,
+    "labeler_values_saved": 0,
+    "seed_handles": [
+      "moderation.bsky.app",
+      "moderation.blacksky.app",
+      "moderation.beehivesafety.com",
+      "skywatch.blue",
+      "skywatch.bsky.social"
+    ],
+    "discovery_terms": [
+      "labeler",
+      "labeling service",
+      "moderation service",
+      "moderation labeler",
+      "community labeler",
+      "safety labeler",
+      "content labeler",
+      "verification labeler",
+      "identity labeler",
+      "creator labeler",
+      "artist labeler",
+      "accessibility labeler",
+      "alt text labeler",
+      "news labeler",
+      "misinformation labeler",
+      "fact check labeler",
+      "spam labeler",
+      "scam labeler",
+      "phishing labeler",
+      "crypto labeler",
+      "ai labeler",
+      "AI generated labeler",
+      "art theft labeler",
+      "fandom labeler",
+      "spoiler labeler",
+      "AO3 labeler",
+      "sports labeler",
+      "team labeler",
+      "politics labeler",
+      "US politics labeler",
+      "community notes labeler",
+      "bookmark labeler",
+      "PDS labeler",
+      "developer labeler",
+      "github labeler",
+      "programming labeler",
+      "pronoun labeler",
+      "language labeler",
+      "vtuber labeler",
+      "music labeler",
+      "writer labeler",
+      "anime labeler",
+      "manga labeler",
+      "hololive labeler",
+      "medical labeler",
+      "healthcare labeler",
+      "onlyfans labeler",
+      "sex work labeler",
+      "furry labeler",
+      "adult labeler",
+      "nsfw labeler",
+      "label service",
+      "ozone labeler"
+    ]
+  },
+  "labelers": [],
+  "labeler_values": [],
+  "domain_counts": {},
+  "label_value_counts": {},
+  "collection_errors": [
+    {
+      "stage": "getProfile:moderation.beehivesafety.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.beehivesafety.com",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:06.605981+00:00"
+    },
+    {
+      "stage": "getProfile:moderation.blacksky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.blacksky.app",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:12.757201+00:00"
+    },
+    {
+      "stage": "getProfile:moderation.bsky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.bsky.app",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:18.904724+00:00"
+    },
+    {
+      "stage": "getProfile:skywatch.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.blue",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:25.051476+00:00"
+    },
+    {
+      "stage": "getProfile:skywatch.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.bsky.social",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:31.201104+00:00"
+    },
+    {
+      "stage": "searchActors:labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:37.349773+00:00"
+    },
+    {
+      "stage": "searchActors:labeling service:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=labeling+service&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:43.391154+00:00"
+    },
+    {
+      "stage": "searchActors:moderation service:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+service&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:49.417590+00:00"
+    },
+    {
+      "stage": "searchActors:moderation labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=moderation+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:04:55.445086+00:00"
+    },
+    {
+      "stage": "searchActors:community labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=community+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:01.473376+00:00"
+    },
+    {
+      "stage": "searchActors:safety labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=safety+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:07.501932+00:00"
+    },
+    {
+      "stage": "searchActors:content labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=content+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:13.553563+00:00"
+    },
+    {
+      "stage": "searchActors:verification labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=verification+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:19.581297+00:00"
+    },
+    {
+      "stage": "searchActors:identity labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=identity+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:25.607605+00:00"
+    },
+    {
+      "stage": "searchActors:creator labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=creator+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:31.633858+00:00"
+    },
+    {
+      "stage": "searchActors:artist labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=artist+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:37.660711+00:00"
+    },
+    {
+      "stage": "searchActors:accessibility labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=accessibility+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:43.686639+00:00"
+    },
+    {
+      "stage": "searchActors:alt text labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=alt+text+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:49.742438+00:00"
+    },
+    {
+      "stage": "searchActors:news labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=news+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:05:55.769047+00:00"
+    },
+    {
+      "stage": "searchActors:misinformation labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=misinformation+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:01.794506+00:00"
+    },
+    {
+      "stage": "searchActors:fact check labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=fact+check+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:07.821407+00:00"
+    },
+    {
+      "stage": "searchActors:spam labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spam+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:13.849278+00:00"
+    },
+    {
+      "stage": "searchActors:scam labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=scam+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:19.876398+00:00"
+    },
+    {
+      "stage": "searchActors:phishing labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=phishing+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:25.925260+00:00"
+    },
+    {
+      "stage": "searchActors:crypto labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=crypto+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:31.951933+00:00"
+    },
+    {
+      "stage": "searchActors:ai labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=ai+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:37.976298+00:00"
+    },
+    {
+      "stage": "searchActors:AI generated labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=AI+generated+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:44.001921+00:00"
+    },
+    {
+      "stage": "searchActors:art theft labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=art+theft+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:50.027868+00:00"
+    },
+    {
+      "stage": "searchActors:fandom labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=fandom+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:06:56.054619+00:00"
+    },
+    {
+      "stage": "searchActors:spoiler labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=spoiler+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:02.105703+00:00"
+    },
+    {
+      "stage": "searchActors:AO3 labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=AO3+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:08.131084+00:00"
+    },
+    {
+      "stage": "searchActors:sports labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=sports+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:14.158492+00:00"
+    },
+    {
+      "stage": "searchActors:team labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=team+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:20.186384+00:00"
+    },
+    {
+      "stage": "searchActors:politics labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=politics+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:26.212188+00:00"
+    },
+    {
+      "stage": "searchActors:US politics labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=US+politics+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:32.239544+00:00"
+    },
+    {
+      "stage": "searchActors:community notes labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=community+notes+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:38.282169+00:00"
+    },
+    {
+      "stage": "searchActors:bookmark labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=bookmark+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:44.309159+00:00"
+    },
+    {
+      "stage": "searchActors:PDS labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=PDS+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:50.337101+00:00"
+    },
+    {
+      "stage": "searchActors:developer labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=developer+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:07:56.365375+00:00"
+    },
+    {
+      "stage": "searchActors:github labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=github+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:02.392215+00:00"
+    },
+    {
+      "stage": "searchActors:programming labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=programming+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:08.418987+00:00"
+    },
+    {
+      "stage": "searchActors:pronoun labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=pronoun+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:14.465302+00:00"
+    },
+    {
+      "stage": "searchActors:language labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=language+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:20.491957+00:00"
+    },
+    {
+      "stage": "searchActors:vtuber labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=vtuber+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:26.518854+00:00"
+    },
+    {
+      "stage": "searchActors:music labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=music+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:32.546806+00:00"
+    },
+    {
+      "stage": "searchActors:writer labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=writer+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:38.573229+00:00"
+    },
+    {
+      "stage": "searchActors:anime labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=anime+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:44.600249+00:00"
+    },
+    {
+      "stage": "searchActors:manga labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=manga+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:50.647495+00:00"
+    },
+    {
+      "stage": "searchActors:hololive labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=hololive+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:08:56.675722+00:00"
+    },
+    {
+      "stage": "searchActors:medical labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=medical+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:02.705450+00:00"
+    },
+    {
+      "stage": "searchActors:healthcare labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=healthcare+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:08.734337+00:00"
+    },
+    {
+      "stage": "searchActors:onlyfans labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=onlyfans+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:14.763355+00:00"
+    },
+    {
+      "stage": "searchActors:sex work labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=sex+work+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:20.792436+00:00"
+    },
+    {
+      "stage": "searchActors:furry labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=furry+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:26.864660+00:00"
+    },
+    {
+      "stage": "searchActors:adult labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=adult+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:32.892699+00:00"
+    },
+    {
+      "stage": "searchActors:nsfw labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=nsfw+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:38.920427+00:00"
+    },
+    {
+      "stage": "searchActors:label service:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=label+service&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:44.948305+00:00"
+    },
+    {
+      "stage": "searchActors:ozone labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=ozone+labeler&limit=100",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:50.977934+00:00"
+    },
+    {
+      "stage": "getServices:batch1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3A24da43eyk5hjxypr5lvkn4uu&dids=did%3Aplc%3A2dnldc4omasiothhuqbmosyx&dids=did%3Aplc%3A2pduupjftektqoitfekc2x76&dids=did%3Aplc%3A2qhdv5xwffbogrfoqcqzpady&dids=did%3Aplc%3A36inn6r2ttwfrt6tpywsjcmt&dids=did%3Aplc%3A3bslxjzm3z3i67r5iwht4y5v&dids=did%3Aplc%3A3ehw5dwwptcy3xuzugwq2u6t&dids=did%3Aplc%3A3eivfiql4memqxkryeu4tqnk&dids=did%3Aplc%3A3ej5knrqezo3meltfsb4vwnv&dids=did%3Aplc%3A3gghjh7wuif2v3ykx5ttmm6c&dids=did%3Aplc%3A3lh2yd5jfacaonp4ftezbd5a&dids=did%3Aplc%3A3pyykdccdni5mdw2kgd465fw&dids=did%3Aplc%3A3wd5oaohfolufznimfhhddch&dids=did%3Aplc%3A45scnhbnhc6zm4vn4br4q3wp&dids=did%3Aplc%3A4cbvrwtii4d5p4hymgu5sv2q&dids=did%3Aplc%3A4grtcppa6rdgx3hgomz6kfdj&dids=did%3Aplc%3A4mvnkzobjzwuaxlnvcky3oh6&dids=did%3Aplc%3A4p3ilpfcl77fqgoofjmghznc&dids=did%3Aplc%3A4qctc5gtrcmjpoqmyxvdqbdf&dids=did%3Aplc%3A4u3hmjlouc435trzucpfhjcf&dids=did%3Aplc%3A4vf7tgwlg6edds2g2nixyjda&dids=did%3Aplc%3A4wgmwsq4t3tg55ffl3r7ocec&dids=did%3Aplc%3A4zw4oscaj6edhpud42ehhsnh&dids=did%3Aplc%3A57fl6zy4wmpuknwpgtjqkvlz&dids=did%3Aplc%3A5pei2ow2wxbwwtae24ioixzb&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:09:57.040202+00:00"
+    },
+    {
+      "stage": "getServices:batch2",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3A5qgvgk3swxadfjxzlk2vp55m&dids=did%3Aplc%3A5rzpsoy4ziaq3njwinrp6ypc&dids=did%3Aplc%3A5wjv77wuqykwphe7lgimldh6&dids=did%3Aplc%3A5xba6d65xjraakkuojru42qj&dids=did%3Aplc%3A657bbv43hgcuypiqbkuuiz4s&dids=did%3Aplc%3A6awpdvr4kfiwd467of4nlkac&dids=did%3Aplc%3A6djesjurxf3uqewul23yuflj&dids=did%3Aplc%3A6eumqlmq3ue6re55kjmtn6b6&dids=did%3Aplc%3A6k2b2myab3zpqivzvyym4cp5&dids=did%3Aplc%3A7cdjyk7fw3s6aq7jdi35dvk4&dids=did%3Aplc%3A7hpffigzovmuhbafrsiy7ne3&dids=did%3Aplc%3A7q62iuxezg2w723o5k4ce6r5&dids=did%3Aplc%3Aadzprud3ccqhgldhortugwar&dids=did%3Aplc%3Aagq6tlzsv5oqn4du7444yiia&dids=did%3Aplc%3Aah4tjc3trzqfivi2owt7iibw&dids=did%3Aplc%3Aar7c4by46qjdydhdevvrndac&dids=did%3Aplc%3Aasypmx5zv6bmq4fes6fjsojq&dids=did%3Aplc%3Aavy6ofacxe26c6x3jcizas6l&dids=did%3Aplc%3Aaxw5uhxtlbapr77lfqz2gdk6&dids=did%3Aplc%3Ab6irkivf4f6kr5zetwycnzxd&dids=did%3Aplc%3Abqaoaao7n5qqv2pf7rtyncqs&dids=did%3Aplc%3Abv3lcacietc6fkdokxfqtdkj&dids=did%3Aplc%3Abxnuth7kms5l57v2milp5gb3&dids=did%3Aplc%3Ac5d5thu6uwhb5odxgk7ejvni&dids=did%3Aplc%3Acdbp64nijvsmhuhodbuoqcwi&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:03.186599+00:00"
+    },
+    {
+      "stage": "getServices:batch3",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3Acseeitm726srf7cg2kx2jwvh&dids=did%3Aplc%3Acug2evrqa3nhdbvlfd2cvtky&dids=did%3Aplc%3Ad2mkddsbmnrgr3domzg5qexf&dids=did%3Aplc%3Ad6loa4hv3xt7ufl3md44nfkh&dids=did%3Aplc%3Adjcot74d3xbuxbe3dkfvchwe&dids=did%3Aplc%3Adm6tjhimvcxsgh2yxbppbqkx&dids=did%3Aplc%3Adp4ojyjjkiesztj6cdjq5ojh&dids=did%3Aplc%3Adsae6lz5garrdkbicuor4chs&dids=did%3Aplc%3Adsjk7d74slgc2xyrhehf2sxk&dids=did%3Aplc%3Adtvn3ttc5bwjqebzyzjh5rdh&dids=did%3Aplc%3Ae2pq4mw6ivyle3lavxptuh56&dids=did%3Aplc%3Ae4elbtctnfqocyfcml6h2lf7&dids=did%3Aplc%3Aecl4csxtybwgw5r45kmaditp&dids=did%3Aplc%3Aeeptyms6w2crpi6h73ok7qjt&dids=did%3Aplc%3Aef2icomujrtf3n3oob5hluqh&dids=did%3Aplc%3Aeivabf3dhre6rtqs2tkyj6f2&dids=did%3Aplc%3Aerl76ixakiifywkveug2fzkh&dids=did%3Aplc%3Aexlb5xx2t4pgtjqzdm6ntsgh&dids=did%3Aplc%3Af7fr3fmpevkmhodlzktuobvx&dids=did%3Aplc%3Afcikraffwejtuqffifeykcml&dids=did%3Aplc%3Afdb3ib72zi3sotun72nl6vop&dids=did%3Aplc%3Affv7lgt5rzmhnhzfum6ktzwm&dids=did%3Aplc%3Aflwugseenu2x4o3h2ymutc3x&dids=did%3Aplc%3Afmug4zegnl7lf6ljp7aokpeh&dids=did%3Aplc%3Aglu5zy2vxbuqwh76tjuwfqbm&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:09.333368+00:00"
+    },
+    {
+      "stage": "getServices:batch4",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3Agqaoe3na6isc3zyvp7iuqpu7&dids=did%3Aplc%3Agqeseqwqqcx7jz2gtvpmpelh&dids=did%3Aplc%3Agsyd3gta5usbdwtcnlmh7mou&dids=did%3Aplc%3Ah2btirb6mgshvzf2jqrsggbc&dids=did%3Aplc%3Ah46ix6jqd54twwjd3boypg5x&dids=did%3Aplc%3Ahmru2ho6zjm2kuigwfirq6td&dids=did%3Aplc%3Ahr236rnywyk3xjl4vt4emyc3&dids=did%3Aplc%3Ahyj7zzpmaaksf4bvugohv7xw&dids=did%3Aplc%3Ahzyne5ulm2d3dcyqnjegt2yp&dids=did%3Aplc%3Ai54lpx4fcztc55vsaiheypxo&dids=did%3Aplc%3Ai65enriuag7n5fgkopbqtkyk&dids=did%3Aplc%3Aim3bgdj4u42mgrzlyouk7czv&dids=did%3Aplc%3Aindwvpzxq36ay7cafeymjm4p&dids=did%3Aplc%3Aix4ghsjkw7zpivorhafvxsa2&dids=did%3Aplc%3Ajcce2sa3fgue4wiocvf7e7xj&dids=did%3Aplc%3Ajh52vvcnlqyxssqvjwctaj5c&dids=did%3Aplc%3Ajjotg3xptjqggin2pfgug2k2&dids=did%3Aplc%3Ajoapxy5523zx5mm4ii4b6ieo&dids=did%3Aplc%3Ajqujmqpwe3vcvlobzzkncpmo&dids=did%3Aplc%3Ak6cbpggz5h33idrah4yk4tst&dids=did%3Aplc%3Akbhrkjhfe2d3okspxbtzb7ga&dids=did%3Aplc%3Akgpqgx33bhqf4sn7lb7thnzw&dids=did%3Aplc%3Akwrnsjs7shplkwzpentb7yqv&dids=did%3Aplc%3Al624mewisyr6hymexmrjkprc&dids=did%3Aplc%3Alcobjfmuulklb5d4gyujdnqw&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:15.481567+00:00"
+    },
+    {
+      "stage": "getServices:batch5",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3Alf6kzcrw6mntttgrtawemegz&dids=did%3Aplc%3Alqstuil6alvccbl2uedtnv3m&dids=did%3Aplc%3Alydl7umexooxibfhdtwcijn2&dids=did%3Aplc%3Alyfdahuzifj577o5o6vphfl5&dids=did%3Aplc%3Am2gxxmtdgygsrommldrsggtw&dids=did%3Aplc%3Am4jxet5jry3f5xjxxedu6mt3&dids=did%3Aplc%3Am4z7d2wfa7lovi7toqwpjwr6&dids=did%3Aplc%3Am6adptn62dcahfaq34tce3j5&dids=did%3Aplc%3Amjyeurqmqjeexbgigk3yytvb&dids=did%3Aplc%3Amkj5rmeswytaiaqdd4bmdnfy&dids=did%3Aplc%3Ampogduvvraozdcbp6w2lafqg&dids=did%3Aplc%3An3kv33h2wkmbbu6xklw2aqzd&dids=did%3Aplc%3Anewitj5jo3uel7o4mnf3vj2o&dids=did%3Aplc%3Anhiydy3lysovgbaaxu5zx62x&dids=did%3Aplc%3Anon7ijavgj2dcxoi2b2pgrjd&dids=did%3Aplc%3Anpns6hnu6v47oatctk4ruxv2&dids=did%3Aplc%3Anqgmfo2ic7bax5ce47abgdit&dids=did%3Aplc%3Anwxpzxyajtoqytsorxuwgolt&dids=did%3Aplc%3Aolmiw2wkm3qoxinal7w5fbnl&dids=did%3Aplc%3Aop6ql6dg7zzmwrm6wzolqzwr&dids=did%3Aplc%3Aoubsyca6hhgqhmbbk27lvs7c&dids=did%3Aplc%3Aoxmtwjxecdj66x4ia7ucd6zk&dids=did%3Aplc%3Ap3xrn75k25pxb7rpnkx3dznw&dids=did%3Aplc%3Apbmxe3tfpkts72wi74weijpo&dids=did%3Aplc%3Apznot3wakcw635bl72cxgklk&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:21.629881+00:00"
+    },
+    {
+      "stage": "getServices:batch6",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3Aqezlipqc4yfk2lebu7533zyr&dids=did%3Aplc%3Aqhed3m2uw3mqcv5lgtvlyog5&dids=did%3Aplc%3Aqkty4ninplgtzeychgz4yyrh&dids=did%3Aplc%3Aqlg3c5mwnaxffbztey23l34n&dids=did%3Aplc%3Ar2wnx7eo2i4rflu6mlwxja6v&dids=did%3Aplc%3Ar5ju6hyf6p7lufdpelj37wnk&dids=did%3Aplc%3Argigpkvlpcux67chfthapgat&dids=did%3Aplc%3Arh3vjqs4npfpmnkkmx4u4bzj&dids=did%3Aplc%3Aroj4uljbc4iupezb3sv2mhee&dids=did%3Aplc%3Arprd6z2sgvsdokjsbadytyun&dids=did%3Aplc%3Aryh4jmxfdxr6itkv7ers2jkz&dids=did%3Aplc%3Arzptgjf46q2t6npdkzh4g7rh&dids=did%3Aplc%3As45hbf5dqdkjpwuuq4djo6l2&dids=did%3Aplc%3Asaslbwamakedc4h6c5bmshvz&dids=did%3Aplc%3Asbnsfdwbgbtfgsp35377cysf&dids=did%3Aplc%3Asetic5jsb2w2yjiopvyortdr&dids=did%3Aplc%3Askibpmllbhxvbvwgtjxl3uao&dids=did%3Aplc%3Asmtbhjnwsvcxzvez2nbf7mar&dids=did%3Aplc%3Asr7hpjhseg2zqomswzw4tmin&dids=did%3Aplc%3Aswmumnkmw5osopckigoal7ox&dids=did%3Aplc%3Atazmeohzhvmcci2cy7sygwmu&dids=did%3Aplc%3Atlngewbs2n4qosiw7o2u5s45&dids=did%3Aplc%3Attgjhhe2za2fnusmymensjsx&dids=did%3Aplc%3Auxjwly6emtgik7juvxxdpl3c&dids=did%3Aplc%3Auyauirpjzk6le4ygqzatcwnq&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:27.777501+00:00"
+    },
+    {
+      "stage": "getServices:batch7",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3Avcwvdve2iuxbsqbd3edxvm7e&dids=did%3Aplc%3Avfibt4bgozsdx6rnnnpha3x7&dids=did%3Aplc%3Avnzvtgtwden4hpeierfcfan2&dids=did%3Aplc%3Avud7oo5sc7k256jjplfxlnhm&dids=did%3Aplc%3Aw6yx4bltuzdmiolooi4kd6zt&dids=did%3Aplc%3Awa5b3th4wc5qivxpq5iy3omb&dids=did%3Aplc%3Awcrkcbo7kopfp4fxihpqbe4n&dids=did%3Aplc%3Awp7hxfjl5l4zlptn7y6774lk&dids=did%3Aplc%3Axje4wfji5zjiwgrhwpc3itv2&dids=did%3Aplc%3Axpxsa5aviwecd7cv6bzbmr5n&dids=did%3Aplc%3Axss2sw5p4bfhjqjorl7gk6z4&dids=did%3Aplc%3Axzakyqf64ysa44ego3soia3v&dids=did%3Aplc%3Aymhqgxqmgxyozvhj32nbywbv&dids=did%3Aplc%3Ayv4nuaj3jshcuh2d2ivykgiz&dids=did%3Aplc%3Ayvejepssvhj7c4upf5x3kh7s&dids=did%3Aplc%3Ayx4ako43dvnqcahmhccuuoyf&dids=did%3Aplc%3Ayxuxzi4hpnovvszinzn33dp3&dids=did%3Aplc%3Az7wmj3d5t7ytjf4nrh5nq6zx&dids=did%3Aplc%3Azal76px7lfptnpgn4j3v6i7d&dids=did%3Aplc%3Aznm6hcs2ydm2o3u7zwrspjlu&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 111] Connection refused>",
+      "time": "2026-06-11T10:10:33.925089+00:00"
+    }
+  ]
+}

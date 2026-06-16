@@ -10,7 +10,7 @@ from rewardbench_compat import (
     pick_device,
     score_dpo_pairs,
 )
-from utils import compute_accuracy, load_preference_rows, write_result_bundle
+from utils import compute_accuracy, format_policy_judgment_prompt, load_preference_rows, write_result_bundle
 
 
 DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
@@ -38,12 +38,21 @@ def parse_args() -> argparse.Namespace:
         choices=["sum", "avg", "norm"],
         help="Reference-free or log-ratio reduction over answer tokens, matching RewardBench DPOInference options.",
     )
+    parser.add_argument(
+        "--prompt-template",
+        default="default",
+        choices=["default", "strong"],
+        help="Optional prompt templating for RM/DPO-style prompt-response scoring.",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     rows = load_preference_rows(args.data, limit=args.limit)
+    if args.prompt_template != "default":
+        for row in rows:
+            row["prompt"] = format_policy_judgment_prompt(row["prompt"], args.prompt_template)
     device = pick_device(args.device)
 
     official = official_model_name(args.model)
@@ -110,6 +119,7 @@ def main() -> None:
             "ref_free_type": args.ref_free_type,
             "max_length": args.max_length,
             "max_prompt_length": args.max_prompt_length,
+            "prompt_template": args.prompt_template,
         }
     )
     result_path, metrics_path = write_result_bundle(

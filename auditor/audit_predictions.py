@@ -21,9 +21,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--method",
-        choices=["rm", "dpo", "llm_judge"],
+        choices=["rm", "dpo", "llm_judge", "similarity"],
         required=True,
-        help="Verifier family. rm, dpo, and llm_judge use paired t-statistics over preference confidence.",
+        help="Verifier family. All methods use paired t-statistics over preference confidence.",
     )
     parser.add_argument("--original", required=True, help="Prediction JSON on the original dataset.")
     parser.add_argument(

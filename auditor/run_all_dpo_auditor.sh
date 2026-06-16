@@ -4,8 +4,10 @@ set -euo pipefail
 DATA_DIR="${DATA_DIR:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
 RESULT_ROOT="${RESULT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/dpo_category50_audit}"
 VERIFIER_RESULTS="${VERIFIER_RESULTS:-/ssd1/lbh/zjx/skyjury/verifier/results}"
+DPO_VERIFIER_SUBDIR="${DPO_VERIFIER_SUBDIR:-dpo_models}"
 REF_MODEL_PATH="${REF_MODEL_PATH:-/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-7b}"
 DATA_PREFIX="${DATA_PREFIX:-skyjury_bench}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 
 mkdir -p "$RESULT_ROOT"/{logs,dpo_predictions,reports/dpo}
 
@@ -59,6 +61,7 @@ run_one() {
     echo "cuda_devices=$cuda_devices"
     echo "device_map=$device_map"
     echo "batch_size=$batch_size"
+    echo "prompt_template=$PROMPT_TEMPLATE"
     echo "============================================================"
 
     CUDA_VISIBLE_DEVICES="$cuda_devices" \
@@ -68,6 +71,7 @@ run_one() {
     MAX_LENGTH="${DPO_MAX_LENGTH:-2048}" \
     MAX_PROMPT_LENGTH="${MAX_PROMPT_LENGTH:-1024}" \
     TORCH_DTYPE="${TORCH_DTYPE:-auto}" \
+    PROMPT_TEMPLATE="$PROMPT_TEMPLATE" \
     bash /ssd1/lbh/zjx/skyjury/auditor/run_dpo_perturbations.sh \
       "$model" \
       "$DATA_DIR" \
@@ -93,14 +97,14 @@ run_one() {
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/allenai_tulu-2-dpo-13b" \
-  "$VERIFIER_RESULTS/dpo_models/allenai_tulu-2-dpo-13b/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_allenai_tulu-2-dpo-13b_predictions.json" \
+  "$VERIFIER_RESULTS/$DPO_VERIFIER_SUBDIR/allenai_tulu-2-dpo-13b/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_allenai_tulu-2-dpo-13b_predictions.json" \
   "${TULU_CUDA_DEVICES:-0,1,2,3}" \
   "${TULU_DEVICE_MAP:-auto}" \
   "${TULU_BATCH_SIZE:-16}"
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/upstage_SOLAR-10.7B-Instruct-v1.0" \
-  "$VERIFIER_RESULTS/dpo_models/upstage_SOLAR-10.7B-Instruct-v1.0/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_upstage_SOLAR-10.7B-Instruct-v1.0_predictions.json" \
+  "$VERIFIER_RESULTS/$DPO_VERIFIER_SUBDIR/upstage_SOLAR-10.7B-Instruct-v1.0/skyjury_bench_dpo_ssd1_lbh_zjx_models_skyjury_verifier_upstage_SOLAR-10.7B-Instruct-v1.0_predictions.json" \
   "${SOLAR_CUDA_DEVICES:-0,1,2,3}" \
   "${SOLAR_DEVICE_MAP:-auto}" \
   "${SOLAR_BATCH_SIZE:-16}"

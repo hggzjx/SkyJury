@@ -1,0 +1,75 @@
+{
+  "accuracy": 0.5590277777777778,
+  "correct_pairs": 322,
+  "total_pairs": 576,
+  "num_samples": 576,
+  "subset_accuracy": {
+    "accessibility": 0.675,
+    "account_behavior": 0.0,
+    "account_verification": 0.6666666666666666,
+    "adult_creator_discovery": 0.55,
+    "adult_filtering": 0.8,
+    "ai_content": 0.475,
+    "art_safety": 0.65,
+    "community_identity": 0.5,
+    "creator_discovery": 0.5,
+    "crypto_safety": 0.6,
+    "crypto_spam": 0.0,
+    "developer_identity": 0.5,
+    "employment": 0.625,
+    "fact_checking": 0.6,
+    "fandom_content_warnings": 0.6,
+    "fandom_identity": 0.65,
+    "fandom_spoiler": 0.25,
+    "gaming_industry": 0.5,
+    "medical_community": 1.0,
+    "music_creator": 0.5,
+    "news_source_context": 0.17857142857142858,
+    "politics_filtering": 0.45454545454545453,
+    "promotion_filtering": 1.0,
+    "protocol_infrastructure": 0.6,
+    "science_misinformation": 0.6,
+    "spam_behavior": 0.5,
+    "sports_authenticity": 1.0,
+    "sports_fandom": 0.575,
+    "substack_filtering": 0.0,
+    "urbanism_community": 0.75,
+    "verification": 0.78125
+  },
+  "category_accuracy": {
+    "identity_trust": 0.5344827586206896,
+    "interest_community": 0.5892857142857143,
+    "platform_information_ecology": 0.4722222222222222,
+    "safety_moderation": 0.6015625
+  },
+  "category_metrics": {
+    "identity_trust": {
+      "correct_pairs": 62,
+      "total_pairs": 116,
+      "accuracy": 0.5344827586206896
+    },
+    "interest_community": {
+      "correct_pairs": 132,
+      "total_pairs": 224,
+      "accuracy": 0.5892857142857143
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 51,
+      "total_pairs": 108,
+      "accuracy": 0.4722222222222222
+    },
+    "safety_moderation": {
+      "correct_pairs": 77,
+      "total_pairs": 128,
+      "accuracy": 0.6015625
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/Ray2333_GRM_Llama3.1_8B_rewardmodel-ft",
+  "official_model_name": "Ray2333/GRM_Llama3.1_8B_rewardmodel-ft",
+  "method": "rewardbench_compatible_reward_model",
+  "device": "cuda",
+  "torch_dtype": "auto",
+  "trust_remote_code": false,
+  "model_builder": "sequence_classification",
+  "prompt_template": "strong"
+}

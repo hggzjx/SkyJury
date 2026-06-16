@@ -1,0 +1,205 @@
+Skipping similarity audit for bge_m3; not in RUN_MODEL_NAMES
+Skipping similarity audit for qwen3_embedding_8b; not in RUN_MODEL_NAMES
+Skipping similarity audit for kalm_gemma3_12b; not in RUN_MODEL_NAMES
+Running similarity audit predictions for bge_reranker_v2_m3: /ssd2/lbh/zjx/models/BAAI_bge-reranker-v2-m3
+Running similarity perturbation: run=bge_reranker_v2_m3 method=reranker variant=base
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7379.87it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7136.97it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+accuracy=0.4500 (90/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_metrics.json
+Running similarity perturbation: run=bge_reranker_v2_m3 method=reranker variant=length
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7195.92it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7195.07it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+accuracy=0.4450 (89/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_metrics.json
+Running similarity perturbation: run=bge_reranker_v2_m3 method=reranker variant=language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7360.33it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7246.34it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+accuracy=0.4200 (84/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_metrics.json
+Running similarity perturbation: run=bge_reranker_v2_m3 method=reranker variant=length_language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7551.56it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7354.98it/s]
+[reranker:bge] batch 1/50
+[reranker:bge] batch 25/50
+[reranker:bge] batch 50/50
+accuracy=0.4300 (86/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/bge_reranker_v2_m3/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_BAAI_bge-reranker-v2-m3_metrics.json
+Generating similarity audit reports for bge_reranker_v2_m3
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/bge_reranker_v2_m3/similarity_bge_reranker_v2_m3_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/bge_reranker_v2_m3/similarity_bge_reranker_v2_m3_rubric_robustness.md
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/bge_reranker_v2_m3/similarity_bge_reranker_v2_m3_cross_candidate_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/bge_reranker_v2_m3/similarity_bge_reranker_v2_m3_cross_candidate_rubric_robustness.md
+Running similarity audit predictions for qwen3_reranker_8b: /ssd2/lbh/zjx/models/Qwen_Qwen3-Reranker-8B
+Running similarity perturbation: run=qwen3_reranker_8b method=reranker variant=base
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7368.73it/s]
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7405.32it/s]
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+accuracy=0.4300 (86/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_metrics.json
+Running similarity perturbation: run=qwen3_reranker_8b method=reranker variant=length
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7161.90it/s]
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7278.99it/s]
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+accuracy=0.5250 (105/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_metrics.json
+Running similarity perturbation: run=qwen3_reranker_8b method=reranker variant=language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7431.62it/s]
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7271.87it/s]
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+accuracy=0.4400 (88/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_metrics.json
+Running similarity perturbation: run=qwen3_reranker_8b method=reranker variant=length_language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7425.13it/s]
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:2357: UserWarning: `max_length` is ignored when `padding`=`True` and there is no truncation strategy. To pad to max length, use `padding='max_length'`.
+  warnings.warn(
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 7242.73it/s]
+[reranker:qwen3] batch 1/50
+[reranker:qwen3] batch 25/50
+[reranker:qwen3] batch 50/50
+accuracy=0.4950 (99/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/qwen3_reranker_8b/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_Qwen_Qwen3-Reranker-8B_metrics.json
+Generating similarity audit reports for qwen3_reranker_8b
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/qwen3_reranker_8b/similarity_qwen3_reranker_8b_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/qwen3_reranker_8b/similarity_qwen3_reranker_8b_rubric_robustness.md
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/qwen3_reranker_8b/similarity_qwen3_reranker_8b_cross_candidate_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/qwen3_reranker_8b/similarity_qwen3_reranker_8b_cross_candidate_rubric_robustness.md
+Running similarity audit predictions for jina_reranker_v3: /ssd2/lbh/zjx/models/jinaai_jina-reranker-v3
+Running similarity perturbation: run=jina_reranker_v3 method=reranker variant=base
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/312 [00:00<?, ?it/s]Loading weights: 100%|██████████| 312/312 [00:00<00:00, 7520.35it/s]
+[reranker:jina-v3] pair 1/200
+[reranker:jina-v3] pair 25/200
+[reranker:jina-v3] pair 50/200
+[reranker:jina-v3] pair 75/200
+[reranker:jina-v3] pair 100/200
+[reranker:jina-v3] pair 125/200
+[reranker:jina-v3] pair 150/200
+[reranker:jina-v3] pair 175/200
+[reranker:jina-v3] pair 200/200
+accuracy=0.5550 (111/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/base/skyjury_bench_base_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_metrics.json
+Running similarity perturbation: run=jina_reranker_v3 method=reranker variant=length
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/312 [00:00<?, ?it/s]Loading weights: 100%|██████████| 312/312 [00:00<00:00, 7710.75it/s]
+[reranker:jina-v3] pair 1/200
+[reranker:jina-v3] pair 25/200
+[reranker:jina-v3] pair 50/200
+[reranker:jina-v3] pair 75/200
+[reranker:jina-v3] pair 100/200
+[reranker:jina-v3] pair 125/200
+[reranker:jina-v3] pair 150/200
+[reranker:jina-v3] pair 175/200
+[reranker:jina-v3] pair 200/200
+accuracy=0.5000 (100/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/length/skyjury_bench_rubric_length_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_metrics.json
+Running similarity perturbation: run=jina_reranker_v3 method=reranker variant=language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/312 [00:00<?, ?it/s]Loading weights: 100%|██████████| 312/312 [00:00<00:00, 7098.77it/s]
+[reranker:jina-v3] pair 1/200
+[reranker:jina-v3] pair 25/200
+[reranker:jina-v3] pair 50/200
+[reranker:jina-v3] pair 75/200
+[reranker:jina-v3] pair 100/200
+[reranker:jina-v3] pair 125/200
+[reranker:jina-v3] pair 150/200
+[reranker:jina-v3] pair 175/200
+[reranker:jina-v3] pair 200/200
+accuracy=0.5300 (106/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/language/skyjury_bench_rubric_language_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_metrics.json
+Running similarity perturbation: run=jina_reranker_v3 method=reranker variant=length_language
+/home/lbh/anaconda3/envs/rm_dev/lib/python3.10/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Loading weights:   0%|          | 0/312 [00:00<?, ?it/s]Loading weights: 100%|██████████| 312/312 [00:00<00:00, 7399.16it/s]
+[reranker:jina-v3] pair 1/200
+[reranker:jina-v3] pair 25/200
+[reranker:jina-v3] pair 50/200
+[reranker:jina-v3] pair 75/200
+[reranker:jina-v3] pair 100/200
+[reranker:jina-v3] pair 125/200
+[reranker:jina-v3] pair 150/200
+[reranker:jina-v3] pair 175/200
+[reranker:jina-v3] pair 200/200
+accuracy=0.4750 (95/200)
+predictions=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_predictions.json
+metrics=/ssd1/lbh/zjx/skyjury/auditor/results/reranker_predictions/jina_reranker_v3/length_language/skyjury_bench_rubric_length_language_similarity_reranker_ssd2_lbh_zjx_models_jinaai_jina-reranker-v3_metrics.json
+Generating similarity audit reports for jina_reranker_v3
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/jina_reranker_v3/similarity_jina_reranker_v3_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/jina_reranker_v3/similarity_jina_reranker_v3_rubric_robustness.md
+wrote json: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/jina_reranker_v3/similarity_jina_reranker_v3_cross_candidate_rubric_robustness.json
+wrote report: /ssd1/lbh/zjx/skyjury/auditor/results/reranker_reports/jina_reranker_v3/similarity_jina_reranker_v3_cross_candidate_rubric_robustness.md

@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "created_at": "2026-06-11T10:01:04.403331+00:00",
+    "collector": "collect_expanded_labeler_bank.py",
+    "pages_per_term": 1,
+    "search_limit": 25,
+    "with_plc": false,
+    "candidate_dids_found": 170,
+    "services_returned": 0,
+    "labelers_saved": 0,
+    "labeler_values_saved": 0,
+    "seed_handles": [
+      "moderation.bsky.app",
+      "moderation.blacksky.app",
+      "moderation.beehivesafety.com",
+      "skywatch.blue",
+      "skywatch.bsky.social"
+    ],
+    "discovery_terms": [
+      "labeler",
+      "labeling service",
+      "moderation service",
+      "moderation labeler",
+      "community labeler",
+      "safety labeler",
+      "content labeler",
+      "verification labeler",
+      "identity labeler",
+      "creator labeler",
+      "artist labeler",
+      "accessibility labeler",
+      "alt text labeler",
+      "news labeler",
+      "misinformation labeler",
+      "fact check labeler",
+      "spam labeler",
+      "scam labeler",
+      "phishing labeler",
+      "crypto labeler",
+      "ai labeler",
+      "AI generated labeler",
+      "art theft labeler",
+      "fandom labeler",
+      "spoiler labeler",
+      "AO3 labeler",
+      "sports labeler",
+      "team labeler",
+      "politics labeler",
+      "US politics labeler",
+      "community notes labeler",
+      "bookmark labeler",
+      "PDS labeler",
+      "developer labeler",
+      "github labeler",
+      "programming labeler",
+      "pronoun labeler",
+      "language labeler",
+      "vtuber labeler",
+      "music labeler",
+      "writer labeler",
+      "anime labeler",
+      "manga labeler",
+      "hololive labeler",
+      "medical labeler",
+      "healthcare labeler",
+      "onlyfans labeler",
+      "sex work labeler",
+      "furry labeler",
+      "adult labeler",
+      "nsfw labeler",
+      "label service",
+      "ozone labeler"
+    ]
+  },
+  "labelers": [],
+  "labeler_values": [],
+  "domain_counts": {},
+  "label_value_counts": {},
+  "collection_errors": [
+    {
+      "stage": "getProfile:moderation.beehivesafety.com",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.beehivesafety.com",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:27.481405+00:00"
+    },
+    {
+      "stage": "getProfile:moderation.blacksky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.blacksky.app",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:33.631415+00:00"
+    },
+    {
+      "stage": "getProfile:moderation.bsky.app",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=moderation.bsky.app",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:39.781254+00:00"
+    },
+    {
+      "stage": "getProfile:skywatch.blue",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.blue",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:45.930297+00:00"
+    },
+    {
+      "stage": "getProfile:skywatch.bsky.social",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=skywatch.bsky.social",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:52.077811+00:00"
+    },
+    {
+      "stage": "searchActors:labeler:page1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.actor.searchActors?q=labeler&limit=25",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:00:58.225728+00:00"
+    },
+    {
+      "stage": "getServices:batch1",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.labeler.getServices?dids=did%3Aplc%3A24da43eyk5hjxypr5lvkn4uu&dids=did%3Aplc%3A2dnldc4omasiothhuqbmosyx&dids=did%3Aplc%3A2pduupjftektqoitfekc2x76&dids=did%3Aplc%3A2qhdv5xwffbogrfoqcqzpady&dids=did%3Aplc%3A36inn6r2ttwfrt6tpywsjcmt&dids=did%3Aplc%3A3bslxjzm3z3i67r5iwht4y5v&dids=did%3Aplc%3A3ehw5dwwptcy3xuzugwq2u6t&dids=did%3Aplc%3A3eivfiql4memqxkryeu4tqnk&dids=did%3Aplc%3A3ej5knrqezo3meltfsb4vwnv&dids=did%3Aplc%3A3gghjh7wuif2v3ykx5ttmm6c&dids=did%3Aplc%3A3lh2yd5jfacaonp4ftezbd5a&dids=did%3Aplc%3A3pyykdccdni5mdw2kgd465fw&dids=did%3Aplc%3A3wd5oaohfolufznimfhhddch&dids=did%3Aplc%3A45scnhbnhc6zm4vn4br4q3wp&dids=did%3Aplc%3A4cbvrwtii4d5p4hymgu5sv2q&dids=did%3Aplc%3A4grtcppa6rdgx3hgomz6kfdj&dids=did%3Aplc%3A4mvnkzobjzwuaxlnvcky3oh6&dids=did%3Aplc%3A4p3ilpfcl77fqgoofjmghznc&dids=did%3Aplc%3A4qctc5gtrcmjpoqmyxvdqbdf&dids=did%3Aplc%3A4u3hmjlouc435trzucpfhjcf&detailed=true",
+      "error_type": "URLError",
+      "message": "<urlopen error [Errno 1] Operation not permitted>",
+      "time": "2026-06-11T10:01:04.282536+00:00"
+    }
+  ]
+}

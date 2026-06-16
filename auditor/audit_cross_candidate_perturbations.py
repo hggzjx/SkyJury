@@ -18,7 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Audit cross-candidate rubric perturbations from existing SkyJury prediction scores."
     )
-    parser.add_argument("--method", choices=["rm", "dpo", "llm_judge"], required=True)
+    parser.add_argument("--method", choices=["rm", "dpo", "llm_judge", "similarity"], required=True)
     parser.add_argument("--original", required=True)
     parser.add_argument(
         "--perturbed",

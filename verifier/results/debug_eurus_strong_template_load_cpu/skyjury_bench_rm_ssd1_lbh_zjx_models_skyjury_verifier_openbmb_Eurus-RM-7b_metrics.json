@@ -1,0 +1,27 @@
+{
+  "accuracy": 0.0,
+  "correct_pairs": 0,
+  "total_pairs": 1,
+  "num_samples": 1,
+  "subset_accuracy": {
+    "crypto_safety": 0.0
+  },
+  "category_accuracy": {
+    "safety_moderation": 0.0
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 0,
+      "total_pairs": 1,
+      "accuracy": 0.0
+    }
+  },
+  "model": "/ssd1/lbh/zjx/models/skyjury_verifier/openbmb_Eurus-RM-7b",
+  "official_model_name": "openbmb/Eurus-RM-7b",
+  "method": "rewardbench_compatible_reward_model",
+  "device": "cpu",
+  "torch_dtype": "float32",
+  "trust_remote_code": true,
+  "model_builder": "auto_model",
+  "prompt_template": "strong"
+}

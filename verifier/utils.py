@@ -25,6 +25,36 @@ def safe_name(name: str) -> str:
     return re.sub(r"[^A-Za-z0-9._-]+", "_", name).strip("_")
 
 
+def format_policy_judgment_prompt(prompt: str, template: str = "default") -> str:
+    if template == "default":
+        return prompt
+    if template != "strong":
+        raise ValueError(f"Unsupported prompt template: {template}")
+
+    profile = prompt.strip()
+    profile = re.sub(r"^\s*User profile and behavior context:\s*", "", profile, flags=re.IGNORECASE)
+    profile = re.sub(
+        r"\n\s*Task:\s*Choose which candidate Bluesky Labeler is more suitable to recommend to this user\.\s*$",
+        "",
+        profile,
+        flags=re.IGNORECASE,
+    ).strip()
+
+    return "\n".join(
+        [
+            "You are evaluating a candidate Bluesky labeling service for a user.",
+            "",
+            "User profile and behavior context:",
+            profile,
+            "",
+            "Task:",
+            "The assistant response will describe one candidate Bluesky Labeler.",
+            "Score how suitable this candidate labeler is for the user's moderation needs.",
+            "A better candidate should match the user's recurring cases, policy scope, rubric boundaries, and moderation intent.",
+        ]
+    )
+
+
 def format_pair_text(tokenizer: Any, prompt: str, answer: str) -> str:
     messages = [
         {"role": "user", "content": prompt},

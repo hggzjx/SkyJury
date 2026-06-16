@@ -1,0 +1,2611 @@
+{
+  "metadata": {
+    "created_at": "2026-06-11T10:03:49.475993+00:00",
+    "collector": "collect_expanded_labeler_bank.py",
+    "pages_per_term": 1,
+    "search_limit": 25,
+    "with_plc": false,
+    "candidate_dids_found": 177,
+    "services_returned": 20,
+    "labelers_saved": 5,
+    "labeler_values_saved": 39,
+    "seed_handles": [
+      "moderation.bsky.app",
+      "moderation.blacksky.app",
+      "moderation.beehivesafety.com",
+      "skywatch.blue",
+      "skywatch.bsky.social"
+    ],
+    "discovery_terms": [
+      "labeler",
+      "labeling service",
+      "moderation service",
+      "moderation labeler",
+      "community labeler",
+      "safety labeler",
+      "content labeler",
+      "verification labeler",
+      "identity labeler",
+      "creator labeler",
+      "artist labeler",
+      "accessibility labeler",
+      "alt text labeler",
+      "news labeler",
+      "misinformation labeler",
+      "fact check labeler",
+      "spam labeler",
+      "scam labeler",
+      "phishing labeler",
+      "crypto labeler",
+      "ai labeler",
+      "AI generated labeler",
+      "art theft labeler",
+      "fandom labeler",
+      "spoiler labeler",
+      "AO3 labeler",
+      "sports labeler",
+      "team labeler",
+      "politics labeler",
+      "US politics labeler",
+      "community notes labeler",
+      "bookmark labeler",
+      "PDS labeler",
+      "developer labeler",
+      "github labeler",
+      "programming labeler",
+      "pronoun labeler",
+      "language labeler",
+      "vtuber labeler",
+      "music labeler",
+      "writer labeler",
+      "anime labeler",
+      "manga labeler",
+      "hololive labeler",
+      "medical labeler",
+      "healthcare labeler",
+      "onlyfans labeler",
+      "sex work labeler",
+      "furry labeler",
+      "adult labeler",
+      "nsfw labeler",
+      "label service",
+      "ozone labeler"
+    ]
+  },
+  "labelers": [
+    {
+      "labeler_id": "labeler_0001",
+      "did": "did:plc:24da43eyk5hjxypr5lvkn4uu",
+      "handle": "es256.app",
+      "display_name": "Moderation Service",
+      "description": null,
+      "policy_source_url": "at://did:plc:24da43eyk5hjxypr5lvkn4uu/app.bsky.labeler.service/self",
+      "snapshot_time": "2026-06-11T10:03:26.502297+00:00",
+      "label_value_count": 3,
+      "label_definition_count": 3,
+      "inferred_domains": [
+        "adult"
+      ],
+      "discovery_sources": [
+        "legacy_bank"
+      ],
+      "discovery_search_terms": [],
+      "service_like_count": 1,
+      "actor_created_at": "2025-08-06T22:12:32.997Z",
+      "actor_indexed_at": "2025-08-06T22:14:00.798Z",
+      "service_view_indexed_at": "2025-10-15T03:06:00.822Z",
+      "service_record_created_at": "2025-10-15T03:06:00.073Z",
+      "plc_labeler_first_seen_at": null,
+      "plc_labeler_endpoint": null,
+      "raw_service": {
+        "uri": "at://did:plc:24da43eyk5hjxypr5lvkn4uu/app.bsky.labeler.service/self",
+        "cid": "bafyreiec7imyleq25jwwyxgjy5x7unubzfhjcc3vu42sape5xfmtchr3ku",
+        "creator": {
+          "did": "did:plc:24da43eyk5hjxypr5lvkn4uu",
+          "handle": "es256.app",
+          "displayName": "Moderation Service",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:24da43eyk5hjxypr5lvkn4uu/bafkreic7aqy4dupnluwygkh6dabisptmwnmnbluypa475uqzrzcntvd3iq",
+          "associated": {
+            "labeler": true,
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "labels": [],
+          "createdAt": "2025-08-06T22:12:32.997Z",
+          "indexedAt": "2025-08-06T22:14:00.798Z"
+        },
+        "likeCount": 1,
+        "indexedAt": "2025-10-15T03:06:00.822Z",
+        "labels": [],
+        "policies": {
+          "labelValueDefinitions": [
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "evil",
+              "locales": [
+                {
+                  "description": "Accounts that have been observed exhibiting evil views or behaviour.",
+                  "lang": "en",
+                  "name": "Evil"
+                }
+              ],
+              "severity": "none"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "no-label",
+              "locales": [
+                {
+                  "description": "Accounts that have been observed with sexual content without self assigned labels.",
+                  "lang": "en",
+                  "name": "No Label"
+                }
+              ],
+              "severity": "none"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "pest",
+              "locales": [
+                {
+                  "description": "Accounts that have been observed exhibiting pest behaviour.",
+                  "lang": "en",
+                  "name": "Pest"
+                }
+              ],
+              "severity": "none"
+            }
+          ],
+          "labelValues": [
+            "evil",
+            "no-label",
+            "pest"
+          ]
+        },
+        "$type": "app.bsky.labeler.defs#labelerViewDetailed"
+      },
+      "raw_service_record": {
+        "uri": "at://did:plc:24da43eyk5hjxypr5lvkn4uu/app.bsky.labeler.service/self",
+        "cid": "bafyreiec7imyleq25jwwyxgjy5x7unubzfhjcc3vu42sape5xfmtchr3ku",
+        "value": {
+          "$type": "app.bsky.labeler.service",
+          "createdAt": "2025-10-15T03:06:00.073Z",
+          "policies": {
+            "labelValueDefinitions": [
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "evil",
+                "locales": [
+                  {
+                    "description": "Accounts that have been observed exhibiting evil views or behaviour.",
+                    "lang": "en",
+                    "name": "Evil"
+                  }
+                ],
+                "severity": "none"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "no-label",
+                "locales": [
+                  {
+                    "description": "Accounts that have been observed with sexual content without self assigned labels.",
+                    "lang": "en",
+                    "name": "No Label"
+                  }
+                ],
+                "severity": "none"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "pest",
+                "locales": [
+                  {
+                    "description": "Accounts that have been observed exhibiting pest behaviour.",
+                    "lang": "en",
+                    "name": "Pest"
+                  }
+                ],
+                "severity": "none"
+              }
+            ],
+            "labelValues": [
+              "evil",
+              "no-label",
+              "pest"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "labeler_id": "labeler_0002",
+      "did": "did:plc:2dnldc4omasiothhuqbmosyx",
+      "handle": "harpersletter.fyi",
+      "display_name": "Harper's Letter Labeler",
+      "description": "This account places a badge on the profile of accounts that signed the Harper's Letter. For informational purposes. Credit to @melissagiragrant.com for the idea.\n\nPing @manos.lol if you find an unlabeled or mislabeled account.",
+      "policy_source_url": "at://did:plc:2dnldc4omasiothhuqbmosyx/app.bsky.labeler.service/self",
+      "snapshot_time": "2026-06-11T10:03:32.698262+00:00",
+      "label_value_count": 1,
+      "label_definition_count": 1,
+      "inferred_domains": [
+        "community_identity"
+      ],
+      "discovery_sources": [
+        "legacy_bank"
+      ],
+      "discovery_search_terms": [],
+      "service_like_count": 161,
+      "actor_created_at": "2025-08-07T13:42:34.198Z",
+      "actor_indexed_at": "2025-09-09T00:58:00.998Z",
+      "service_view_indexed_at": "2026-04-27T19:07:06.553Z",
+      "service_record_created_at": "2025-08-07T17:33:15.500Z",
+      "plc_labeler_first_seen_at": null,
+      "plc_labeler_endpoint": null,
+      "raw_service": {
+        "uri": "at://did:plc:2dnldc4omasiothhuqbmosyx/app.bsky.labeler.service/self",
+        "cid": "bafyreigrkk6awpbpfgilsgbxagi7yoq4txwgckjue2fxckwzmu5nuemp7a",
+        "creator": {
+          "did": "did:plc:2dnldc4omasiothhuqbmosyx",
+          "handle": "harpersletter.fyi",
+          "displayName": "Harper's Letter Labeler",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2dnldc4omasiothhuqbmosyx/bafkreicwmjklynguxorhgl7iuwj3hfuw5weceomkze2zisy6lif4mupfaq",
+          "associated": {
+            "labeler": true,
+            "chat": {
+              "allowIncoming": "all"
+            },
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "labels": [],
+          "createdAt": "2025-08-07T13:42:34.198Z",
+          "description": "This account places a badge on the profile of accounts that signed the Harper's Letter. For informational purposes. Credit to @melissagiragrant.com for the idea.\n\nPing @manos.lol if you find an unlabeled or mislabeled account.",
+          "indexedAt": "2025-09-09T00:58:00.998Z"
+        },
+        "likeCount": 161,
+        "indexedAt": "2026-04-27T19:07:06.553Z",
+        "labels": [],
+        "policies": {
+          "labelValueDefinitions": [
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "signed-harpers-letter",
+              "locales": [
+                {
+                  "description": "This user signed the Harper's Letter.",
+                  "lang": "en",
+                  "name": "Harper's Signatory"
+                }
+              ],
+              "severity": "inform"
+            }
+          ],
+          "labelValues": [
+            "signed-harpers-letter"
+          ]
+        },
+        "reasonTypes": [
+          "com.atproto.moderation.defs#reasonAppeal"
+        ],
+        "subjectTypes": [
+          "account"
+        ],
+        "$type": "app.bsky.labeler.defs#labelerViewDetailed"
+      },
+      "raw_service_record": {
+        "uri": "at://did:plc:2dnldc4omasiothhuqbmosyx/app.bsky.labeler.service/self",
+        "cid": "bafyreigrkk6awpbpfgilsgbxagi7yoq4txwgckjue2fxckwzmu5nuemp7a",
+        "value": {
+          "$type": "app.bsky.labeler.service",
+          "createdAt": "2025-08-07T17:33:15.500Z",
+          "policies": {
+            "labelValueDefinitions": [
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "signed-harpers-letter",
+                "locales": [
+                  {
+                    "description": "This user signed the Harper's Letter.",
+                    "lang": "en",
+                    "name": "Harper's Signatory"
+                  }
+                ],
+                "severity": "inform"
+              }
+            ],
+            "labelValues": [
+              "signed-harpers-letter"
+            ]
+          },
+          "reasonTypes": [
+            "com.atproto.moderation.defs#reasonAppeal"
+          ],
+          "subjectTypes": [
+            "account"
+          ]
+        }
+      }
+    },
+    {
+      "labeler_id": "labeler_0003",
+      "did": "did:plc:2pduupjftektqoitfekc2x76",
+      "handle": "ab4n-labeler.bsky.social",
+      "display_name": "",
+      "description": "A disinfo labeling account run by @antibot4navalny.bsky.social team.",
+      "policy_source_url": "at://did:plc:2pduupjftektqoitfekc2x76/app.bsky.labeler.service/self",
+      "snapshot_time": "2026-06-11T10:03:38.588873+00:00",
+      "label_value_count": 1,
+      "label_definition_count": 1,
+      "inferred_domains": [
+        "art_creator",
+        "sports"
+      ],
+      "discovery_sources": [
+        "legacy_bank"
+      ],
+      "discovery_search_terms": [],
+      "service_like_count": 445,
+      "actor_created_at": "2024-12-27T19:22:09.642Z",
+      "actor_indexed_at": "2025-01-14T12:11:05.051Z",
+      "service_view_indexed_at": "2025-01-03T11:10:41.951Z",
+      "service_record_created_at": "2025-01-01T18:40:45.810Z",
+      "plc_labeler_first_seen_at": null,
+      "plc_labeler_endpoint": null,
+      "raw_service": {
+        "uri": "at://did:plc:2pduupjftektqoitfekc2x76/app.bsky.labeler.service/self",
+        "cid": "bafyreifsq3m2e4pvmyehhkohgs2lsbpsbyw42ba2h556v5s2cmigyyals4",
+        "creator": {
+          "did": "did:plc:2pduupjftektqoitfekc2x76",
+          "handle": "ab4n-labeler.bsky.social",
+          "displayName": "",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2pduupjftektqoitfekc2x76/bafkreiayfgthf4lkr5ofbvzxwubrewf3c765pluiqd6fiswg4nq5jk26o4",
+          "associated": {
+            "labeler": true,
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "labels": [],
+          "createdAt": "2024-12-27T19:22:09.642Z",
+          "description": "A disinfo labeling account run by @antibot4navalny.bsky.social team.",
+          "indexedAt": "2025-01-14T12:11:05.051Z"
+        },
+        "likeCount": 445,
+        "indexedAt": "2025-01-03T11:10:41.951Z",
+        "labels": [],
+        "policies": {
+          "labelValueDefinitions": [
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "matryoshka",
+              "locales": [
+                {
+                  "description": "Pro-Kremlin disinfo burner accounts that post fake videos, street art and magazine covers to (a) waste fact checkers time with knowingly illegitimate requests; (b) add virality to knowingly fake visual media.",
+                  "lang": "en",
+                  "name": "Matryoshka disinfo"
+                }
+              ],
+              "severity": "inform"
+            }
+          ],
+          "labelValues": [
+            "matryoshka"
+          ]
+        },
+        "$type": "app.bsky.labeler.defs#labelerViewDetailed"
+      },
+      "raw_service_record": {
+        "uri": "at://did:plc:2pduupjftektqoitfekc2x76/app.bsky.labeler.service/self",
+        "cid": "bafyreifsq3m2e4pvmyehhkohgs2lsbpsbyw42ba2h556v5s2cmigyyals4",
+        "value": {
+          "$type": "app.bsky.labeler.service",
+          "createdAt": "2025-01-01T18:40:45.810Z",
+          "policies": {
+            "labelValueDefinitions": [
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "matryoshka",
+                "locales": [
+                  {
+                    "description": "Pro-Kremlin disinfo burner accounts that post fake videos, street art and magazine covers to (a) waste fact checkers time with knowingly illegitimate requests; (b) add virality to knowingly fake visual media.",
+                    "lang": "en",
+                    "name": "Matryoshka disinfo"
+                  }
+                ],
+                "severity": "inform"
+              }
+            ],
+            "labelValues": [
+              "matryoshka"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "labeler_id": "labeler_0004",
+      "did": "did:plc:2qhdv5xwffbogrfoqcqzpady",
+      "handle": "labeler.radial.racing",
+      "display_name": "Pro Cycling Labeler",
+      "description": "A labeling service for the Pro Cycling community. \n\nSubscribe to see the labels, and get one by sending a post that says:\n@labeler.radial.racing label\n\nRun by @radial.racing",
+      "policy_source_url": "at://did:plc:2qhdv5xwffbogrfoqcqzpady/app.bsky.labeler.service/self",
+      "snapshot_time": "2026-06-11T10:03:44.502153+00:00",
+      "label_value_count": 16,
+      "label_definition_count": 16,
+      "inferred_domains": [
+        "misinformation",
+        "art_creator",
+        "community_identity",
+        "spoiler",
+        "sports"
+      ],
+      "discovery_sources": [
+        "legacy_bank",
+        "search"
+      ],
+      "discovery_search_terms": [
+        "labeler"
+      ],
+      "service_like_count": 96,
+      "actor_created_at": "2024-06-13T13:27:43.348Z",
+      "actor_indexed_at": "2025-04-10T12:30:32.272Z",
+      "service_view_indexed_at": "2025-01-08T13:35:09.658Z",
+      "service_record_created_at": "2024-06-13T20:35:13.852Z",
+      "plc_labeler_first_seen_at": null,
+      "plc_labeler_endpoint": null,
+      "raw_service": {
+        "uri": "at://did:plc:2qhdv5xwffbogrfoqcqzpady/app.bsky.labeler.service/self",
+        "cid": "bafyreigat2ti4sskaj52pu3sbqdbslw7sqpg6a6qthbtovyktqbppynghu",
+        "creator": {
+          "did": "did:plc:2qhdv5xwffbogrfoqcqzpady",
+          "handle": "labeler.radial.racing",
+          "displayName": "Pro Cycling Labeler",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2qhdv5xwffbogrfoqcqzpady/bafkreibtiitbwe7hxc2pbieknbcwwblgrurintg3lto727uq3nhj4owdcu",
+          "associated": {
+            "labeler": true,
+            "chat": {
+              "allowIncoming": "none"
+            },
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "labels": [],
+          "createdAt": "2024-06-13T13:27:43.348Z",
+          "description": "A labeling service for the Pro Cycling community. \n\nSubscribe to see the labels, and get one by sending a post that says:\n@labeler.radial.racing label\n\nRun by @radial.racing",
+          "indexedAt": "2025-04-10T12:30:32.272Z"
+        },
+        "likeCount": 96,
+        "indexedAt": "2025-01-08T13:35:09.658Z",
+        "labels": [],
+        "policies": {
+          "labelValueDefinitions": [
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-fan",
+              "locales": [
+                {
+                  "description": "Anybody who follows professional cycling.",
+                  "lang": "en",
+                  "name": "🚴‍♂️🚴‍♀️🚴"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-superfan",
+              "locales": [
+                {
+                  "description": "All cycling, all the time. A real 🚴‍♂️🚴‍♀️🚴 stan.",
+                  "lang": "en",
+                  "name": "🚴‍♂️ Superfan"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-business",
+              "locales": [
+                {
+                  "description": "Any business in the world of bike racing.",
+                  "lang": "en",
+                  "name": "🚴‍♂️ Business"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-platform",
+              "locales": [
+                {
+                  "description": "A technology or community platform in the world of bike racing.",
+                  "lang": "en",
+                  "name": "🚴‍♂️ Platform"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "content-creator",
+              "locales": [
+                {
+                  "description": "An account producing content for the rest of us Pro Cycling fans.",
+                  "lang": "en",
+                  "name": "🚴‍♂️ Content Creator"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "pro-cyclist",
+              "locales": [
+                {
+                  "description": "A professional cyclist.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Pro Cyclist"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "former-pro",
+              "locales": [
+                {
+                  "description": "A former professional cyclist.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Former Pro"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "team",
+              "locales": [
+                {
+                  "description": "A professional cycling team.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "🚴 Pro Team"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "race",
+              "locales": [
+                {
+                  "description": "An account representing an individual race.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Bike Race"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-media",
+              "locales": [
+                {
+                  "description": "Journalists, photographers, analysts and content creators from the professional cycling world.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Cycling Media"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "cycling-publication",
+              "locales": [
+                {
+                  "description": "Publications delivering news, insights, and stories from the professional cycling world.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Cycling Publication"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "team-insider",
+              "locales": [
+                {
+                  "description": "An account with professional involvement in a pro team’s operations.\n\n✅ This profile has been independently verified.",
+                  "lang": "en",
+                  "name": "Team Insider"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "hide",
+              "identifier": "unrelated",
+              "locales": [
+                {
+                  "description": "This content has been marked unrelated to pro cycling, and was possibly mis-included in the Pro Cycling Chatter feed.",
+                  "lang": "en",
+                  "name": "Unrelated content"
+                }
+              ],
+              "severity": "inform"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "race-spoiler",
+              "locales": [
+                {
+                  "description": "This content may spoil a race for those who haven't watched it yet.",
+                  "lang": "en",
+                  "name": "Race Spoiler"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "warn",
+              "identifier": "impersonator",
+              "locales": [
+                {
+                  "description": "This account appears to be impersonating a real person.",
+                  "lang": "en",
+                  "name": "Impersonator"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "none",
+              "defaultSetting": "warn",
+              "identifier": "tribute-account",
+              "locales": [
+                {
+                  "description": "An account impersonating a person or organization in a non-malicious and transparent way. Aka a 'stan' or parody account.",
+                  "lang": "en",
+                  "name": "🎭  Tribute Account"
+                }
+              ],
+              "severity": "alert"
+            }
+          ],
+          "labelValues": [
+            "cycling-fan",
+            "cycling-superfan",
+            "cycling-business",
+            "cycling-platform",
+            "content-creator",
+            "pro-cyclist",
+            "former-pro",
+            "team",
+            "race",
+            "cycling-media",
+            "cycling-publication",
+            "team-insider",
+            "race-spoiler",
+            "unrelated",
+            "impersonator",
+            "tribute-account"
+          ]
+        },
+        "$type": "app.bsky.labeler.defs#labelerViewDetailed"
+      },
+      "raw_service_record": {
+        "uri": "at://did:plc:2qhdv5xwffbogrfoqcqzpady/app.bsky.labeler.service/self",
+        "cid": "bafyreigat2ti4sskaj52pu3sbqdbslw7sqpg6a6qthbtovyktqbppynghu",
+        "value": {
+          "$type": "app.bsky.labeler.service",
+          "createdAt": "2024-06-13T20:35:13.852Z",
+          "policies": {
+            "labelValueDefinitions": [
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-fan",
+                "locales": [
+                  {
+                    "description": "Anybody who follows professional cycling.",
+                    "lang": "en",
+                    "name": "🚴‍♂️🚴‍♀️🚴"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-superfan",
+                "locales": [
+                  {
+                    "description": "All cycling, all the time. A real 🚴‍♂️🚴‍♀️🚴 stan.",
+                    "lang": "en",
+                    "name": "🚴‍♂️ Superfan"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-business",
+                "locales": [
+                  {
+                    "description": "Any business in the world of bike racing.",
+                    "lang": "en",
+                    "name": "🚴‍♂️ Business"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-platform",
+                "locales": [
+                  {
+                    "description": "A technology or community platform in the world of bike racing.",
+                    "lang": "en",
+                    "name": "🚴‍♂️ Platform"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "content-creator",
+                "locales": [
+                  {
+                    "description": "An account producing content for the rest of us Pro Cycling fans.",
+                    "lang": "en",
+                    "name": "🚴‍♂️ Content Creator"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "pro-cyclist",
+                "locales": [
+                  {
+                    "description": "A professional cyclist.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Pro Cyclist"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "former-pro",
+                "locales": [
+                  {
+                    "description": "A former professional cyclist.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Former Pro"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "team",
+                "locales": [
+                  {
+                    "description": "A professional cycling team.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "🚴 Pro Team"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "race",
+                "locales": [
+                  {
+                    "description": "An account representing an individual race.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Bike Race"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-media",
+                "locales": [
+                  {
+                    "description": "Journalists, photographers, analysts and content creators from the professional cycling world.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Cycling Media"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "cycling-publication",
+                "locales": [
+                  {
+                    "description": "Publications delivering news, insights, and stories from the professional cycling world.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Cycling Publication"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "team-insider",
+                "locales": [
+                  {
+                    "description": "An account with professional involvement in a pro team’s operations.\n\n✅ This profile has been independently verified.",
+                    "lang": "en",
+                    "name": "Team Insider"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "hide",
+                "identifier": "unrelated",
+                "locales": [
+                  {
+                    "description": "This content has been marked unrelated to pro cycling, and was possibly mis-included in the Pro Cycling Chatter feed.",
+                    "lang": "en",
+                    "name": "Unrelated content"
+                  }
+                ],
+                "severity": "inform"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "race-spoiler",
+                "locales": [
+                  {
+                    "description": "This content may spoil a race for those who haven't watched it yet.",
+                    "lang": "en",
+                    "name": "Race Spoiler"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "warn",
+                "identifier": "impersonator",
+                "locales": [
+                  {
+                    "description": "This account appears to be impersonating a real person.",
+                    "lang": "en",
+                    "name": "Impersonator"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "none",
+                "defaultSetting": "warn",
+                "identifier": "tribute-account",
+                "locales": [
+                  {
+                    "description": "An account impersonating a person or organization in a non-malicious and transparent way. Aka a 'stan' or parody account.",
+                    "lang": "en",
+                    "name": "🎭  Tribute Account"
+                  }
+                ],
+                "severity": "alert"
+              }
+            ],
+            "labelValues": [
+              "cycling-fan",
+              "cycling-superfan",
+              "cycling-business",
+              "cycling-platform",
+              "content-creator",
+              "pro-cyclist",
+              "former-pro",
+              "team",
+              "race",
+              "cycling-media",
+              "cycling-publication",
+              "team-insider",
+              "race-spoiler",
+              "unrelated",
+              "impersonator",
+              "tribute-account"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "labeler_id": "labeler_0005",
+      "did": "did:plc:36inn6r2ttwfrt6tpywsjcmt",
+      "handle": "phobial.mastod.one",
+      "display_name": "Phobia Labeler",
+      "description": "Labels posts likely to trigger various types of fear and discomfort. \n\n(Not for clinical use. Not a substitute for therapy. Labels may fail to be applied on posts that are too recent, confusing, mild, annoying, intense, subjective, or right behind you.)",
+      "policy_source_url": "at://did:plc:36inn6r2ttwfrt6tpywsjcmt/app.bsky.labeler.service/self",
+      "snapshot_time": "2026-06-11T10:03:49.475583+00:00",
+      "label_value_count": 18,
+      "label_definition_count": 18,
+      "inferred_domains": [
+        "other"
+      ],
+      "discovery_sources": [
+        "legacy_bank"
+      ],
+      "discovery_search_terms": [],
+      "service_like_count": 226,
+      "actor_created_at": "2024-03-17T01:03:16.880Z",
+      "actor_indexed_at": "2024-03-26T21:28:55.809Z",
+      "service_view_indexed_at": "2024-03-26T09:00:39.224Z",
+      "service_record_created_at": "2024-03-26T09:00:39.224Z",
+      "plc_labeler_first_seen_at": null,
+      "plc_labeler_endpoint": null,
+      "raw_service": {
+        "uri": "at://did:plc:36inn6r2ttwfrt6tpywsjcmt/app.bsky.labeler.service/self",
+        "cid": "bafyreibmz7dktuwffngn7fs3vtobvzu3ysq6n2sptfbn7ilax4gfuhu3ne",
+        "creator": {
+          "did": "did:plc:36inn6r2ttwfrt6tpywsjcmt",
+          "handle": "phobial.mastod.one",
+          "displayName": "Phobia Labeler",
+          "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:36inn6r2ttwfrt6tpywsjcmt/bafkreicto5oiucbkkkrtljfby2ci5cu3r4jnigrxho4wbgxsnprio4722y",
+          "associated": {
+            "labeler": true,
+            "activitySubscription": {
+              "allowSubscriptions": "followers"
+            }
+          },
+          "labels": [],
+          "createdAt": "2024-03-17T01:03:16.880Z",
+          "description": "Labels posts likely to trigger various types of fear and discomfort. \n\n(Not for clinical use. Not a substitute for therapy. Labels may fail to be applied on posts that are too recent, confusing, mild, annoying, intense, subjective, or right behind you.)",
+          "indexedAt": "2024-03-26T21:28:55.809Z"
+        },
+        "likeCount": 226,
+        "indexedAt": "2024-03-26T09:00:39.224Z",
+        "labels": [],
+        "policies": {
+          "labelValueDefinitions": [
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "arachno",
+              "locales": [
+                {
+                  "description": "Spiders and other arachnids such as scorpions and ticks.",
+                  "lang": "en",
+                  "name": "Arachnophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "herpeto",
+              "locales": [
+                {
+                  "description": "Snakes and other reptiles such as lizards and crocodiles.",
+                  "lang": "en",
+                  "name": "Herpetophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "trypo",
+              "locales": [
+                {
+                  "description": "Repetitive patterns or clusters of small holes or bumps.",
+                  "lang": "en",
+                  "name": "Trypophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "emeto",
+              "locales": [
+                {
+                  "description": "Vomiting.",
+                  "lang": "en",
+                  "name": "Emetophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "vermi",
+              "locales": [
+                {
+                  "description": "Worms and other invertebrates such as leeches and maggots.",
+                  "lang": "en",
+                  "name": "Vermiphobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "coulro",
+              "locales": [
+                {
+                  "description": "Clowns.",
+                  "lang": "en",
+                  "name": "Coulrophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "ommeta",
+              "locales": [
+                {
+                  "description": "Eyes and eye contact.",
+                  "lang": "en",
+                  "name": "Ommetaphobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "acro",
+              "locales": [
+                {
+                  "description": "Heights.",
+                  "lang": "en",
+                  "name": "Acrophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "helio",
+              "locales": [
+                {
+                  "description": "The sun and sunlight.",
+                  "lang": "en",
+                  "name": "Heliophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "gephyro",
+              "locales": [
+                {
+                  "description": "Bridges.",
+                  "lang": "en",
+                  "name": "Gephyrophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "apeiro",
+              "locales": [
+                {
+                  "description": "Infinity, eternity, and the uncountable.",
+                  "lang": "en",
+                  "name": "Apeirophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "globo",
+              "locales": [
+                {
+                  "description": "Balloons.",
+                  "lang": "en",
+                  "name": "Globophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "heptadeca",
+              "locales": [
+                {
+                  "description": "The number seventeen.",
+                  "lang": "en",
+                  "name": "Heptadecaphobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "pogono",
+              "locales": [
+                {
+                  "description": "Beards.",
+                  "lang": "en",
+                  "name": "Pogonophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "glosso",
+              "locales": [
+                {
+                  "description": "Public speaking.",
+                  "lang": "en",
+                  "name": "Glossophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "thalasso",
+              "locales": [
+                {
+                  "description": "The sea or ocean.",
+                  "lang": "en",
+                  "name": "Thalassophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "xantho",
+              "locales": [
+                {
+                  "description": "Yellow.",
+                  "lang": "en",
+                  "name": "Xanthophobia"
+                }
+              ],
+              "severity": "alert"
+            },
+            {
+              "adultOnly": false,
+              "blurs": "content",
+              "defaultSetting": "ignore",
+              "identifier": "lepidoptero",
+              "locales": [
+                {
+                  "description": "Butterflies and moths.",
+                  "lang": "en",
+                  "name": "Lepidopterophobia"
+                }
+              ],
+              "severity": "alert"
+            }
+          ],
+          "labelValues": [
+            "coulro",
+            "arachno",
+            "ommeta",
+            "trypo",
+            "acro",
+            "herpeto",
+            "emeto",
+            "helio",
+            "vermi",
+            "gephyro",
+            "apeiro",
+            "globo",
+            "heptadeca",
+            "pogono",
+            "glosso",
+            "thalasso",
+            "xantho",
+            "lepidoptero"
+          ]
+        },
+        "$type": "app.bsky.labeler.defs#labelerViewDetailed"
+      },
+      "raw_service_record": {
+        "uri": "at://did:plc:36inn6r2ttwfrt6tpywsjcmt/app.bsky.labeler.service/self",
+        "cid": "bafyreibmz7dktuwffngn7fs3vtobvzu3ysq6n2sptfbn7ilax4gfuhu3ne",
+        "value": {
+          "$type": "app.bsky.labeler.service",
+          "createdAt": "2024-03-26T09:00:39.224Z",
+          "policies": {
+            "labelValueDefinitions": [
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "arachno",
+                "locales": [
+                  {
+                    "description": "Spiders and other arachnids such as scorpions and ticks.",
+                    "lang": "en",
+                    "name": "Arachnophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "herpeto",
+                "locales": [
+                  {
+                    "description": "Snakes and other reptiles such as lizards and crocodiles.",
+                    "lang": "en",
+                    "name": "Herpetophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "trypo",
+                "locales": [
+                  {
+                    "description": "Repetitive patterns or clusters of small holes or bumps.",
+                    "lang": "en",
+                    "name": "Trypophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "emeto",
+                "locales": [
+                  {
+                    "description": "Vomiting.",
+                    "lang": "en",
+                    "name": "Emetophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "vermi",
+                "locales": [
+                  {
+                    "description": "Worms and other invertebrates such as leeches and maggots.",
+                    "lang": "en",
+                    "name": "Vermiphobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "coulro",
+                "locales": [
+                  {
+                    "description": "Clowns.",
+                    "lang": "en",
+                    "name": "Coulrophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "ommeta",
+                "locales": [
+                  {
+                    "description": "Eyes and eye contact.",
+                    "lang": "en",
+                    "name": "Ommetaphobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "acro",
+                "locales": [
+                  {
+                    "description": "Heights.",
+                    "lang": "en",
+                    "name": "Acrophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "helio",
+                "locales": [
+                  {
+                    "description": "The sun and sunlight.",
+                    "lang": "en",
+                    "name": "Heliophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "gephyro",
+                "locales": [
+                  {
+                    "description": "Bridges.",
+                    "lang": "en",
+                    "name": "Gephyrophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "apeiro",
+                "locales": [
+                  {
+                    "description": "Infinity, eternity, and the uncountable.",
+                    "lang": "en",
+                    "name": "Apeirophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "globo",
+                "locales": [
+                  {
+                    "description": "Balloons.",
+                    "lang": "en",
+                    "name": "Globophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "heptadeca",
+                "locales": [
+                  {
+                    "description": "The number seventeen.",
+                    "lang": "en",
+                    "name": "Heptadecaphobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "pogono",
+                "locales": [
+                  {
+                    "description": "Beards.",
+                    "lang": "en",
+                    "name": "Pogonophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "glosso",
+                "locales": [
+                  {
+                    "description": "Public speaking.",
+                    "lang": "en",
+                    "name": "Glossophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "thalasso",
+                "locales": [
+                  {
+                    "description": "The sea or ocean.",
+                    "lang": "en",
+                    "name": "Thalassophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "xantho",
+                "locales": [
+                  {
+                    "description": "Yellow.",
+                    "lang": "en",
+                    "name": "Xanthophobia"
+                  }
+                ],
+                "severity": "alert"
+              },
+              {
+                "adultOnly": false,
+                "blurs": "content",
+                "defaultSetting": "ignore",
+                "identifier": "lepidoptero",
+                "locales": [
+                  {
+                    "description": "Butterflies and moths.",
+                    "lang": "en",
+                    "name": "Lepidopterophobia"
+                  }
+                ],
+                "severity": "alert"
+              }
+            ],
+            "labelValues": [
+              "coulro",
+              "arachno",
+              "ommeta",
+              "trypo",
+              "acro",
+              "herpeto",
+              "emeto",
+              "helio",
+              "vermi",
+              "gephyro",
+              "apeiro",
+              "globo",
+              "heptadeca",
+              "pogono",
+              "glosso",
+              "thalasso",
+              "xantho",
+              "lepidoptero"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "labeler_values": [
+    {
+      "label_value_id": "labeler_0001_value_0001",
+      "labeler_id": "labeler_0001",
+      "label_value": "evil",
+      "label_display_name": "Evil",
+      "label_definition": "Accounts that have been observed exhibiting evil views or behaviour.",
+      "severity_level": "none",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 10,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "evil",
+        "locales": [
+          {
+            "description": "Accounts that have been observed exhibiting evil views or behaviour.",
+            "lang": "en",
+            "name": "Evil"
+          }
+        ],
+        "severity": "none"
+      }
+    },
+    {
+      "label_value_id": "labeler_0001_value_0002",
+      "labeler_id": "labeler_0001",
+      "label_value": "no-label",
+      "label_display_name": "No Label",
+      "label_definition": "Accounts that have been observed with sexual content without self assigned labels.",
+      "severity_level": "none",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 12,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "no-label",
+        "locales": [
+          {
+            "description": "Accounts that have been observed with sexual content without self assigned labels.",
+            "lang": "en",
+            "name": "No Label"
+          }
+        ],
+        "severity": "none"
+      }
+    },
+    {
+      "label_value_id": "labeler_0001_value_0003",
+      "labeler_id": "labeler_0001",
+      "label_value": "pest",
+      "label_display_name": "Pest",
+      "label_definition": "Accounts that have been observed exhibiting pest behaviour.",
+      "severity_level": "none",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 8,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "pest",
+        "locales": [
+          {
+            "description": "Accounts that have been observed exhibiting pest behaviour.",
+            "lang": "en",
+            "name": "Pest"
+          }
+        ],
+        "severity": "none"
+      }
+    },
+    {
+      "label_value_id": "labeler_0002_value_0001",
+      "labeler_id": "labeler_0002",
+      "label_value": "signed-harpers-letter",
+      "label_display_name": "Harper's Signatory",
+      "label_definition": "This user signed the Harper's Letter.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 7,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "signed-harpers-letter",
+        "locales": [
+          {
+            "description": "This user signed the Harper's Letter.",
+            "lang": "en",
+            "name": "Harper's Signatory"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0003_value_0001",
+      "labeler_id": "labeler_0003",
+      "label_value": "matryoshka",
+      "label_display_name": "Matryoshka disinfo",
+      "label_definition": "Pro-Kremlin disinfo burner accounts that post fake videos, street art and magazine covers to (a) waste fact checkers time with knowingly illegitimate requests; (b) add virality to knowingly fake visual media.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 32,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "matryoshka",
+        "locales": [
+          {
+            "description": "Pro-Kremlin disinfo burner accounts that post fake videos, street art and magazine covers to (a) waste fact checkers time with knowingly illegitimate requests; (b) add virality to knowingly fake visual media.",
+            "lang": "en",
+            "name": "Matryoshka disinfo"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0001",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-fan",
+      "label_display_name": "🚴‍♂️🚴‍♀️🚴",
+      "label_definition": "Anybody who follows professional cycling.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 5,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-fan",
+        "locales": [
+          {
+            "description": "Anybody who follows professional cycling.",
+            "lang": "en",
+            "name": "🚴‍♂️🚴‍♀️🚴"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0002",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-superfan",
+      "label_display_name": "🚴‍♂️ Superfan",
+      "label_definition": "All cycling, all the time. A real 🚴‍♂️🚴‍♀️🚴 stan.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 8,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-superfan",
+        "locales": [
+          {
+            "description": "All cycling, all the time. A real 🚴‍♂️🚴‍♀️🚴 stan.",
+            "lang": "en",
+            "name": "🚴‍♂️ Superfan"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0003",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-business",
+      "label_display_name": "🚴‍♂️ Business",
+      "label_definition": "Any business in the world of bike racing.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 8,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-business",
+        "locales": [
+          {
+            "description": "Any business in the world of bike racing.",
+            "lang": "en",
+            "name": "🚴‍♂️ Business"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0004",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-platform",
+      "label_display_name": "🚴‍♂️ Platform",
+      "label_definition": "A technology or community platform in the world of bike racing.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 11,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-platform",
+        "locales": [
+          {
+            "description": "A technology or community platform in the world of bike racing.",
+            "lang": "en",
+            "name": "🚴‍♂️ Platform"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0005",
+      "labeler_id": "labeler_0004",
+      "label_value": "content-creator",
+      "label_display_name": "🚴‍♂️ Content Creator",
+      "label_definition": "An account producing content for the rest of us Pro Cycling fans.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 12,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "content-creator",
+        "locales": [
+          {
+            "description": "An account producing content for the rest of us Pro Cycling fans.",
+            "lang": "en",
+            "name": "🚴‍♂️ Content Creator"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0006",
+      "labeler_id": "labeler_0004",
+      "label_value": "pro-cyclist",
+      "label_display_name": "Pro Cyclist",
+      "label_definition": "A professional cyclist.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "pro-cyclist",
+        "locales": [
+          {
+            "description": "A professional cyclist.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Pro Cyclist"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0007",
+      "labeler_id": "labeler_0004",
+      "label_value": "former-pro",
+      "label_display_name": "Former Pro",
+      "label_definition": "A former professional cyclist.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 10,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "former-pro",
+        "locales": [
+          {
+            "description": "A former professional cyclist.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Former Pro"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0008",
+      "labeler_id": "labeler_0004",
+      "label_value": "team",
+      "label_display_name": "🚴 Pro Team",
+      "label_definition": "A professional cycling team.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 10,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "team",
+        "locales": [
+          {
+            "description": "A professional cycling team.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "🚴 Pro Team"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0009",
+      "labeler_id": "labeler_0004",
+      "label_value": "race",
+      "label_display_name": "Bike Race",
+      "label_definition": "An account representing an individual race.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 12,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "race",
+        "locales": [
+          {
+            "description": "An account representing an individual race.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Bike Race"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0010",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-media",
+      "label_display_name": "Cycling Media",
+      "label_definition": "Journalists, photographers, analysts and content creators from the professional cycling world.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 17,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-media",
+        "locales": [
+          {
+            "description": "Journalists, photographers, analysts and content creators from the professional cycling world.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Cycling Media"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0011",
+      "labeler_id": "labeler_0004",
+      "label_value": "cycling-publication",
+      "label_display_name": "Cycling Publication",
+      "label_definition": "Publications delivering news, insights, and stories from the professional cycling world.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 17,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "cycling-publication",
+        "locales": [
+          {
+            "description": "Publications delivering news, insights, and stories from the professional cycling world.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Cycling Publication"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0012",
+      "labeler_id": "labeler_0004",
+      "label_value": "team-insider",
+      "label_display_name": "Team Insider",
+      "label_definition": "An account with professional involvement in a pro team’s operations.\n\n✅ This profile has been independently verified.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 17,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "team-insider",
+        "locales": [
+          {
+            "description": "An account with professional involvement in a pro team’s operations.\n\n✅ This profile has been independently verified.",
+            "lang": "en",
+            "name": "Team Insider"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0013",
+      "labeler_id": "labeler_0004",
+      "label_value": "unrelated",
+      "label_display_name": "Unrelated content",
+      "label_definition": "This content has been marked unrelated to pro cycling, and was possibly mis-included in the Pro Cycling Chatter feed.",
+      "severity_level": "inform",
+      "adult_only": false,
+      "default_setting": "hide",
+      "definition_token_count": 20,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "hide",
+        "identifier": "unrelated",
+        "locales": [
+          {
+            "description": "This content has been marked unrelated to pro cycling, and was possibly mis-included in the Pro Cycling Chatter feed.",
+            "lang": "en",
+            "name": "Unrelated content"
+          }
+        ],
+        "severity": "inform"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0014",
+      "labeler_id": "labeler_0004",
+      "label_value": "race-spoiler",
+      "label_display_name": "Race Spoiler",
+      "label_definition": "This content may spoil a race for those who haven't watched it yet.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 14,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "race-spoiler",
+        "locales": [
+          {
+            "description": "This content may spoil a race for those who haven't watched it yet.",
+            "lang": "en",
+            "name": "Race Spoiler"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0015",
+      "labeler_id": "labeler_0004",
+      "label_value": "impersonator",
+      "label_display_name": "Impersonator",
+      "label_definition": "This account appears to be impersonating a real person.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "warn",
+        "identifier": "impersonator",
+        "locales": [
+          {
+            "description": "This account appears to be impersonating a real person.",
+            "lang": "en",
+            "name": "Impersonator"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0004_value_0016",
+      "labeler_id": "labeler_0004",
+      "label_value": "tribute-account",
+      "label_display_name": "🎭  Tribute Account",
+      "label_definition": "An account impersonating a person or organization in a non-malicious and transparent way. Aka a 'stan' or parody account.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "warn",
+      "definition_token_count": 20,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "none",
+        "defaultSetting": "warn",
+        "identifier": "tribute-account",
+        "locales": [
+          {
+            "description": "An account impersonating a person or organization in a non-malicious and transparent way. Aka a 'stan' or parody account.",
+            "lang": "en",
+            "name": "🎭  Tribute Account"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0001",
+      "labeler_id": "labeler_0005",
+      "label_value": "arachno",
+      "label_display_name": "Arachnophobia",
+      "label_definition": "Spiders and other arachnids such as scorpions and ticks.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "arachno",
+        "locales": [
+          {
+            "description": "Spiders and other arachnids such as scorpions and ticks.",
+            "lang": "en",
+            "name": "Arachnophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0002",
+      "labeler_id": "labeler_0005",
+      "label_value": "herpeto",
+      "label_display_name": "Herpetophobia",
+      "label_definition": "Snakes and other reptiles such as lizards and crocodiles.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "herpeto",
+        "locales": [
+          {
+            "description": "Snakes and other reptiles such as lizards and crocodiles.",
+            "lang": "en",
+            "name": "Herpetophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0003",
+      "labeler_id": "labeler_0005",
+      "label_value": "trypo",
+      "label_display_name": "Trypophobia",
+      "label_definition": "Repetitive patterns or clusters of small holes or bumps.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "trypo",
+        "locales": [
+          {
+            "description": "Repetitive patterns or clusters of small holes or bumps.",
+            "lang": "en",
+            "name": "Trypophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0004",
+      "labeler_id": "labeler_0005",
+      "label_value": "emeto",
+      "label_display_name": "Emetophobia",
+      "label_definition": "Vomiting.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "emeto",
+        "locales": [
+          {
+            "description": "Vomiting.",
+            "lang": "en",
+            "name": "Emetophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0005",
+      "labeler_id": "labeler_0005",
+      "label_value": "vermi",
+      "label_display_name": "Vermiphobia",
+      "label_definition": "Worms and other invertebrates such as leeches and maggots.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 9,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "vermi",
+        "locales": [
+          {
+            "description": "Worms and other invertebrates such as leeches and maggots.",
+            "lang": "en",
+            "name": "Vermiphobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0006",
+      "labeler_id": "labeler_0005",
+      "label_value": "coulro",
+      "label_display_name": "Coulrophobia",
+      "label_definition": "Clowns.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "coulro",
+        "locales": [
+          {
+            "description": "Clowns.",
+            "lang": "en",
+            "name": "Coulrophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0007",
+      "labeler_id": "labeler_0005",
+      "label_value": "ommeta",
+      "label_display_name": "Ommetaphobia",
+      "label_definition": "Eyes and eye contact.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 4,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "ommeta",
+        "locales": [
+          {
+            "description": "Eyes and eye contact.",
+            "lang": "en",
+            "name": "Ommetaphobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0008",
+      "labeler_id": "labeler_0005",
+      "label_value": "acro",
+      "label_display_name": "Acrophobia",
+      "label_definition": "Heights.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "acro",
+        "locales": [
+          {
+            "description": "Heights.",
+            "lang": "en",
+            "name": "Acrophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0009",
+      "labeler_id": "labeler_0005",
+      "label_value": "helio",
+      "label_display_name": "Heliophobia",
+      "label_definition": "The sun and sunlight.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 4,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "helio",
+        "locales": [
+          {
+            "description": "The sun and sunlight.",
+            "lang": "en",
+            "name": "Heliophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0010",
+      "labeler_id": "labeler_0005",
+      "label_value": "gephyro",
+      "label_display_name": "Gephyrophobia",
+      "label_definition": "Bridges.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "gephyro",
+        "locales": [
+          {
+            "description": "Bridges.",
+            "lang": "en",
+            "name": "Gephyrophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0011",
+      "labeler_id": "labeler_0005",
+      "label_value": "apeiro",
+      "label_display_name": "Apeirophobia",
+      "label_definition": "Infinity, eternity, and the uncountable.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 5,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "apeiro",
+        "locales": [
+          {
+            "description": "Infinity, eternity, and the uncountable.",
+            "lang": "en",
+            "name": "Apeirophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0012",
+      "labeler_id": "labeler_0005",
+      "label_value": "globo",
+      "label_display_name": "Globophobia",
+      "label_definition": "Balloons.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "globo",
+        "locales": [
+          {
+            "description": "Balloons.",
+            "lang": "en",
+            "name": "Globophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0013",
+      "labeler_id": "labeler_0005",
+      "label_value": "heptadeca",
+      "label_display_name": "Heptadecaphobia",
+      "label_definition": "The number seventeen.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 3,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "heptadeca",
+        "locales": [
+          {
+            "description": "The number seventeen.",
+            "lang": "en",
+            "name": "Heptadecaphobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0014",
+      "labeler_id": "labeler_0005",
+      "label_value": "pogono",
+      "label_display_name": "Pogonophobia",
+      "label_definition": "Beards.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "pogono",
+        "locales": [
+          {
+            "description": "Beards.",
+            "lang": "en",
+            "name": "Pogonophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0015",
+      "labeler_id": "labeler_0005",
+      "label_value": "glosso",
+      "label_display_name": "Glossophobia",
+      "label_definition": "Public speaking.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 2,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "glosso",
+        "locales": [
+          {
+            "description": "Public speaking.",
+            "lang": "en",
+            "name": "Glossophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0016",
+      "labeler_id": "labeler_0005",
+      "label_value": "thalasso",
+      "label_display_name": "Thalassophobia",
+      "label_definition": "The sea or ocean.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 4,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "thalasso",
+        "locales": [
+          {
+            "description": "The sea or ocean.",
+            "lang": "en",
+            "name": "Thalassophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0017",
+      "labeler_id": "labeler_0005",
+      "label_value": "xantho",
+      "label_display_name": "Xanthophobia",
+      "label_definition": "Yellow.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 1,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "xantho",
+        "locales": [
+          {
+            "description": "Yellow.",
+            "lang": "en",
+            "name": "Xanthophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    },
+    {
+      "label_value_id": "labeler_0005_value_0018",
+      "labeler_id": "labeler_0005",
+      "label_value": "lepidoptero",
+      "label_display_name": "Lepidopterophobia",
+      "label_definition": "Butterflies and moths.",
+      "severity_level": "alert",
+      "adult_only": false,
+      "default_setting": "ignore",
+      "definition_token_count": 3,
+      "raw_definition": {
+        "adultOnly": false,
+        "blurs": "content",
+        "defaultSetting": "ignore",
+        "identifier": "lepidoptero",
+        "locales": [
+          {
+            "description": "Butterflies and moths.",
+            "lang": "en",
+            "name": "Lepidopterophobia"
+          }
+        ],
+        "severity": "alert"
+      }
+    }
+  ],
+  "domain_counts": {
+    "adult": 1,
+    "community_identity": 2,
+    "art_creator": 2,
+    "sports": 2,
+    "misinformation": 1,
+    "spoiler": 1,
+    "other": 1
+  },
+  "label_value_counts": {
+    "labeler_0001": 3,
+    "labeler_0002": 1,
+    "labeler_0003": 1,
+    "labeler_0004": 16,
+    "labeler_0005": 18
+  },
+  "collection_errors": []
+}

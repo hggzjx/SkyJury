@@ -11,7 +11,7 @@ from rewardbench_compat import (
     score_reward_conversations,
     score_reward_texts,
 )
-from utils import compute_accuracy, load_preference_rows, write_result_bundle
+from utils import compute_accuracy, format_policy_judgment_prompt, load_preference_rows, write_result_bundle
 
 
 DEFAULT_DATA = "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
@@ -36,6 +36,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-trust-remote-code", action="store_false", dest="trust_remote_code")
     parser.add_argument("--local-files-only", action="store_true", help="Do not try to reach Hugging Face Hub.")
     parser.add_argument("--device-map", default=None, help="HF device_map for CUDA runs; default is auto.")
+    parser.add_argument(
+        "--prompt-template",
+        default="default",
+        choices=["default", "strong"],
+        help="Optional prompt templating for RM/DPO-style prompt-response scoring.",
+    )
     return parser.parse_args()
 
 
@@ -66,7 +72,7 @@ def main() -> None:
     flat_conversations: list[list[dict[str, str]]] = []
     flat_index: list[tuple[int, str]] = []
     for row_idx, row in enumerate(rows):
-        prompt = row["prompt"]
+        prompt = format_policy_judgment_prompt(row["prompt"], args.prompt_template)
         for answer in row["chosen"]:
             if config.tokenize_chat_template:
                 flat_conversations.append(
@@ -120,6 +126,7 @@ def main() -> None:
             "torch_dtype": args.torch_dtype,
             "trust_remote_code": effective_trust,
             "model_builder": config.model_builder,
+            "prompt_template": args.prompt_template,
         }
     )
     result_path, metrics_path = write_result_bundle(

@@ -4,7 +4,9 @@ set -euo pipefail
 DATA_DIR="${DATA_DIR:-/ssd1/lbh/zjx/skyjury/data/auditor/category50}"
 RESULT_ROOT="${RESULT_ROOT:-/ssd1/lbh/zjx/skyjury/auditor/results/rm_category50_audit}"
 VERIFIER_RESULTS="${VERIFIER_RESULTS:-/ssd1/lbh/zjx/skyjury/verifier/results}"
+RM_VERIFIER_SUBDIR="${RM_VERIFIER_SUBDIR:-reward_models}"
 DATA_PREFIX="${DATA_PREFIX:-skyjury_bench}"
+PROMPT_TEMPLATE="${PROMPT_TEMPLATE:-default}"
 
 mkdir -p "$RESULT_ROOT"/{logs,rm_predictions,reports/rm}
 
@@ -57,6 +59,7 @@ run_one() {
     echo "cuda_devices=$cuda_devices"
     echo "device_map=$device_map"
     echo "batch_size=$batch_size"
+    echo "prompt_template=$PROMPT_TEMPLATE"
     echo "============================================================"
 
     CUDA_VISIBLE_DEVICES="$cuda_devices" \
@@ -65,6 +68,7 @@ run_one() {
     BATCH_SIZE="$batch_size" \
     MAX_LENGTH="${RM_MAX_LENGTH:-2048}" \
     TORCH_DTYPE="${TORCH_DTYPE:-auto}" \
+    PROMPT_TEMPLATE="$PROMPT_TEMPLATE" \
     bash /ssd1/lbh/zjx/skyjury/auditor/run_rm_perturbations.sh \
       "$model" \
       "$DATA_DIR" \
@@ -89,35 +93,35 @@ run_one() {
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/RLHFlow_ArmoRM-Llama3-8B-v0.1" \
-  "$VERIFIER_RESULTS/reward_models/RLHFlow_ArmoRM-Llama3-8B-v0.1/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_RLHFlow_ArmoRM-Llama3-8B-v0.1_predictions.json" \
+  "$VERIFIER_RESULTS/$RM_VERIFIER_SUBDIR/RLHFlow_ArmoRM-Llama3-8B-v0.1/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_RLHFlow_ArmoRM-Llama3-8B-v0.1_predictions.json" \
   "${ARMORM_CUDA_DEVICES:-0}" \
   "${ARMORM_DEVICE_MAP:-none}" \
   "${ARMORM_BATCH_SIZE:-4}"
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/Ray2333_GRM_Llama3.1_8B_rewardmodel-ft" \
-  "$VERIFIER_RESULTS/reward_models/Ray2333_GRM_Llama3.1_8B_rewardmodel-ft/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Ray2333_GRM_Llama3.1_8B_rewardmodel-ft_predictions.json" \
+  "$VERIFIER_RESULTS/$RM_VERIFIER_SUBDIR/Ray2333_GRM_Llama3.1_8B_rewardmodel-ft/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Ray2333_GRM_Llama3.1_8B_rewardmodel-ft_predictions.json" \
   "${GRM_CUDA_DEVICES:-1}" \
   "${GRM_DEVICE_MAP:-none}" \
   "${GRM_BATCH_SIZE:-4}"
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/openbmb_Eurus-RM-7b" \
-  "$VERIFIER_RESULTS/reward_models/openbmb_Eurus-RM-7b/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_openbmb_Eurus-RM-7b_predictions.json" \
+  "$VERIFIER_RESULTS/$RM_VERIFIER_SUBDIR/openbmb_Eurus-RM-7b/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_openbmb_Eurus-RM-7b_predictions.json" \
   "${EURUS_CUDA_DEVICES:-2}" \
   "${EURUS_DEVICE_MAP:-none}" \
   "${EURUS_BATCH_SIZE:-4}"
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/Skywork_Skywork-Reward-Llama-3.1-8B-v0.2" \
-  "$VERIFIER_RESULTS/reward_models/Skywork_Skywork-Reward-Llama-3.1-8B-v0.2/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Skywork_Skywork-Reward-Llama-3.1-8B-v0.2_predictions.json" \
+  "$VERIFIER_RESULTS/$RM_VERIFIER_SUBDIR/Skywork_Skywork-Reward-Llama-3.1-8B-v0.2/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Skywork_Skywork-Reward-Llama-3.1-8B-v0.2_predictions.json" \
   "${SKYWORK_LLAMA_CUDA_DEVICES:-3}" \
   "${SKYWORK_LLAMA_DEVICE_MAP:-none}" \
   "${SKYWORK_LLAMA_BATCH_SIZE:-4}"
 
 run_one \
   "/ssd1/lbh/zjx/models/skyjury_verifier/Skywork_Skywork-Reward-Gemma-2-27B-v0.2" \
-  "$VERIFIER_RESULTS/reward_models/Skywork_Skywork-Reward-Gemma-2-27B-v0.2/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Skywork_Skywork-Reward-Gemma-2-27B-v0.2_predictions.json" \
+  "$VERIFIER_RESULTS/$RM_VERIFIER_SUBDIR/Skywork_Skywork-Reward-Gemma-2-27B-v0.2/skyjury_bench_rm_ssd1_lbh_zjx_models_skyjury_verifier_Skywork_Skywork-Reward-Gemma-2-27B-v0.2_predictions.json" \
   "${SKYWORK_CUDA_DEVICES:-0,1,2,3}" \
   "${SKYWORK_DEVICE_MAP:-auto}" \
   "${SKYWORK_BATCH_SIZE:-4}"

@@ -1,0 +1,48 @@
+{
+  "accuracy": 1.0,
+  "correct_pairs": 8,
+  "total_pairs": 8,
+  "num_samples": 8,
+  "subset_accuracy": {
+    "ai_content": 1.0,
+    "creator_discovery": 1.0,
+    "crypto_safety": 1.0,
+    "crypto_spam": 1.0,
+    "science_misinformation": 1.0
+  },
+  "category_accuracy": {
+    "interest_community": 1.0,
+    "platform_information_ecology": 1.0,
+    "safety_moderation": 1.0
+  },
+  "category_metrics": {
+    "interest_community": {
+      "correct_pairs": 1,
+      "total_pairs": 1,
+      "accuracy": 1.0
+    },
+    "platform_information_ecology": {
+      "correct_pairs": 3,
+      "total_pairs": 3,
+      "accuracy": 1.0
+    },
+    "safety_moderation": {
+      "correct_pairs": 4,
+      "total_pairs": 4,
+      "accuracy": 1.0
+    }
+  },
+  "method": "similarity_tfidf",
+  "similarity_method": "tfidf",
+  "model": null,
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_base.json",
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_rubric_length.json",
+    "/ssd1/lbh/zjx/skyjury/data/auditor/category50/skyjury_bench_rubric_language.json"
+  ],
+  "score_definition": "similarity(user_profile, labeler_text)",
+  "mean_chosen_score": 0.2926259765992513,
+  "mean_rejected_score": 0.1791698392101238,
+  "mean_margin": 0.11345613738912749,
+  "median_margin": 0.10473755207629565
+}

@@ -1,0 +1,35 @@
+{
+  "accuracy": 1.0,
+  "correct_pairs": 2,
+  "total_pairs": 2,
+  "num_samples": 2,
+  "subset_accuracy": {
+    "crypto_safety": 1.0
+  },
+  "category_accuracy": {
+    "safety_moderation": 1.0
+  },
+  "category_metrics": {
+    "safety_moderation": {
+      "correct_pairs": 2,
+      "total_pairs": 2,
+      "accuracy": 1.0
+    }
+  },
+  "method": "similarity_sbert",
+  "similarity_method": "sbert",
+  "model": "/ssd2/lbh/zjx/models/BAAI_bge-m3",
+  "device": "cpu",
+  "cuda_devices": null,
+  "device_map": null,
+  "torch_dtype": null,
+  "trust_remote_code": false,
+  "fit_data": [
+    "/ssd1/lbh/zjx/skyjury/data/skyjury_bench.json"
+  ],
+  "score_definition": "similarity(user_profile, labeler_text)",
+  "mean_chosen_score": 0.8168522119522095,
+  "mean_rejected_score": 0.8060963153839111,
+  "mean_margin": 0.010755926370620728,
+  "median_margin": 0.010755926370620728
+}

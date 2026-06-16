@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 import re
+from collections.abc import Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
@@ -60,6 +61,30 @@ REWARD_MODEL_CONFIG: dict[str, RewardModelConfig] = {
         add_special_tokens=False,
         tokenize_chat_template=True,
     ),
+    "Skywork/Skywork-Reward-V2-Llama-3.1-8B": RewardModelConfig(
+        torch_dtype="bfloat16",
+        attn_implementation="eager",
+        num_labels=1,
+        reward_score_index=0,
+        add_special_tokens=False,
+        tokenize_chat_template=True,
+    ),
+    "Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M": RewardModelConfig(
+        torch_dtype="bfloat16",
+        attn_implementation="eager",
+        num_labels=1,
+        reward_score_index=0,
+        add_special_tokens=False,
+        tokenize_chat_template=True,
+    ),
+    "Skywork/Skywork-Reward-V2-Qwen3-8B": RewardModelConfig(
+        torch_dtype="bfloat16",
+        attn_implementation="eager",
+        num_labels=1,
+        reward_score_index=0,
+        add_special_tokens=False,
+        tokenize_chat_template=True,
+    ),
     "openbmb/Eurus-RM-7b": RewardModelConfig(
         model_builder="auto_model",
         trust_remote_code=True,
@@ -83,6 +108,9 @@ LOCAL_MODEL_ALIASES = {
     "Ray2333_GRM_Llama3.1_8B_rewardmodel-ft": "Ray2333/GRM_Llama3.1_8B_rewardmodel-ft",
     "Skywork_Skywork-Reward-Gemma-2-27B-v0.2": "Skywork/Skywork-Reward-Gemma-2-27B-v0.2",
     "Skywork_Skywork-Reward-Llama-3.1-8B-v0.2": "Skywork/Skywork-Reward-Llama-3.1-8B-v0.2",
+    "Skywork_Skywork-Reward-V2-Llama-3.1-8B": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+    "Skywork_Skywork-Reward-V2-Llama-3.1-8B-40M": "Skywork/Skywork-Reward-V2-Llama-3.1-8B-40M",
+    "Skywork_Skywork-Reward-V2-Qwen3-8B": "Skywork/Skywork-Reward-V2-Qwen3-8B",
     "openbmb_Eurus-RM-7b": "openbmb/Eurus-RM-7b",
     "allenai_tulu-2-dpo-7b": "allenai/tulu-2-dpo-7b",
     "allenai_tulu-2-dpo-13b": "allenai/tulu-2-dpo-13b",
@@ -158,14 +186,20 @@ def format_rewardbench_pair_text(tokenizer: Any, prompt: str, answer: str) -> st
         {"role": "assistant", "content": answer},
     ]
     if hasattr(tokenizer, "apply_chat_template") and getattr(tokenizer, "chat_template", None):
-        return tokenizer.apply_chat_template(messages, tokenize=False)
+        formatted = tokenizer.apply_chat_template(messages, tokenize=False)
+        if tokenizer.bos_token is not None and formatted.startswith(tokenizer.bos_token):
+            formatted = formatted[len(tokenizer.bos_token) :]
+        return formatted
     return f"<|user|>\n{prompt}\n<|assistant|>\n{answer}"
 
 
 def format_rewardbench_prompt(tokenizer: Any, prompt: str) -> str:
     messages = [{"role": "user", "content": prompt}]
     if hasattr(tokenizer, "apply_chat_template") and getattr(tokenizer, "chat_template", None):
-        return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        formatted = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        if tokenizer.bos_token is not None and formatted.startswith(tokenizer.bos_token):
+            formatted = formatted[len(tokenizer.bos_token) :]
+        return formatted
     return f"<|user|>\n{prompt}\n<|assistant|>\n"
 
 
@@ -202,6 +236,22 @@ def normalized_device_map(device_map: str | None) -> str | None:
     return device_map
 
 
+def ensure_transformers_legacy_symbols() -> None:
+    try:
+        from transformers.models.llama import modeling_llama
+    except Exception:
+        modeling_llama = None
+    if modeling_llama is not None and not hasattr(modeling_llama, "LLAMA_INPUTS_DOCSTRING"):
+        modeling_llama.LLAMA_INPUTS_DOCSTRING = ""
+
+    try:
+        from transformers import PreTrainedModel
+    except Exception:
+        return
+    if not hasattr(PreTrainedModel, "all_tied_weights_keys"):
+        PreTrainedModel.all_tied_weights_keys = {}
+
+
 def load_reward_model(
     model: str,
     device: torch.device,
@@ -215,6 +265,7 @@ def load_reward_model(
     effective_trust = config.trust_remote_code if trust_remote_code is None else trust_remote_code
     dtype = torch_dtype_from_name(resolve_torch_dtype_name(torch_dtype_name, config.torch_dtype), device)
     kwargs = model_kwargs(device, dtype, effective_trust, local_files_only, device_map, config)
+    ensure_transformers_legacy_symbols()
     if config.model_builder == "auto_model":
         loaded = AutoModel.from_pretrained(model, **kwargs)
     else:
@@ -306,23 +357,21 @@ def score_reward_conversations(
     scores: list[float] = []
     with torch.inference_mode():
         for conversation in tqdm(conversations, desc="RewardBench RM chat-template scoring"):
-            encoded = tokenizer.apply_chat_template(
-                conversation,
-                tokenize=True,
+            formatted = tokenizer.apply_chat_template(conversation, tokenize=False)
+            if tokenizer.bos_token is not None and formatted.startswith(tokenizer.bos_token):
+                formatted = formatted[len(tokenizer.bos_token) :]
+            encoded = tokenizer(
+                formatted,
                 return_tensors="pt",
                 truncation=True,
                 max_length=max_length,
             )
-            if isinstance(encoded, dict):
-                model_inputs = {
-                    key: value.to(device if device.type == "cuda" else "cpu")
-                    for key, value in encoded.items()
-                    if isinstance(value, torch.Tensor)
-                }
-                attention_mask = model_inputs.get("attention_mask")
-            else:
-                model_inputs = {"input_ids": encoded.to(device if device.type == "cuda" else "cpu")}
-                attention_mask = None
+            model_inputs = {
+                key: value.to(device if device.type == "cuda" else "cpu")
+                for key, value in encoded.items()
+                if isinstance(value, torch.Tensor)
+            }
+            attention_mask = model_inputs.get("attention_mask")
             outputs = model(**model_inputs)
             score = extract_reward_scores(outputs, attention_mask, score_index)
             scores.extend(score.detach().float().cpu().tolist())
