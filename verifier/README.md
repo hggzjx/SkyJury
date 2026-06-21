@@ -7,7 +7,7 @@ This directory contains verifier runners for SkyJury:
 - `run_llm_judge.py`: OpenAI-compatible API judge
 - `run_local_llm_judge.py`: local Hugging Face causal-LM judge
 - `run_vllm_judge.py`: local vLLM judge
-- `run_similarity_model.py`: similarity-based matching judge (TF-IDF, BM25, Sentence-BERT, E5)
+- `run_similarity_model.py`: embedding-based similarity and reranking scorers (TF-IDF, BM25, dense embedding models, BGE/Qwen/Jina rerankers)
 
 For installation, data format, and portable run examples, see the top-level documentation:
 

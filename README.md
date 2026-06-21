@@ -1,13 +1,13 @@
-# SkyJury: Benchmarking LLM-Based Policy Judgment for User-Conditioned Labeler Selection in Decentralized Moderation
+# SkyJury: Benchmarking User-Conditioned Policy Judgment in Decentralized Moderation
 
-SkyJury is a benchmark for **user-conditioned labeler selection** in decentralized moderation. Given a user profile and two plausible Bluesky labelers, a model must decide which labeler is the better match for that user's moderation needs.
+SkyJury is a benchmark for **user-conditioned policy judgment** in decentralized moderation, operationalized through pairwise Bluesky labeler selection. Given a user profile and two plausible Bluesky labelers, a model must decide which selectable governance component is the better match for that user's moderation needs.
 
 The benchmark evaluates two complementary abilities:
 
 - **Verifier accuracy**: whether a model selects the better labeler.
 - **Auditor robustness**: whether the model's confidence remains stable under meaning-preserving rubric reformulations.
 
-SkyJury is built from real Bluesky labelers and public rubric definitions. The task is designed to test fine-grained policy judgment rather than handle matching or topical keyword overlap.
+SkyJury is built from real Bluesky labelers and public rubric definitions. The task is designed to test fine-grained policy judgment rather than handle matching or topical keyword overlap. The current evaluation covers five model families: embedding-based similarity models, dedicated reranking models, discriminative reward models, DPO-style preference models, and LLM-as-a-judge models.
 
 ## Framework
 
@@ -54,6 +54,7 @@ skyjury/
 ├── verifier/
 │   ├── run_reward_model.py
 │   ├── run_dpo_lm.py
+│   ├── run_similarity_model.py
 │   ├── run_llm_judge.py
 │   ├── run_vllm_judge.py
 │   ├── rewardbench_compat.py
@@ -83,14 +84,14 @@ conda activate skyjury
 Install the core dependencies. For CPU-only exploration, the following is enough:
 
 ```bash
-pip install torch transformers datasets accelerate huggingface_hub numpy tqdm matplotlib pymupdf sentencepiece protobuf safetensors
+pip install torch transformers datasets accelerate huggingface_hub numpy tqdm matplotlib pymupdf sentencepiece protobuf safetensors scikit-learn
 ```
 
 For GPU evaluation, install the PyTorch build that matches your CUDA runtime first, then install the remaining packages. For example:
 
 ```bash
 pip install torch --index-url https://download.pytorch.org/whl/cu121
-pip install transformers datasets accelerate huggingface_hub numpy tqdm matplotlib pymupdf sentencepiece protobuf safetensors
+pip install transformers datasets accelerate huggingface_hub numpy tqdm matplotlib pymupdf sentencepiece protobuf safetensors scikit-learn
 ```
 
 Optional dependencies:
@@ -126,6 +127,41 @@ All examples below assume you are in the repository root:
 cd skyjury
 conda activate skyjury
 ```
+
+### Embedding-Based Similarity Models
+
+Run an embedding model as a user-to-labeler similarity scorer:
+
+```bash
+python verifier/run_similarity_model.py \
+  --method e5 \
+  --model-path /path/to/embedding-model \
+  --data data/skyjury_bench.json \
+  --output-dir verifier/results/similarity_models/example_embedding \
+  --batch-size 32 \
+  --max-length 512 \
+  --device cuda
+```
+
+For BGE-M3, Qwen3-Embedding-8B, or KaLM-Gemma3-12B, pass the local model path with `--model-path`. Lexical baselines are also available through `--method tfidf` and `--method bm25`.
+
+### Dedicated Reranking Models
+
+Run a reranker as a user--candidate relevance scorer:
+
+```bash
+python verifier/run_similarity_model.py \
+  --method reranker \
+  --model-path /path/to/reranker-model \
+  --data data/skyjury_bench.json \
+  --output-dir verifier/results/reranker_models/example_reranker \
+  --batch-size 8 \
+  --reranker-max-length 2048 \
+  --device cuda \
+  --trust-remote-code
+```
+
+The reranker path can point to BGE-reranker-v2-m3, Qwen3-Reranker-8B, or Jina-reranker-v3. Internally, these runs are written with the same prediction schema as the other verifier families, so they can be passed directly to the auditor.
 
 ### Discriminative Reward Models
 
@@ -285,7 +321,7 @@ python verifier/run_llm_judge.py \
   --output-dir auditor/results/llm_judge_category50_audit/llm_judge_predictions/gpt-5-ca/language
 ```
 
-The same pattern applies to RM and DPO scorers: run the verifier on the base, length, and language datasets, then pass the resulting prediction files to the auditor.
+The same pattern applies to embedding, reranking, RM, and DPO scorers: run the verifier on the base, length, and language datasets, then pass the resulting prediction files to the auditor. For embedding and reranking runs, use `--method similarity` when generating auditor reports, because their prediction files share the similarity-style score schema.
 
 ### Generate a Robustness Report
 
@@ -325,6 +361,12 @@ The table below summarizes the main overall results used in the paper. `Acc` is 
 
 | Family | Model | Acc | len/both | len/cho | len/rej | lang/both | lang/cho | lang/rej |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Embedding | BGE-M3 | 0.519 | -0.0002 | 0.2364*** | -0.2429 | 0.1521* | 1.5004*** | -1.5565 |
+| Embedding | Qwen3-Embedding-8B | 0.601 | -0.0195 | -0.3605 | 0.4031*** | -0.0361 | 0.0036 | -0.0595 |
+| Embedding | KaLM-Gemma3-12B | 0.634 | 0.0689 | 0.8313*** | -0.8074 | -0.0989 | 1.9013*** | -1.5814 |
+| Reranker | BGE-reranker-v2-m3 | 0.457 | -0.0131 | -0.6123 | 0.6187*** | 0.1386 | 0.2356*** | -0.0308 |
+| Reranker | Qwen3-Reranker-8B | 0.410 | -0.1228 | 0.2965*** | -0.3208 | -0.1836 | 0.1790** | -0.2062 |
+| Reranker | Jina-reranker-v3 | 0.564 | 0.2900*** | 1.6951*** | -1.3224 | 0.0989 | 0.7156*** | -0.4321 |
 | RM | ArmoRM-Llama3-8B | 0.632 | 0.0784 | -0.0482 | 0.1129 | 0.0939 | 0.1406** | 0.0033 |
 | RM | GRM-Llama3.1-8B | 0.564 | -0.1801 | -0.7727 | 0.6951*** | -0.1414 | 0.3901*** | -0.4353 |
 | RM | Skywork-Gemma-2-27B | 0.688 | 0.0710 | -0.1546 | 0.2731*** | 0.1196 | 0.2716*** | -0.1410 |
@@ -337,6 +379,3 @@ The table below summarizes the main overall results used in the paper. `Acc` is 
 | Judge | MiniMax-M2.7 | 0.644 | -0.0479 | -0.0561 | -0.0561 | -0.0308 | -0.0376 | -0.0376 |
 | Judge | Qwen3.5-Plus | **0.731** | 0.0432 | 0.0386 | 0.0386 | 0.0726 | 0.0664 | 0.0664 |
 | Judge | GPT-5 | 0.691 | 0.2439*** | 0.2394*** | 0.2394*** | 0.0741 | 0.0699 | 0.0699 |
-
-
-
